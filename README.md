@@ -1,6 +1,11 @@
 # duongital
-hello world
+
+Frontend Developer!
 
 I created from Next.js
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/duongital)
+### to do list:
+
+- create github action
+- upload to S3
+- use route53 to pointer new domain
