@@ -48,12 +48,12 @@ export default function Index({ data }) {
             .map(({ node: post }) => {
               return (
                 <div className="blog-post-preview mb-10" key={post.id}>
-                  <h3 className="text-primary">
+                  <h3 className="text-primary mb-0">
                     <Link to={post.frontmatter.path}>
                       {post.frontmatter.title}
                     </Link>
                   </h3>
-                  <h6>{post.frontmatter.date}</h6>
+                  <h6 className="mt-0">{post.frontmatter.date}</h6>
                   {/* <p>{post.excerpt}</p> */}
                 </div>
               )

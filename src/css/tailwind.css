@@ -12,38 +12,48 @@ html {
 }
 
 h1 {
-  font-size: 2rem;
-  line-height: 1.5;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  line-height: 1.2;
   font-weight: 600;
 }
 
 h2 {
+  margin-top: 1rem;
   font-size: 1.6rem;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 h3 {
+  margin-top: 1rem;
   font-size: 1.5rem;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 h4 {
+  margin-top: 1rem;
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
 h5 {
+  margin-top: 1rem;
   font-size: 1.3rem;
   line-height: 1.5;
 }
 
 h6 {
+  margin-top: 1rem;
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
 .post p {
   margin-bottom: 1rem;
+  margin-top: 1rem;
+  line-height: 2;
 }
 
 a {

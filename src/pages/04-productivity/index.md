@@ -4,17 +4,7 @@ date: 2021-04-12T17:12:33.962Z
 title: "Productivity"
 ---
 
-![sample app](./productivity_mapping.png)
-
-# block scope và function scope
-
-```javascript
-for (var i = 0; i < 3; i++) {
-	setTimeout(() => {
-		console.log(i);
-	}, 0);
-}
-```
+![sample app](./dots_banner.png)
 
 khi khai báo _vòng lặp_ thì lưu ý trong _mở ngoặc đóng ngoặc_ thì biến i:
 
@@ -22,12 +12,6 @@ khi khai báo _vòng lặp_ thì lưu ý trong _mở ngoặc đóng ngoặc_ th�
 - `let` thì sống trong scope {} => sử dụng i như local block scope
 
 đối với function scope thì mọi biến đều sống trong function scope, nếu khai bằng var thì cũng không chạy ra ngoài được, khi debug we will see that there's scope name of function, out side of function scope that function to become variable of outer scope
-
-# tại sao khai báo biến bằng `var` log biến trước được, còn `let` với `const` thì không?
-
-`let` và `const` không có hoisting vậy nên lúc log ra trước sẽ bị lỗi undefined
-
----
 
 # tại sao người ta hay khai báo hàm bằng const và arrow function?
 
@@ -47,111 +31,16 @@ khi `require` một module nào đó thì đó là singleton chứ không phải
 
 lưu ý thứ tự các props và methods nếu khác nhau thì cũng có hidden class khác nhau, vì vậy để tối ưu việc sử dụng lại code thì cần có thứ tự giống nhau
 
-```javascript
-function Point(x, y) {
-	this.x = x;
-	this.y = y;
-}
-var p1 = new Point(1, 2);
-p1.a = 5;
-p1.b = 6;
-var p2 = new Point(3, 4);
-p2.b = 7;
-p2.a = 8;
-```
-
 `inline caching`: khi 2 hoặc nhiều class cùng share một `hiden class` thì để tối ưu cho methods được gọi lặp đi lặp lại, thay vì đi vào hidden class để tìm kiếm thì cơ chế `inline caching` sẽ giúp việc này thực thi được nhanh hơn bằng cách cache hàm đó tạm ở đâu đó.
 
-# để gọi nhiều hàm liên tục sau khi gọi một lần rồi thì cứ return về `this` trong mỗi hàm đó là được.
+# closure
 
-```javascript
-class Animal {
-	constructor(legs) {
-		this.legs = legs;
-	}
+khi viết hàm A mà bên trong hàm A đó có một hàm B hoặc C, lúc này B hoặc C dùng biến ở hàm A thì trong scope sẽ sinh ra closure scope để giữ biến trong hàm A lại.
 
-	go() {
-		console.log("go go");
-		return this;
-	}
+tại sao phải cần như vậy, vì một lý do nào đó thì hàm A có thể biến mất (out of scope) thì các biến trong nó sẽ mất đi, lúc này closure giữ biến đó lại cho hàm B, C dùng sau này
 
-	eat() {
-		console.log("eat eat");
-		return this;
-	}
-
-	add(value) {
-		this.legs += value;
-		return this;
-	}
-
-	subtract(value) {
-		this.legs -= value;
-		return this;
-	}
-
-	showLegs() {
-		console.log(this.legs);
-	}
-}
-
-let a = new Animal(4);
-a.go().eat();
-a.eat().go();
-a.add(3).subtract(1);
-
-a.showLegs();
-```
-
-cách sau được viết bằng `function` và dùng `prototype`
-
-```javascript
-function Animal(legs) {
-	this.legs = legs;
-}
-
-Animal.prototype.go = function () {
-	console.log("go go");
-	return this;
-};
-
-Animal.prototype.eat = function () {
-	console.log("eat eat");
-	return this;
-};
-
-Animal.prototype.add = function (value) {
-	this.legs += value;
-	return this;
-};
-
-Animal.prototype.log = function () {
-	console.log(this.legs);
-};
-
-const a = new Animal(2);
-a.log();
-
-a.add(2).eat().go();
-a.log();
-```
-
-# snowpack vs. webpack
-
-- snowpack cố gắng convert npm package thành ESM và lấy những file liên quan của package đó nằm trong folder pkg phần build (unbundled deployment) ⇒ việc làm như vậy giúp tối ưu performance của HMR. Về hình ảnh mình có thể trỏ đến dùng src như dev web thông thường, k giống như webpack là phải import hình vào rồi kiếm loader cho file name đó.
-
-# what is currying in JS (has inner code sample)
-
-- currying: sử dụng HOC (đã return nhiều lần, chỉ còn execute một lần cuối) làm param cho một function. Tại sao phải làm như vậy? ⇒ vì mình muốn code đẹp và dễ nhìn hơn, mình muốn getName, getId một lần rồi và sau đó dùng hàm này làm callback lần cuối.
-- code:
-
-  ```javascript
-  const get = (key) => (object) => object[key];
-  const getName = get("name");
-  const getId = get("id");
-  nameList.map(getName); // or: otherNameList.map(getName)
-  nameList.map(getId); // or: anotherNameList.map(getId)
-  ```
+![sample app](./productivity_mapping.png)
+_this is a caption of the picture_
 
 # formik không expose hàm handleChange ra cho mình dùng
 
@@ -167,44 +56,9 @@ thunk withExtraArgument: bình thường add thunk middleware vào redux thì ch
 
 # tại sao GTM hay fb pixel dùng cookies lưu dữ liệu người dùng?
 
-- tại sao GTM, Pixel... hoặc các service trên mạng hay dùng Cookies để identify người dùng, **bởi vì Client của mình nó không khống chế hoặc edit code được**, do vậy khi gọi api bên đó nó buộc phải set cookies vào browser và handle các cookies đó. Còn sessionStorage hoặc localStorage là do mình tự quyết định. Vậy nên giữ `token` ở localStorage hay cookies? ⇒ nên giữ ở cookies để server api tự add và gỡ ra cho an toàn (các thứ liên quan đến bảo mật). Còn session thì giữ mấy cái id để tracking, localStorage giữ mấy cái như theme hoặc lang.
-- Here is why we should use cookie to save token over localStorage: [link](https://dev.to/cotter/localstorage-vs-cookies-all-you-need-to-know-about-storing-jwt-tokens-securely-in-the-front-end-15id)
+tại sao GTM, Pixel... hoặc các service trên mạng hay dùng Cookies để identify người dùng, **bởi vì Client của mình nó không khống chế hoặc edit code được**, do vậy khi gọi api bên đó nó buộc phải set cookies vào browser và handle các cookies đó. Còn sessionStorage hoặc localStorage là do mình tự quyết định. Vậy nên giữ `token` ở localStorage hay cookies? ⇒ nên giữ ở cookies để server api tự add và gỡ ra cho an toàn (các thứ liên quan đến bảo mật). Còn session thì giữ mấy cái id để tracking, localStorage giữ mấy cái như theme hoặc lang.
 
-# closure
+Here is why we should use cookie to save token over localStorage: [link](https://dev.to/cotter/localstorage-vs-cookies-all-you-need-to-know-about-storing-jwt-tokens-securely-in-the-front-end-15id)
 
-khi viết hàm A mà bên trong hàm A đó có một hàm B hoặc C, lúc này B hoặc C dùng biến ở hàm A thì trong scope sẽ sinh ra closure scope để giữ biến trong hàm A lại.
-
-tại sao phải cần như vậy, vì một lý do nào đó thì hàm A có thể biến mất (out of scope) thì các biến trong nó sẽ mất đi, lúc này closure giữ biến đó lại cho hàm B, C dùng sau này
-
-```javascript
-{
-	let c = 111;
-	function main() {
-		let a = 100;
-		let b = 2;
-
-		function call() {
-			let x = 1001;
-			a += 10;
-			a += 10;
-			a += 10;
-			console.log(a);
-
-			function inner() {
-				a += 10;
-				a += 10;
-				a += 10;
-				x += 1;
-				console.log(a);
-				console.log(x);
-			}
-			inner();
-		}
-		console.log(b);
-		console.log(c);
-		call();
-	}
-
-	main();
-}
-```
+![sample app](./dots_square.png)
+_Time is short, hack them all!_
