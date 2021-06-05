@@ -12,8 +12,8 @@ export default function Template({ data }) {
       <div className="h-10 md:h-24"></div>
       <div className="container mx-auto">
         <div className="flex flex-wrap px-8">
-          <div className="w-full md:w-1/2"></div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full lg:w-1/4"></div>
+          <div className="w-full lg:w-1/2">
             <Link to="/">HOME</Link>
             <h1 className="text-primary">{post.frontmatter.title}</h1>
             <div
@@ -21,6 +21,7 @@ export default function Template({ data }) {
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </div>
+          <div className="w-full lg:w-1/4"></div>
         </div>
       </div>
     </div>
