@@ -39,8 +39,8 @@ khi viết hàm A mà bên trong hàm A đó có một hàm B hoặc C, lúc nà
 
 tại sao phải cần như vậy, vì một lý do nào đó thì hàm A có thể biến mất (out of scope) thì các biến trong nó sẽ mất đi, lúc này closure giữ biến đó lại cho hàm B, C dùng sau này
 
-![sample app](./productivity_mapping.png)
-_this is a caption of the picture_
+![sample app](./dots_square.png)
+_Time is short, hack them all!_
 
 # formik không expose hàm handleChange ra cho mình dùng
 
