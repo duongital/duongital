@@ -4,11 +4,11 @@
 
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
 
 html {
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -57,10 +57,14 @@ h6 {
 }
 
 a {
-  @apply text-primary
+  @apply text-primary;
 }
 
 p em {
   text-align: center !important;
   font-weight: 400;
+}
+
+li {
+  list-style-type: circle;
 }

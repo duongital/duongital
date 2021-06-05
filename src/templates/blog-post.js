@@ -11,12 +11,17 @@ export default function Template({ data }) {
       <Helmet title={`${post.frontmatter.title}`} />
       <div className="h-10 md:h-24"></div>
       <div className="container mx-auto">
-        <Link to="/">HOME</Link>
-        <h1 className="text-primary">{post.frontmatter.title}</h1>
-        <div
-          className="blog-post-content mt-10 mb-24"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className="flex flex-wrap px-8">
+          <div className="w-full md:w-1/2"></div>
+          <div className="w-full md:w-1/2">
+            <Link to="/">HOME</Link>
+            <h1 className="text-primary">{post.frontmatter.title}</h1>
+            <div
+              className="blog-post-content mt-10 mb-24"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </div>
+        </div>
       </div>
     </div>
   )
