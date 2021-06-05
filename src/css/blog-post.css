@@ -1,0 +1,14 @@
+.blog-post-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.blog-posts {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+span ~ em {
+  text-align: center;
+  display: block;
+}
