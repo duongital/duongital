@@ -15,11 +15,11 @@ export default function Index({ data }) {
         style={{ height: 100 + "vh" }}
       >
         <div className="w-full md:w-1/2 px-8 my-12 md:my-0">
-          <Img
+          {/* <Img
             className="w-24 float-right"
             fluid={data.file.childImageSharp.fluid}
             alt="avatar"
-          />
+          /> */}
           <div className="clear-both" />
           <h1 className="text-right">Duong Nguyen</h1>
           <p className="my-4 text-right">
@@ -36,6 +36,11 @@ export default function Index({ data }) {
               ❤️
             </span>
           </strong>
+          <Img
+            className="w-full mt-24"
+            fluid={data.file.childImageSharp.fluid}
+            alt="avatar"
+          />
         </div>
         <div className="w-full md:w-1/2 px-8 my-12 md:my-0">
           {posts
@@ -43,13 +48,13 @@ export default function Index({ data }) {
             .map(({ node: post }) => {
               return (
                 <div className="blog-post-preview mb-10" key={post.id}>
-                  <h1 className="text-primary">
+                  <h3 className="text-primary">
                     <Link to={post.frontmatter.path}>
                       {post.frontmatter.title}
                     </Link>
-                  </h1>
+                  </h3>
                   <h6>{post.frontmatter.date}</h6>
-                  <p>{post.excerpt}</p>
+                  {/* <p>{post.excerpt}</p> */}
                 </div>
               )
             })}
@@ -74,7 +79,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: "pages/avatar.jpg" }) {
+    file(relativePath: { eq: "pages/home-cover.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

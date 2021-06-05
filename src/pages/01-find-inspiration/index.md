@@ -1,7 +1,7 @@
 ---
 path: "/cam-hung-lam-viec"
 date: 2020-01-27T17:12:33.962Z
-title: "Cảm hứng làm và học..."
+title: "Cảm hứng làm và học"
 ---
 
 Khỏi trả lời cũng biết là trên google. Tuy nhiên với theo kinh nghiệm cá nhân của mình thì không

@@ -4,22 +4,15 @@ date: 2021-04-12T17:12:33.962Z
 title: "Productivity"
 ---
 
-Duong graduated from University of Economics HCMC and started his
-first job as a Marketing Executive for Mercedes-Benz Vietnam. Over 5
-years working in the field he made a big decision to change career
-paths and become a Software Engineer. Now he enjoys every working
-day with front-end tasks and challenges himself to become a
-
 ![sample app](./productivity_mapping.png)
-_this is caption of the image_
 
 # block scope và function scope
 
 ```javascript
 for (var i = 0; i < 3; i++) {
-  setTimeout(() => {
-    console.log(i)
-  }, 0)
+	setTimeout(() => {
+		console.log(i);
+	}, 0);
 }
 ```
 
@@ -56,15 +49,15 @@ lưu ý thứ tự các props và methods nếu khác nhau thì cũng có hidden
 
 ```javascript
 function Point(x, y) {
-  this.x = x
-  this.y = y
+	this.x = x;
+	this.y = y;
 }
-var p1 = new Point(1, 2)
-p1.a = 5
-p1.b = 6
-var p2 = new Point(3, 4)
-p2.b = 7
-p2.a = 8
+var p1 = new Point(1, 2);
+p1.a = 5;
+p1.b = 6;
+var p2 = new Point(3, 4);
+p2.b = 7;
+p2.a = 8;
 ```
 
 `inline caching`: khi 2 hoặc nhiều class cùng share một `hiden class` thì để tối ưu cho methods được gọi lặp đi lặp lại, thay vì đi vào hidden class để tìm kiếm thì cơ chế `inline caching` sẽ giúp việc này thực thi được nhanh hơn bằng cách cache hàm đó tạm ở đâu đó.
@@ -73,74 +66,74 @@ p2.a = 8
 
 ```javascript
 class Animal {
-  constructor(legs) {
-    this.legs = legs
-  }
+	constructor(legs) {
+		this.legs = legs;
+	}
 
-  go() {
-    console.log("go go")
-    return this
-  }
+	go() {
+		console.log("go go");
+		return this;
+	}
 
-  eat() {
-    console.log("eat eat")
-    return this
-  }
+	eat() {
+		console.log("eat eat");
+		return this;
+	}
 
-  add(value) {
-    this.legs += value
-    return this
-  }
+	add(value) {
+		this.legs += value;
+		return this;
+	}
 
-  subtract(value) {
-    this.legs -= value
-    return this
-  }
+	subtract(value) {
+		this.legs -= value;
+		return this;
+	}
 
-  showLegs() {
-    console.log(this.legs)
-  }
+	showLegs() {
+		console.log(this.legs);
+	}
 }
 
-let a = new Animal(4)
-a.go().eat()
-a.eat().go()
-a.add(3).subtract(1)
+let a = new Animal(4);
+a.go().eat();
+a.eat().go();
+a.add(3).subtract(1);
 
-a.showLegs()
+a.showLegs();
 ```
 
 cách sau được viết bằng `function` và dùng `prototype`
 
 ```javascript
 function Animal(legs) {
-  this.legs = legs
+	this.legs = legs;
 }
 
 Animal.prototype.go = function () {
-  console.log("go go")
-  return this
-}
+	console.log("go go");
+	return this;
+};
 
 Animal.prototype.eat = function () {
-  console.log("eat eat")
-  return this
-}
+	console.log("eat eat");
+	return this;
+};
 
 Animal.prototype.add = function (value) {
-  this.legs += value
-  return this
-}
+	this.legs += value;
+	return this;
+};
 
 Animal.prototype.log = function () {
-  console.log(this.legs)
-}
+	console.log(this.legs);
+};
 
-const a = new Animal(2)
-a.log()
+const a = new Animal(2);
+a.log();
 
-a.add(2).eat().go()
-a.log()
+a.add(2).eat().go();
+a.log();
 ```
 
 # snowpack vs. webpack
@@ -153,11 +146,11 @@ a.log()
 - code:
 
   ```javascript
-  const get = key => object => object[key]
-  const getName = get("name")
-  const getId = get("id")
-  nameList.map(getName) // or: otherNameList.map(getName)
-  nameList.map(getId) // or: anotherNameList.map(getId)
+  const get = (key) => (object) => object[key];
+  const getName = get("name");
+  const getId = get("id");
+  nameList.map(getName); // or: otherNameList.map(getName)
+  nameList.map(getId); // or: anotherNameList.map(getId)
   ```
 
 # formik không expose hàm handleChange ra cho mình dùng
@@ -185,33 +178,33 @@ tại sao phải cần như vậy, vì một lý do nào đó thì hàm A có th
 
 ```javascript
 {
-  let c = 111
-  function main() {
-    let a = 100
-    let b = 2
+	let c = 111;
+	function main() {
+		let a = 100;
+		let b = 2;
 
-    function call() {
-      let x = 1001
-      a += 10
-      a += 10
-      a += 10
-      console.log(a)
+		function call() {
+			let x = 1001;
+			a += 10;
+			a += 10;
+			a += 10;
+			console.log(a);
 
-      function inner() {
-        a += 10
-        a += 10
-        a += 10
-        x += 1
-        console.log(a)
-        console.log(x)
-      }
-      inner()
-    }
-    console.log(b)
-    console.log(c)
-    call()
-  }
+			function inner() {
+				a += 10;
+				a += 10;
+				a += 10;
+				x += 1;
+				console.log(a);
+				console.log(x);
+			}
+			inner();
+		}
+		console.log(b);
+		console.log(c);
+		call();
+	}
 
-  main()
+	main();
 }
 ```
