@@ -1,7 +1,7 @@
 ---
 path: "/productivity"
 date: 2021-04-12T17:12:33.962Z
-title: "Note linh tinh về Javascript"
+title: "Note linh tinh về JS"
 ---
 
 ![sample app](./dots_banner.png)
