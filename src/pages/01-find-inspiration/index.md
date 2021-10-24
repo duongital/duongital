@@ -28,28 +28,3 @@ nhưng một thời gian liên tục cũng sẽ được thôi. Chúc các bạn
 mới lạ.
 
 P/S: Thường thì mình theo dõi fintech startups của 2 trang là: crunchbase và index.co
-
-Oooooh-weeee, my first blog post!
-
-# Hello World
-
-### I am writing heading 3
-
-# Hello World
-
-## this is heading 2
-
-### I am writing heading 3
-
-**bold**
-
-_italic_
-
-tiếng việt support `here`
-
-```javascript
-let x = 100
-const a = 200
-
-console.log("Hellow there")
-```

@@ -12,11 +12,11 @@ Là người trầm tính một tí, ham học hỏi và luôn cập nhật thay
 
 # Học code có cần giỏi toán không?
 
-Ban đầu chắc có lẽ ai cũng thắc mắc câu này, câu trả lời là không nha mọi người. Lúc mình mới bắt đầu làm tới giờ thì tấc cả mọi thứ đã được cho công thức tính sẵn. Vì các thể loại này thì cần người chuyên vá giỏi hơn chứ không thể nào để coder thực hiện một cách chuyên môn được. Như hồi ở công ty bảo hiểm, thì phí đóng tiền hàng tháng của một hợp đồng rất phức tạp, team phải gọi api riêng qua bên phần mềm thứ ba để nó trả về chứ không có tác động gì đến nó.
+Ban đầu chắc có lẽ ai cũng thắc mắc câu này, câu trả lời là không nha. Lúc mới bắt đầu làm tới giờ thì tấc cả mọi thứ đã được cho công thức tính sẵn. Vì các thể loại này thì cần người chuyên vá giỏi hơn chứ không thể nào để coder thực hiện một cách chuyên môn được. Như hồi ở công ty bảo hiểm, thì phí đóng tiền hàng tháng của một hợp đồng rất phức tạp, team phải gọi api riêng qua bên phần mềm thứ ba để nó trả về chứ không có tác động gì đến nó.
 
 # Muốn làm coder thì có cần phải học đại học không?
 
-Không cần luôn nha, vì mình cũng chẳng tốt nghiệp trường đại học nào ngành công nghệ thông tin cả, đơn giản chỉ là một cái chứng chỉ nghề thôi cũng được rồi. Chủ yếu là ngày phỏng vấn mọi người vào trong đó nói gì và thể hiện như thế nào thôi. Và đôi lúc cũng tuỳ vào công ty đó nữa. Ví dụ một công ty S nọ, mình nộp hồ sơ vào thì nhân sự có gọi điện và hỏi em có tốt nghiệp ở trường bách khoa hay khoa học tự nhiên gì không? Vì bên công ty chị chỉ chọn những bạn học ở đó thôi. Rồi xong luôn na. Tuy nhiên có một số công ty khi mình kể chuyện của mình ra thì họ rất appreciate cái chuyện đó và xem đó là điểm cộng nữa, nên cũng khó nói lắm, tuỳ mỗi công ty và môi trường thôi mọi người à.
+Không cần luôn, vì mình cũng chẳng tốt nghiệp trường đại học nào ngành công nghệ thông tin cả, đơn giản chỉ là một cái chứng chỉ nghề thôi cũng được rồi. Chủ yếu là ngày phỏng vấn mọi người vào trong đó nói gì và thể hiện như thế nào thôi. Và đôi lúc cũng tuỳ vào công ty đó nữa. Ví dụ một công ty S nọ, lúc nộp hồ sơ vào thì nhân sự có gọi điện và hỏi em có tốt nghiệp ở trường bách khoa hay khoa học tự nhiên gì không? Vì bên công ty chị chỉ chọn những bạn học ở đó thôi. Rồi xong luôn. Tuy nhiên có một số công ty khi mình kể chuyện của mình ra thì họ rất `appreciate` cái chuyện đó và xem đó là điểm cộng nữa, nên cũng khó nói lắm, tuỳ mỗi công ty và môi trường thôi mọi người.
 
 # Công việc hàng ngày của frontend là làm gì?
 
@@ -28,4 +28,4 @@ Có cao ở mức khởi điểm và tầm trung khi có thâm niên, tuy nhiên
 
 # Định hướng sắp tới của mình
 
-Tiếp tục trau dồi các kiến thức liên quan đến frontend và sau đó trở thành full stack engineer. Thực sự hướng đi này rất khó và nó cần sự tập trung và nỗ lực cao độ, trong khi mình cũng bắt đầu muốn lập gia đình rồi, nhiều khi khởi động một cuộc sống an nhà có vẻ thú vị hơn nhỉ?
+Tiếp tục trau dồi các kiến thức liên quan đến frontend và sau đó trở thành full stack engineer. Thực sự hướng đi này rất khó và nó cần sự tập trung và nỗ lực cao độ, trong khi mình cũng bắt đầu muốn lập gia đình rồi, nhiều khi khởi động một cuộc sống an nhàn có vẻ thú vị hơn nhỉ?

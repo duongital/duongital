@@ -1,7 +1,7 @@
 ---
 path: "/productivity"
 date: 2021-04-12T17:12:33.962Z
-title: "Productivity"
+title: "Note linh tinh về Javascript"
 ---
 
 ![sample app](./dots_banner.png)
@@ -59,6 +59,3 @@ thunk withExtraArgument: bình thường add thunk middleware vào redux thì ch
 tại sao GTM, Pixel... hoặc các service trên mạng hay dùng Cookies để identify người dùng, **bởi vì Client của mình nó không khống chế hoặc edit code được**, do vậy khi gọi api bên đó nó buộc phải set cookies vào browser và handle các cookies đó. Còn sessionStorage hoặc localStorage là do mình tự quyết định. Vậy nên giữ `token` ở localStorage hay cookies? ⇒ nên giữ ở cookies để server api tự add và gỡ ra cho an toàn (các thứ liên quan đến bảo mật). Còn session thì giữ mấy cái id để tracking, localStorage giữ mấy cái như theme hoặc lang.
 
 Here is why we should use cookie to save token over localStorage: [link](https://dev.to/cotter/localstorage-vs-cookies-all-you-need-to-know-about-storing-jwt-tokens-securely-in-the-front-end-15id)
-
-![sample app](./dots_square.png)
-_Time is short, hack them all!_
