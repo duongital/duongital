@@ -6,7 +6,7 @@ title: "Kinh nghiệm 10 năm đi làm"
 
 # My Decade in Review 2012-2021
 
-Bài viết này hoàn toàn dựa trên ý kiến chủ quan của mình, có thể sai hoặc ko đúng nên mọi người đọc vui thôi nha ;-)
+`#decadeInReview` là trend nổi lên năm ngoái nhiều người hay chơi, mà lúc đó không đủ 10 năm làm việc nên năm nay mới bắt được :)) Bài viết này hoàn toàn dựa trên ý kiến chủ quan của mình, có thể sai hoặc ko đúng nên đọc dzui thôi nha ;-)
 
 # 2012
 
@@ -14,7 +14,7 @@ Bài viết này hoàn toàn dựa trên ý kiến chủ quan của mình, có t
 
 Mình bắt đầu đi làm hơi trễ so với các bạn chung lớp, đầu năm 2012 mới có offer ở Mercedes. Tốt nghiệp đâu đó giữa năm 2011 rồi mà chật vật tìm việc qúa trời, vì cứ đè vô ngân hàng mà apply. Nghĩ kiểu tương lai ngoài ngân hàng ra thì cũng sẽ ko biết làm gì. Sau khi rớt đâu đó khoảng chục ngân hàng thì mới chịu đổi chiến lược chuyển sang nộp hồ sơ cho doanh nghiệp khác.
 
-Ở Finance 6 tháng thì mình có cơ hội lên Sales & Marketing làm, đời đưa thì mình đẩy thôi. Lúc đó S&M của Mẹc hào nhoáng lắm nên cũng muốn thử ;-)
+Ở Finance 6 tháng thì có cơ hội lên Sales & Marketing làm, đời đưa thì mình đẩy thôi. Lúc đó S&M của Mẹc hào nhoáng lắm nên cũng muốn thử ;-)
 
 Bài học rút ra: có thể ở công ty khác người ta không coi trọng bạn nhưng với công ty khác nữa thì không, nên đừng tự hạ thấp bản thân mình xuống mà hãy mở rộng lòng mình để đón lấy những điều khác tốt đẹp hơn.
 
