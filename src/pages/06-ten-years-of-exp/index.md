@@ -4,8 +4,6 @@ date: 2021-12-30T17:12:33.962Z
 title: "Kinh nghiệm 10 năm đi làm"
 ---
 
-# My Decade in Review 2012-2021
-
 `#decadeInReview` là trend nổi lên năm ngoái nhiều người hay chơi, mà lúc đó không đủ 10 năm làm việc nên năm nay mới bắt được :)) Bài viết này hoàn toàn dựa trên ý kiến chủ quan của mình, có thể sai hoặc ko đúng nên đọc dzui thôi nha ;-)
 
 # 2012
