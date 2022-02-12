@@ -8,7 +8,7 @@ Hiện tại có ba hệ điều hành chính mà nhiều người dùng nhất 
 
 # Sao lưu dữ liệu (Dropbox)
 
-Ban đầu mình dùng rất nhiều trên GGL drive nhưng sau này để ý rằng việc đồng bộ dữ liệu trên Ubuntu ko được hỗ trợ tốt cho lắm mặc dù có thể đăng nhập bằng Gmail để tiến hành backup sao lưu dữ liệu trên hệ điều hành này nhưng có lag kinh khủng, có khi không update files mới luôn.
+Ban đầu mình dùng rất nhiều trên Google drive nhưng sau này để ý rằng việc đồng bộ dữ liệu trên Ubuntu ko được hỗ trợ tốt cho lắm mặc dù có thể đăng nhập bằng Gmail để tiến hành backup sao lưu dữ liệu trên hệ điều hành này nhưng có lag kinh khủng, có khi không update files mới luôn.
 
 # Danh bạ, hình ảnh, âm thanh, video (Telegram)
 
@@ -28,4 +28,8 @@ Khỏi nói thì hai cái apps này giờ quá nổi rồi. Mình chuyển qua c
 
 # Notes (text file)
 
-Trước đây mình dùng notion để ghi note, nhưng sau này thấy nó chậm và việc mất app thì mất notes là khả thi. Vậy nên mình dời toàn bộ nhà bằng những files text sau đó đồng bộ nó lên Dropbox.
+Trước đây mình dùng notion để ghi note, nhưng sau này thấy nó chậm và việc mất app thì mất notes là khả thi. Vậy nên mình dời toàn bộ nhà bằng những files text sau đó đồng bộ nó lên Dropbox. Các file note được viết dưới dạng `.md` nên khi đổi editor thì mọi thứ về dữ liệu vẫn giữ nguyên không đổi.
+
+# Graphic design (gimp, inkscape, blender)
+
+Đã đến lúc quên đi Photoshop, AI và 3DSMax. Mình đã từng thuộc hết các phím tắt của các phần mềm Adobe. Nhưng sự già cỗi và phí thường niên quá mắc nên dần dần mình chuyển sang các phần mềm open source và cảm thấy thoải mái khi sử dụng mấy phần mềm này. Thời gian đầu có vẻ khó dùng nhưng, nhưng cơ bản thiết kế nó không phụ thuộc vào phần mềm mình sử dụng mà nó phụ thuộc vào cảm nhận của nghệ thuật.
