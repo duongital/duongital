@@ -1,7 +1,7 @@
 ---
-path: '/google-index-trang-web-nhu-the-sao'
+path: "/google-index-trang-web-nhu-the-sao"
 date: 2022-08-16T17:12:33.962Z
-title: 'Google index trang web như thế sao'
+title: "Google index trang web như thế sao"
 ---
 
 Khi làm một trang web với mục tiêu lên top tìm kiếm thì mình sẽ bắt đầu tập trung vào phần SEO. Lúc trước mình cũng quan tâm lắm, gần đây mọi người nhờ làm web giùm có hay yêu cầu thì mình cũng nghĩ tới phần này nhiều hơn.
@@ -25,5 +25,9 @@ Mình dùng một auto tool để generate robot và sitemap, lúc này thấy t
 ### Ba ngày sau (Aug 19):
 
 Đã thấy kết quả trang upload tay, nhưng như vậy là thủ công vì sau này mỗi lần thêm trang phải làm vậy thì không tốt lắm, mình tiếp tục chờ từ kết quả update indexs từ sitemap.
+
+### Sep 3:
+
+Mình nhận nhiều email của gmail báo redirect, kiểm tra lại thì thấy toàn bộ setup www đang redirect vô domain. Sửa lại toàn bộ domain gốc là chính, và cách sub domain www sẽ redirect vào domain chính.
 
 Tiếp tục chờ...
