@@ -1,7 +1,7 @@
 ---
-path: "/google-index-trang-web-nhu-the-sao"
+path: "/google-index-trang-web-nhu-nao"
 date: 2022-08-16T17:12:33.962Z
-title: "Google index trang web như thế sao"
+title: "Google index trang web như nào"
 ---
 
 Khi làm một trang web với mục tiêu lên top tìm kiếm thì mình sẽ bắt đầu tập trung vào phần SEO. Lúc trước mình cũng quan tâm lắm, gần đây mọi người nhờ làm web giùm có hay yêu cầu thì mình cũng nghĩ tới phần này nhiều hơn.
