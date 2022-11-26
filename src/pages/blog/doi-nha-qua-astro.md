@@ -1,12 +1,16 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Markdown Style Guide"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
-pubDate: "Jul 01 2022"
-heroImage: "/placeholder-hero.jpg"
+title: "Dời nhà qua Astro"
+description: "Là một cái blog nhỏ thôi nhưng dời rất nhiều lần :))"
+pubDate: "Nov 26 2022"
+heroImage: "/blog-cover.png"
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+Mình lập cái blog này cũng lâu rồi mà dời nhà rất nhiều lần. Đầu tiên là Gatsby xong qua NextJS giờ là Astro, không biết xài bao lâu mà chuyển liên tục.
+
+Hy vọng với nhà mới mình sẽ siêng tập viết hơn và Google sẽ index nhanh hơn vì Astro support khá tốt cho các vấn đề này. Build và deploy thì dùng Cloudflare - 1st time luôn.
+
+Bên dưới là một số ví dụ markdown của Astro hướng dẫn người dùng khi viết bài:
 
 ## Headings
 
