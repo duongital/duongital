@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Note linh tinh về JS"
 description: "vì hàm không có hoisting, không bị trùng lặp do khai báo lại và bind được this vô trong hàm"
 pubDate: "Apr 12 2021"
-heroImage: "/blog-cover.png"
+heroImage: "/blog-cover.jpg"
 ---
 
 khi khai báo _vòng lặp_ thì lưu ý trong _mở ngoặc đóng ngoặc_ thì biến i:

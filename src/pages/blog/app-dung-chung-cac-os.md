@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Apps dùng chung cho nhiều OS"
 description: "Hiện tại có ba hệ điều hành chính mà nhiều người dùng nhất theo thứ tự là: windows, macos và ubuntu."
 pubDate: "Feb 11 2022"
-heroImage: "/blog-cover.png"
+heroImage: "/blog-cover.jpg"
 ---
 
 Hiện tại có ba hệ điều hành chính mà nhiều người dùng nhất theo thứ tự là: windows, macos và ubuntu. Là một lập trình viên thì mình thường xuyên chuyển đổi giữa các hệ điều hành qua lại hằng ngày và thậm chí là mỗi tiếng nên vấn đề sử dụng phần mềm sao cho thống nhất quả là một điều cần thiết.

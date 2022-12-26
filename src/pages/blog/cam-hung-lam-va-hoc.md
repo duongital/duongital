@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Cảm hứng làm và học"
 description: "Lorem ipsum dolor sit amet"
 pubDate: "Jan 27 2020"
-heroImage: "/blog-cover.png"
+heroImage: "/blog-cover.jpg"
 ---
 
 Khỏi trả lời cũng biết là trên google. Tuy nhiên với theo kinh nghiệm cá nhân của mình thì không

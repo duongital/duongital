@@ -3,7 +3,7 @@ layout: "../../layouts/BlogPost.astro"
 title: "Dời nhà qua Astro"
 description: "Là một cái blog nhỏ thôi nhưng dời rất nhiều lần :))"
 pubDate: "Nov 26 2022"
-heroImage: "/blog-cover.png"
+heroImage: "/blog-cover.jpg"
 ---
 
 Mình lập cái blog này cũng lâu rồi mà dời nhà rất nhiều lần. Đầu tiên là Gatsby xong qua NextJS giờ là Astro, không biết xài bao lâu mà chuyển liên tục.
