@@ -9,6 +9,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+		<!-- Google tag (gtag.js) -->
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-0D8J8XRGJL"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-0D8J8XRGJL');
+		</script>
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
