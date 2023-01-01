@@ -1,16 +1,18 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Dời nhà qua Astro"
-description: "Là một cái blog nhỏ thôi nhưng dời rất nhiều lần :))"
+title: "Moving to Astro"
+description: "Just a small blog but changing source code many times :D"
 pubDate: "Nov 26 2022"
 heroImage: "/blog-cover.jpg"
 ---
 
-Mình lập cái blog này cũng lâu rồi mà dời nhà rất nhiều lần. Đầu tiên là Gatsby xong qua NextJS giờ là Astro, không biết xài bao lâu mà chuyển liên tục.
+I created this blog for long but changing the source code so many times. First one is Gatsby then NextJS and now is Astro, not sure how long it takes for the current one but it still evolving.
 
-Hy vọng với nhà mới mình sẽ siêng tập viết hơn và Google sẽ index nhanh hơn vì Astro support khá tốt cho các vấn đề này. Build và deploy thì dùng Cloudflare - 1st time luôn.
+Hopefully with this migration I will write more articles and Google will fast index my site because Astro has some plugins quite support to this.
 
-Bên dưới là một số ví dụ markdown của Astro hướng dẫn người dùng khi viết bài:
+This time I use Cloudflare pages, not same as last ones are: Vercel and Firebase Hosting.
+
+Below are examples of markdown:
 
 ## Headings
 
