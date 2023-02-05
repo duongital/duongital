@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPostVi.astro"
 title: "Bốn năm làm IT"
 description: "Cách đây 4 năm cũng rơi vô tháng 10 mình có offer đầu tiên trong nghề IT"
 pubDate: "Oct 24 2021"

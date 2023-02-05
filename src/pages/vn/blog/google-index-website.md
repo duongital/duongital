@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPostVi.astro"
 title: "Google index trang web như nào"
 description: "Khi làm một trang web với mục tiêu lên top tìm kiếm thì mình sẽ bắt đầu tập trung vào phần SEO"
 pubDate: "Aug 16 2022"

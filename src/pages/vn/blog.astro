@@ -1,9 +1,9 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import HeaderLink from '../components/HeaderLink.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
+import HeaderLink from '../../components/HeaderLink.astro';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
@@ -12,7 +12,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
@@ -54,7 +54,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 					}
 				</ul>
 			</section>
-			<HeaderLink href="/vn/blog">🇻🇳 Vietnamese</HeaderLink>
 		</main>
 		<Footer />
 	</body>

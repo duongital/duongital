@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPost.astro"
+layout: "../../../layouts/BlogPostVi.astro"
 title: "MEAN Stacks"
 description: "Tạo ứng dụng từ MEAN stack và build lên AWS"
 pubDate: "Jul 12 2020"
