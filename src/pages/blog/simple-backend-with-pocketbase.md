@@ -42,4 +42,8 @@ WantedBy=multi-user.target
 ```
 
 - now we start pocket base service `sudo systemctl start pocketbase.service`
+- go back to public IP address and check if PocketBase is running
 
+<img width="1415" alt="image" src="https://github.com/duongital/duongital/assets/5635533/4480556a-5934-4e78-bdbf-bd5608a217bb">
+
+Congratulations! We now can start with Frontend project and not worrying much about: authentication, data persistent, realtime api...
