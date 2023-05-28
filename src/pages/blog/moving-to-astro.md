@@ -3,7 +3,6 @@ layout: "../../layouts/BlogPost.astro"
 title: "Moving to Astro"
 description: "Just a small blog but changing source code many times :D"
 pubDate: "Nov 26 2022"
-heroImage: "/blog-cover.jpg"
 ---
 
 I created this blog for long but changing the source code so many times. First one is Gatsby then NextJS and now is Astro, not sure how long it takes for the current one but it still evolving.
