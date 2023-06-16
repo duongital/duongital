@@ -19,6 +19,7 @@
     "astro": "^1.6.11"
   },
   "devDependencies": {
+    "prettier": "^2.8.8",
     "prisma": "^4.15.0"
   }
 }

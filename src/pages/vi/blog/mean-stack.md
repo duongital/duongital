@@ -1,9 +1,9 @@
 ---
-layout: "../../../layouts/BlogPostVi.astro"
-title: "MEAN Stacks"
-description: "Tạo ứng dụng từ MEAN stack và build lên AWS"
-pubDate: "Jul 12 2020"
-heroImage: "/blog-cover.jpg"
+layout: '../../../layouts/BlogPostVi.astro'
+title: 'MEAN Stacks'
+description: 'Tạo ứng dụng từ MEAN stack và build lên AWS'
+pubDate: 'Jul 12 2020'
+heroImage: '/blog-cover.jpg'
 ---
 
 Tạo ứng dụng từ MEAN stack và build lên AWS

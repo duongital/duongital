@@ -1,5 +1,5 @@
 /// <reference types="astro/client" />
 
-    interface Window {
-        dataLayer: any;
-    }
+interface Window {
+  dataLayer: any
+}

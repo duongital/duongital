@@ -1,8 +1,8 @@
 ---
-layout: "../../layouts/BlogPost.astro"
-title: "Simple backend with PocketBase"
-description: "Just focus with Frontend then we have everything with Backend API available"
-pubDate: "May 14 2023"
+layout: '../../layouts/BlogPost.astro'
+title: 'Simple backend with PocketBase'
+description: 'Just focus with Frontend then we have everything with Backend API available'
+pubDate: 'May 14 2023'
 ---
 
 Having a running server on AWS or DigitalOcean
@@ -27,7 +27,7 @@ http {
 ```
 
 - we now forwarding all request from port 80 to port 8090 that PocketBase will run on the server
-- next step is to use `systemctl` to start PocketBase service, to create a new service, create a `*.servce` file in folder `/lib/systemd/system`, example: 
+- next step is to use `systemctl` to start PocketBase service, to create a new service, create a `*.servce` file in folder `/lib/systemd/system`, example:
 
 ```
 [Unit]

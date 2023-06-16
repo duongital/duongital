@@ -1,9 +1,9 @@
 ---
-layout: "../../../layouts/BlogPostVi.astro"
-title: "Bốn năm làm IT"
-description: "Cách đây 4 năm cũng rơi vô tháng 10 mình có offer đầu tiên trong nghề IT"
-pubDate: "Oct 24 2021"
-heroImage: "/blog-cover.jpg"
+layout: '../../../layouts/BlogPostVi.astro'
+title: 'Bốn năm làm IT'
+description: 'Cách đây 4 năm cũng rơi vô tháng 10 mình có offer đầu tiên trong nghề IT'
+pubDate: 'Oct 24 2021'
+heroImage: '/blog-cover.jpg'
 ---
 
 Cách đây 4 năm cũng rơi vô tháng 10 mình có offer đầu tiên trong nghề IT, lúc đó vui lắm kiểu như lần đầu tiên có việc làm bên nghề này nên rất là háo hức. Công ty cũng lớn nữa, dạng được niêm yết trên NYSE nên cũng kiểu nghĩ là điểm đến cuối cùng của mình luôn rồi. Ai ngờ sau này có nhiều thay đổi như vậy. Bốn năm trôi qua mình cũng nhảy được ba công ty rồi haha. Nghĩ lại hành trình này cũng chỉ mới bắt đầu. Cũng có gì đó gọi là cột mốc nên ghi lại vài dòng lưu lại chia sẻ một ít câu hỏi thắc mắc lúc mới bắt đầu định theo nghề.

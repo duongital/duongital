@@ -1,9 +1,9 @@
 ---
-layout: "../../../layouts/BlogPostVi.astro"
-title: "Google index trang web như nào"
-description: "Khi làm một trang web với mục tiêu lên top tìm kiếm thì mình sẽ bắt đầu tập trung vào phần SEO"
-pubDate: "Aug 16 2022"
-heroImage: "/blog-cover.jpg"
+layout: '../../../layouts/BlogPostVi.astro'
+title: 'Google index trang web như nào'
+description: 'Khi làm một trang web với mục tiêu lên top tìm kiếm thì mình sẽ bắt đầu tập trung vào phần SEO'
+pubDate: 'Aug 16 2022'
+heroImage: '/blog-cover.jpg'
 ---
 
 Khi làm một trang web với mục tiêu lên top tìm kiếm thì mình sẽ bắt đầu tập trung vào phần SEO. Lúc trước mình cũng quan tâm lắm, gần đây mọi người nhờ làm web giùm có hay yêu cầu thì mình cũng nghĩ tới phần này nhiều hơn.
