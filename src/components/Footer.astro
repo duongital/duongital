@@ -1,10 +1,17 @@
 ---
+import HeaderLink from './HeaderLink.astro'
 const today = new Date()
 ---
 
 <footer>
-  &copy; {today.getFullYear()} Duong Nguyen. All rights reserved.
+  <span>find me on:</span>
+  <nav class="flex gap-x-2">
+    <HeaderLink href="https://twitter.com/duongital">twitter</HeaderLink>
+    <HeaderLink href="https://github.com/duongital">github</HeaderLink>
+  </nav>
 </footer>
+
+
 <style>
   footer {
     padding: 25px 0;
