@@ -35,7 +35,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
       }
     </style>
   </head>
-  <body class="container mx-auto">
+  <body class="max-w-lg mx-auto">
     <Header />
     <main>
       <section>
@@ -59,7 +59,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
           }
         </ul>
       </section>
-      <HeaderLink href="/vi/blog">🇻🇳 Vietnamese</HeaderLink>
+      <HeaderLink class="my-8" href="/vi/blog">🇻🇳 Vietnamese</HeaderLink>
     </main>
     <Footer />
   </body>

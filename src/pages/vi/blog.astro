@@ -35,11 +35,10 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
       }
     </style>
   </head>
-  <body class="container mx-auto">
+  <body class="max-w-lg mx-auto">
     <Header />
     <main>
       <section>
-        <p>Một vài bài viết và suy nghĩ về lập trình</p>
         <ul>
           {
             posts.map((post) => (

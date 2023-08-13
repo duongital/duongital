@@ -4,4 +4,5 @@
 
 body {
   @apply px-4 py-12;
+  font-family: 'JetBrains Mono Variable', sans-serif;
 }
