@@ -6,3 +6,25 @@ body {
   @apply px-4 py-12;
   font-family: 'JetBrains Mono Variable', sans-serif;
 }
+
+hr, p {
+  @apply my-4 !important;
+}
+
+ul {
+  @apply my-4 !important;
+}
+
+li {
+  @apply list-disc text-sm !important;
+}
+
+pre {
+  @apply text-xs p-4 rounded-md !important;
+}
+
+a {
+  @apply text-gray-600 underline !important;
+}
+
+/* todo h1 -- h6 */

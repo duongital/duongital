@@ -59,7 +59,9 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
           }
         </ul>
       </section>
-      <HeaderLink class="my-8" href="/vi/blog">🇻🇳 Vietnamese</HeaderLink>
+      <HeaderLink class="my-8" href="/vi/blog">
+        <span class="text-xs">Vietnamese</span>
+      </HeaderLink>
     </main>
     <Footer />
   </body>
