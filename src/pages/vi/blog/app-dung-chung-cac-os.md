@@ -1,5 +1,5 @@
 ---
-layout: '../../../layouts/BlogPostVi.astro'
+layout: '../../../layouts/BlogPost.astro'
 title: 'Apps dùng chung cho nhiều OS'
 description: 'Hiện tại có ba hệ điều hành chính mà nhiều người dùng nhất theo thứ tự là: windows, macos và ubuntu.'
 pubDate: 'Feb 11 2022'

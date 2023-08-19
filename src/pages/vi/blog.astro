@@ -43,7 +43,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
           {
             posts.map((post) => (
               <li>
-                <time datetime={post.frontmatter.pubDate}>
+                <time class="hidden md:block" datetime={post.frontmatter.pubDate}>
                   {new Date(post.frontmatter.pubDate).toLocaleDateString(
                     'en-us',
                     {
@@ -59,9 +59,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
           }
         </ul>
       </section>
-      <HeaderLink class="my-8" href="/blog">
-        <span class="text-xs">English</span>
-      </HeaderLink>
     </main>
     <Footer />
   </body>

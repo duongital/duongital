@@ -5,9 +5,7 @@ description: 'Just focus with Frontend then we have everything with Backend API 
 pubDate: 'May 14 2023'
 ---
 
-Having a running server on AWS or DigitalOcean
-
-SSH to the server and doing following:
+Having a running server on AWS or DigitalOcean, SSH to the server and doing following:
 
 - download latest PocketBase zip file from [PocketBase](https://pocketbase.io/docs/)
 - install unzip app to extract the zip file `sudo apt install unzip`
