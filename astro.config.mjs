@@ -7,6 +7,9 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    base: ""
+  },
   site: 'https://duongital.com',
   integrations: [mdx(), sitemap(), partytown({
     config: {
