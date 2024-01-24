@@ -6,7 +6,7 @@ pubDate: 'Jan 24 2024'
 ---
 
 <!-- ![javascript meme](attachments/test.png) -->
-![javascript meme](attachments/demo.png)
+![javascript meme](./attachments/demo.png)
 
 # general knowledge
 
