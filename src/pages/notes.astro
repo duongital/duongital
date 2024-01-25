@@ -7,7 +7,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 import LottieAnimation from 'astro-integration-lottie/Lottie.astro'
 import { getCollection } from 'astro:content'
 
-let allLearn = await getCollection('learn')
+let allNotes = await getCollection('notes')
 ---
 
 <!DOCTYPE html>
@@ -20,16 +20,16 @@ let allLearn = await getCollection('learn')
     <main transition:animate={fade({ duration: '50ms' })}>
       <section>
         <div class="flex gap-x-4 items-center">
-          <h2 class="text-4xl font-mono">Learning Topics</h2>
+          <h2 class="text-4xl font-mono">My Notes</h2>
           <div class="w-12 h-12">
             <LottieAnimation src="/assets/Robot.json" />
           </div>
         </div>
         <ul>
           {
-            allLearn.map((post) => (
+            allNotes.map((post) => (
               <li class="my-4">
-                <a class="text-lg" href={`/learn/${post.slug}`}>
+                <a class="text-lg" href={`/notes/${post.slug}`}>
                   {post.id}
                 </a>
               </li>

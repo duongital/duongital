@@ -242,6 +242,162 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".md"] };
 };
+"notes": {
+"README.md": {
+	id: "README.md";
+  slug: "readme";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"algorithm.md": {
+	id: "algorithm.md";
+  slug: "algorithm";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"c-cpp.md": {
+	id: "c-cpp.md";
+  slug: "c-cpp";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"data-structure.md": {
+	id: "data-structure.md";
+  slug: "data-structure";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"design-pattern.md": {
+	id: "design-pattern.md";
+  slug: "design-pattern";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"devops.md": {
+	id: "devops.md";
+  slug: "devops";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"excel.md": {
+	id: "excel.md";
+  slug: "excel";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"functional-programming.md": {
+	id: "functional-programming.md";
+  slug: "functional-programming";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"git.md": {
+	id: "git.md";
+  slug: "git";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"golang.md": {
+	id: "golang.md";
+  slug: "golang";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"linux.md": {
+	id: "linux.md";
+  slug: "linux";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"nginx-apache.md": {
+	id: "nginx-apache.md";
+  slug: "nginx-apache";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"nodejs.md": {
+	id: "nodejs.md";
+  slug: "nodejs";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"odoo.md": {
+	id: "odoo.md";
+  slug: "odoo";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"python.md": {
+	id: "python.md";
+  slug: "python";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"random.md": {
+	id: "random.md";
+  slug: "random";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"rust.md": {
+	id: "rust.md";
+  slug: "rust";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"sql.md": {
+	id: "sql.md";
+  slug: "sql";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"terminal.md": {
+	id: "terminal.md";
+  slug: "terminal";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"typescript.md": {
+	id: "typescript.md";
+  slug: "typescript";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"uml.md": {
+	id: "uml.md";
+  slug: "uml";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"vim.md": {
+	id: "vim.md";
+  slug: "vim";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+};
 "posts": {
 "70-480.md": {
 	id: "70-480.md";

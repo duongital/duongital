@@ -12,21 +12,17 @@ hr, p {
   @apply my-4 !important;
 }
 
-ul, ol {
-  @apply my-4 list-inside !important;
-}
-
-/* ol {
+ul {
   @apply my-4 !important;
-} */
+}
 
 ul li {
   @apply list-disc text-sm !important;
 }
 
-li::marker {
+/* li::marker {
   @apply flex !important;
-}
+} */
 
 ol li {
   @apply list-decimal text-sm !important;
