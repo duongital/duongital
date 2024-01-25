@@ -184,7 +184,65 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"posts": {
+		"learn": {
+"cs/network.md": {
+	id: "cs/network.md";
+  slug: "cs/network";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"react/josh-css.md": {
+	id: "react/josh-css.md";
+  slug: "react/josh-css";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"react/react-hook-advanced.md": {
+	id: "react/react-hook-advanced.md";
+  slug: "react/react-hook-advanced";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"react/react-hook.md": {
+	id: "react/react-hook.md";
+  slug: "react/react-hook";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"react/react-patterns.md": {
+	id: "react/react-patterns.md";
+  slug: "react/react-patterns";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"react/react-performance.md": {
+	id: "react/react-performance.md";
+  slug: "react/react-performance";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"react/react-testing.md": {
+	id: "react/react-testing.md";
+  slug: "react/react-testing";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"react/useful-links.md": {
+	id: "react/useful-links.md";
+  slug: "react/useful-links";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+};
+"posts": {
 "70-480.md": {
 	id: "70-480.md";
   slug: "70-480";
@@ -212,57 +270,6 @@ declare module 'astro:content' {
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-};
-"react": {
-"josh-css.md": {
-	id: "josh-css.md";
-  slug: "josh-css";
-  body: string;
-  collection: "react";
-  data: any
-} & { render(): Render[".md"] };
-"react-hook-advanced.md": {
-	id: "react-hook-advanced.md";
-  slug: "react-hook-advanced";
-  body: string;
-  collection: "react";
-  data: any
-} & { render(): Render[".md"] };
-"react-hook.md": {
-	id: "react-hook.md";
-  slug: "react-hook";
-  body: string;
-  collection: "react";
-  data: any
-} & { render(): Render[".md"] };
-"react-patterns.md": {
-	id: "react-patterns.md";
-  slug: "react-patterns";
-  body: string;
-  collection: "react";
-  data: any
-} & { render(): Render[".md"] };
-"react-performance.md": {
-	id: "react-performance.md";
-  slug: "react-performance";
-  body: string;
-  collection: "react";
-  data: any
-} & { render(): Render[".md"] };
-"react-testing.md": {
-	id: "react-testing.md";
-  slug: "react-testing";
-  body: string;
-  collection: "react";
-  data: any
-} & { render(): Render[".md"] };
-"useful-links.md": {
-	id: "useful-links.md";
-  slug: "useful-links";
-  body: string;
-  collection: "react";
-  data: any
 } & { render(): Render[".md"] };
 };
 

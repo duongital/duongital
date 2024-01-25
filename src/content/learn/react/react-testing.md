@@ -1,6 +1,6 @@
 #react 
 
-# clip 153: 
+# 153: 
 
 ## tìm hiểu testing là gì: 
 
@@ -60,37 +60,37 @@ import * as utilsMock from '../utils'
 jest.mock('../utils')
 ```
 
-# clip 156: 
+# 156: 
 
 - Jest lúc runtime sẽ tự hiểu DOM là gì và mình có thể createElement hay làm các thứ liên quan đến DOM đều được.
 
-# clip 158
+# 158
 
 - lưu ý việc xóa đi những gì mình điều chỉnh là rất quan trọng cho những test sau, vì nếu không chỉnh lại như trước đó thì có thể gây ra lỗi vì những test sau gọi lại element đó. Đó cũng là lý do tại sao mà sau khi mock function rồi thì mình phải trả lại nguyên bản trước đó. Thông thường thì mình dùng hàm `beforeEach()` để reset cái không cần thay đổi cho mỗi test.
 
-# clip 159
+# 159
 
 - thông thường DOM.click() thì sẽ không đủ cho các events vậy nên ta cần phải dùng đến web api là `dispatchEvent()` với param nhận và là `MouseEvent` cho các sự kiện như mousehover...
 
-# clip 161
+# 161
 
 - _react testing library_ có hàm `render` dùng để thay thế cho react_dom dùng kết hợp với jest để render vào DOM ảo ở trong Jest, lúc này hàm `render` của _react testing library_ sẽ tự động append vào body của DOM ảo của Jest, đồng thời sau mỗi hàm _test_ thì sẽ tự động unmount ra khỏi DOM ảo đó và mình cũng không cần tự handle bằng tay trong hook beforeEach
 
-# clip 162
+# 162
 
 - `fireEvent` là hàm thuộc về testing library mô phỏng các sự kiện handle như: click, mousehover... 
 
 - thường mình sẽ gán một component sau khi render bằng cách sau: `const {container} = render(<Counter/>)`
 
-# clip 163
+# 163
 
 - để sử dụng được hàm `.toHaveTextContent` thì mình cần phải import thêm library `@testing-library/jest-dom/extend-expect`
 
-# clip 164
+# 164
 
 - _test implementation detail free_ là khái niệm viết test để làm sao đó khi src code mình thay đổi thì các test case không cần phải viết lại, hoặc điều chỉnh ít thôi. Ví dụ use case của react là trước đó mình class component, sau đó chuyển sang functional component
 
-# clip 165
+# 165
 
 - sử dụng hàm screen để lấy DOM chắn chắn hơn, xem trong acessability (xem lại clip)
 
@@ -105,11 +105,7 @@ mock function: jest.fn()
 169: toHaveBeenCalledWith, toHaveBeenCalledTimes
 170: faker
 
-# clip 174
-
-call API
-
-image.png
+# 174
 
 getting from: https://asciiflow.com/
 

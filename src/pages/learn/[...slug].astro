@@ -6,7 +6,7 @@ import Header from '../../components/Header.astro'
 import BaseHead from '../../components/BaseHead.astro'
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('react')
+  const blogEntries = await getCollection('learn')
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -34,7 +34,7 @@ const { Content } = await entry.render()
 
   <body class="max-w-lg mx-auto blog">
     <Header />
-    <main transition:animate={fade({ duration: '200ms' })}>
+    <main transition:animate={fade({ duration: '50ms' })}>
       <article>
         <Content />
       </article>

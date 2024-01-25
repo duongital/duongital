@@ -5,7 +5,7 @@ import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
-import HeaderLink from '../components/HeaderLink.astro'
+import LottieAnimation from 'astro-integration-lottie/Lottie.astro'
 import { getCollection } from 'astro:content'
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -20,7 +20,7 @@ allPosts = allPosts.sort(
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
 )
 
-let allReact = await getCollection('react')
+let allLearn = await getCollection('learn')
 ---
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ let allReact = await getCollection('react')
   </head>
   <body class="max-w-lg mx-auto">
     <Header />
-    <main transition:animate={fade({ duration: '200ms' })}>
+    <main transition:animate={fade({ duration: '50ms' })}>
       <!-- <section>
         <h1>Blog Posts:</h1>
         <ul>
@@ -68,12 +68,19 @@ let allReact = await getCollection('react')
         </ul>
       </section> -->
       <section>
-        <h1>Learn: ReactJS</h1>
+        <div class="flex gap-x-4 items-center">
+          <h2 class="text-4xl font-mono">Learning Notes</h2>
+          <div class="w-12 h-12">
+            <LottieAnimation src="/assets/Robot.json" />
+          </div>
+        </div>
         <ul>
           {
-            allReact.map((post) => (
-              <li class="my-1.5">
-                <a href={`/react/${post.slug}`}>{post.id}</a>
+            allLearn.map((post) => (
+              <li class="my-4">
+                <a class="text-lg" href={`/learn/${post.slug}`}>
+                  {post.id}
+                </a>
               </li>
             ))
           }
