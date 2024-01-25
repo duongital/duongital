@@ -4,13 +4,15 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 import HeaderLink from '../components/HeaderLink.astro'
+import { getCollection } from 'astro:content'
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-)
+// const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+//   (a, b) =>
+//     new Date(b.frontmatter.pubDate).valueOf() -
+//     new Date(a.frontmatter.pubDate).valueOf()
+// )
+const allPosts = await getCollection('posts')
 ---
 
 <!DOCTYPE html>
@@ -41,19 +43,16 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
       <section>
         <ul>
           {
-            posts.map((post) => (
+            allPosts.map((post) => (
               <li class="my-1.5">
-                <time class="hidden md:block" datetime={post.frontmatter.pubDate}>
-                  {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                    'en-us',
-                    {
-                      year: 'numeric',
-                      month: 'short',
-                      day: 'numeric',
-                    }
-                  )}
+                <time class="hidden md:block" datetime={post.data.pubDate}>
+                  {new Date(post.data.pubDate).toLocaleDateString('en-us', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
                 </time>
-                <a href={post.url}>{post.frontmatter.title}</a>
+                <a href={`blog/${post.slug}`}>{post.data.title}</a>
               </li>
             ))
           }

@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/BlogPost.astro'
 title: 'Javascript Snippets'
 description: 'Some thoughts about JS code'
 pubDate: 'Jan 24 2024'
