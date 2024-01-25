@@ -1,36 +1,32 @@
 ---
+import { Content as ReadMe } from '../../README.md'
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+import { fade } from 'astro:transitions'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 ---
 
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-0D8J8XRGJL"
-    ></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
+    <style>
+      .title {
+        font-size: 2em;
+        margin: 0.25em 0 0;
       }
-      gtag('js', new Date())
-      gtag('config', 'G-0D8J8XRGJL')
-    </script>
+      hr {
+        border-top: 1px solid #ddd;
+        margin: 1rem 0;
+      }
+    </style>
   </head>
-  <body class="max-w-lg mx-auto">
-    <Header title={SITE_TITLE} />
-    <main>
-      <p>Hi 👋 I'm Duong</p>
-      <p>
-        I am learning Computer Science and write notes here!
-      </p>
+
+  <body class="max-w-lg mx-auto blog">
+    <Header />
+    <main transition:animate={fade({ duration: '200ms' })}>
+      <article>
+        <ReadMe />
+      </article>
     </main>
   </body>
 </html>
