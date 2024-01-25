@@ -1,11 +1,12 @@
 ---
+import { fade } from 'astro:transitions'
 import { getCollection } from 'astro:content'
+
 import Header from '../../components/Header.astro'
 import BaseHead from '../../components/BaseHead.astro'
-import { fade } from 'astro:transitions'
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('posts')
+  const blogEntries = await getCollection('react')
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -18,15 +19,25 @@ const { Content } = await entry.render()
 
 <html lang="en">
   <head>
-    <BaseHead title={entry.data.title} description={entry.data.description} />
+    <BaseHead title="@duongital - ReactJS" description="Learn React JS" />
+    <style>
+      .title {
+        font-size: 2em;
+        margin: 0.25em 0 0;
+      }
+      hr {
+        border-top: 1px solid #ddd;
+        margin: 1rem 0;
+      }
+    </style>
   </head>
 
   <body class="max-w-lg mx-auto blog">
+    <Header />
     <main transition:animate={fade({ duration: '200ms' })}>
       <article>
         <Content />
       </article>
     </main>
-    <Content />
   </body>
 </html>

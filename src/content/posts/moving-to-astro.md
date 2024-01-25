@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/BlogPost.astro'
 title: 'Moving to Astro'
 description: 'Just a small blog but changing source code many times :D'
 pubDate: 'Nov 26 2022'

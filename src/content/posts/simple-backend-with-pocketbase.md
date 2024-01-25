@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/BlogPost.astro'
 title: 'Simple backend with PocketBase'
 description: 'Just focus with Frontend then we have everything with Backend API available'
 pubDate: 'May 14 2023'

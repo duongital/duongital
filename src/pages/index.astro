@@ -4,6 +4,13 @@ import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import { fade } from 'astro:transitions'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
+import { getCollection } from 'astro:content'
+
+let allPosts = await getCollection('posts')
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
+)
 ---
 
 <html lang="en">
@@ -27,6 +34,25 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
       <article>
         <ReadMe />
       </article>
+      <section>
+        <h1>Thoughts:</h1>
+        <ul>
+          {
+            allPosts.map((post) => (
+              <li class="my-1.5 flex gap-x-4">
+                <span class="hidden md:block">
+                  {new Date(post.data.pubDate).toLocaleDateString('en-us', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                  })}
+                </span>
+                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </main>
   </body>
 </html>

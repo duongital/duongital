@@ -214,6 +214,57 @@ declare module 'astro:content' {
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 };
+"react": {
+"josh-css.md": {
+	id: "josh-css.md";
+  slug: "josh-css";
+  body: string;
+  collection: "react";
+  data: any
+} & { render(): Render[".md"] };
+"react-hook-advanced.md": {
+	id: "react-hook-advanced.md";
+  slug: "react-hook-advanced";
+  body: string;
+  collection: "react";
+  data: any
+} & { render(): Render[".md"] };
+"react-hook.md": {
+	id: "react-hook.md";
+  slug: "react-hook";
+  body: string;
+  collection: "react";
+  data: any
+} & { render(): Render[".md"] };
+"react-patterns.md": {
+	id: "react-patterns.md";
+  slug: "react-patterns";
+  body: string;
+  collection: "react";
+  data: any
+} & { render(): Render[".md"] };
+"react-performance.md": {
+	id: "react-performance.md";
+  slug: "react-performance";
+  body: string;
+  collection: "react";
+  data: any
+} & { render(): Render[".md"] };
+"react-testing.md": {
+	id: "react-testing.md";
+  slug: "react-testing";
+  body: string;
+  collection: "react";
+  data: any
+} & { render(): Render[".md"] };
+"useful-links.md": {
+	id: "useful-links.md";
+  slug: "useful-links";
+  body: string;
+  collection: "react";
+  data: any
+} & { render(): Render[".md"] };
+};
 
 	};
 
