@@ -42,7 +42,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
         <ul>
           {
             posts.map((post) => (
-              <li>
+              <li class="my-1.5">
                 <time class="hidden md:block" datetime={post.frontmatter.pubDate}>
                   {new Date(post.frontmatter.pubDate).toLocaleDateString(
                     'en-us',
@@ -60,6 +60,5 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
         </ul>
       </section>
     </main>
-    <Footer />
   </body>
 </html>

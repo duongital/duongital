@@ -4,7 +4,8 @@
 
 body {
   @apply px-4 py-12;
-  font-family: 'JetBrains Mono Variable', sans-serif;
+  font-size: 16px;
+  font-family: 'Garamond', 'Verdana', sans-serif;
 }
 
 hr, p {
@@ -41,15 +42,15 @@ a {
 
 /* todo h1 -- h6 */
 h1 {
-  @apply text-5xl !important;
+  @apply text-2xl !important;
 }
 
 h2 {
-  @apply text-4xl !important;
+  @apply text-2xl !important;
 }
 
 h3 {
-  @apply text-3xl !important;
+  @apply text-2xl !important;
 }
 
 h4 {
@@ -66,12 +67,19 @@ h6 {
 
 blockquote {
   @apply text-sm italic font-semibold text-gray-900 dark:text-white pl-4 border-l-4 !important;
+  font-family: 'JetBrains Mono Variable', sans-serif;
 }
 
 code {
-  @apply bg-gray-200 text-xs px-1 py-0.5 rounded-sm !important;
+  @apply bg-gray-100 text-xs px-1 py-0.5 rounded-sm !important;
+  font-family: 'JetBrains Mono Variable', sans-serif;
 }
 
 pre > code {
   @apply bg-transparent text-xs not-italic !important;
+  font-family: 'JetBrains Mono Variable', sans-serif;
+}
+
+.astro-code {
+  border: 1px solid gainsboro;
 }

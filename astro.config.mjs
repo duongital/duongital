@@ -8,6 +8,12 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://duongital.com',
+  markdown: {
+    shikiConfig: {
+      // theme: "github-light"
+      theme: "slack-ochin"
+    }
+  },
   integrations: [mdx(), sitemap(), partytown({
     config: {
       forward: ['dataLayer.push']
