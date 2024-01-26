@@ -185,9 +185,65 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"learn": {
-"cs/network.md": {
-	id: "cs/network.md";
-  slug: "cs/network";
+"cs/1-programming.md": {
+	id: "cs/1-programming.md";
+  slug: "cs/1-programming";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/2-computer-arch.md": {
+	id: "cs/2-computer-arch.md";
+  slug: "cs/2-computer-arch";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/3-algorithms-and-ds.md": {
+	id: "cs/3-algorithms-and-ds.md";
+  slug: "cs/3-algorithms-and-ds";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/4-math.md": {
+	id: "cs/4-math.md";
+  slug: "cs/4-math";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/5-os.md": {
+	id: "cs/5-os.md";
+  slug: "cs/5-os";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/6-networking.md": {
+	id: "cs/6-networking.md";
+  slug: "cs/6-networking";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/7-database.md": {
+	id: "cs/7-database.md";
+  slug: "cs/7-database";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/8-languages-and-compilers.md": {
+	id: "cs/8-languages-and-compilers.md";
+  slug: "cs/8-languages-and-compilers";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cs/9-distributed-systems.md": {
+	id: "cs/9-distributed-systems.md";
+  slug: "cs/9-distributed-systems";
   body: string;
   collection: "learn";
   data: any
