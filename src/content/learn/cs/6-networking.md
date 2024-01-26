@@ -1,6 +1,5 @@
-# internet protocols
-
 ![getting started](https://media.giphy.com/media/gegsYiciYvqmA5CwT7/giphy.gif)
+*Let's go!*
 
 Common phrases:
 
@@ -47,7 +46,10 @@ The OSI (Open Systems Interconnection) model is a conceptual framework that help
 
 These are just examples, and there are many other protocols that align with different layers of the OSI model. The model helps in conceptualizing the interactions and functions of these protocols in a systematic way.
 
-# OSI model:
+# OSI model vs TCP/IP model
+
+![osi vs tcp](attachments/20240126-osi-vs-tcpip.png)
+*OSI model is outdated and mostly replaced by TCP/IP model today*
 
 The Open Systems Interconnection (OSI) model is a conceptual framework that standardizes the functions of a network into seven categories or layers. These layers are: Physical, Data Link, Network, Transport, Session, Presentation, and Application. This model is used to understand and describe how different network protocols interact and work together to provide network services [Source 1](https://en.wikipedia.org/wiki/OSI_model), [Source 2](https://aws.amazon.com/what-is/osi-model/), [Source 3](https://www.techtarget.com/searchnetworking/definition/OSI), [Source 4](https://www.forcepoint.com/cyber-edu/osi-model).
 
@@ -69,24 +71,6 @@ The OSI model is important because it provides a common language for computer ne
 
 ![7 layers](./attachments/20240125-7-layers.png)
 *7 layers of OSI model*
-
-Let's consider a practical scenario to illustrate how the OSI model works. Suppose you want to visit a website. Here's how the OSI model comes into play:
-
-1. **Application Layer**: You open a web browser and type in the URL of the website you want to visit. The application layer handles this request [Source 4](https://study.com/academy/lesson/osi-model-using-open-systems-interconnection-to-send-and-receive-data.html).
-
-2. **Presentation Layer**: The data that makes up the website (like text, images, videos, etc.) is formatted and presented in a way that your browser can understand [Source 4](https://study.com/academy/lesson/osi-model-using-open-systems-interconnection-to-send-and-receive-data.html).
-
-3. **Session Layer**: Your browser initiates a session with the server hosting the website. This layer is responsible for setting up, maintaining, and terminating the session [Source 4](https://study.com/academy/lesson/osi-model-using-open-systems-interconnection-to-send-and-receive-data.html).
-
-4. **Transport Layer**: The data from your browser is broken down into smaller pieces called segments, which are then sent over the network. This layer ensures that the data arrives reliably and in the correct order [Source 4](https://study.com/academy/lesson/osi-model-using-open-systems-interconnection-to-send-and-receive-data.html).
-
-5. **Network Layer**: These segments are then grouped into packets and sent to the server. The network layer determines the best route for these packets to take to reach the server [Source 4](https://study.com/academy/lesson/osi-model-using-open-systems-interconnection-to-send-and-receive-data.html).
-
-6. **Data Link Layer**: The packets are then converted into frames, which are sent over the physical medium (like your home Wi-Fi or cellular network). This layer also handles error correction if any corruption occurs during transmission [Source 4](https://study.com/academy/lesson/osi-model-using-open-systems-interconnection-to-send-and-receive-data.html).
-
-7. **Physical Layer**: Finally, the frames are converted into electrical signals (or radio waves in the case of cellular networks) that can be transmitted over the network. This layer is responsible for the actual physical transmission of data [Source 4](https://study.com/academy/lesson/osi-model-using-open-systems-interconnection-to-send-and-receive-data.html).
-
-Once the server receives the request, it goes through the same layers in reverse to send the requested webpage back to your browser. The OSI model helps us understand how all these processes fit together to enable us to browse the web.
 
 # CSMA/CD vs TCP/IP
 
