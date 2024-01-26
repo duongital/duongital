@@ -83,3 +83,7 @@ pre > code {
 .astro-code {
   border: 1px solid gainsboro;
 }
+
+p > em {
+  @apply block text-center text-sm;
+}

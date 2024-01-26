@@ -243,13 +243,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "notes": {
-"README.md": {
-	id: "README.md";
-  slug: "readme";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "algorithm.md": {
 	id: "algorithm.md";
   slug: "algorithm";

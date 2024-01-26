@@ -1,0 +1,1 @@
+CS is basically a runaway branch of applied math, so learning math will give you a competitive advantage.

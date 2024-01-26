@@ -114,6 +114,7 @@ let a = 'string' | 'number'
 
 all example goes here: [link](../ref/type.ts)
 
+
 ## intersect hai kiểu lại với nhau
 
 ```typescript

@@ -1,6 +1,6 @@
 # class diagram
 
-desribe Class structure
+Class structure
 
 # object diagram
 
