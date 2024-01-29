@@ -22,6 +22,7 @@ const { Content } = await entry.render()
   </head>
 
   <body class="max-w-lg mx-auto blog">
+    <Header />
     <main transition:animate={fade({ duration: '50ms' })}>
       <article>
         <Content />

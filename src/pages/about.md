@@ -1,6 +1,6 @@
 ---
 layout: '../layouts/BlogPost.astro'
-title: '@duongital - About'
+title: 'About Me'
 description: 'Senior Frontend Engineer with over  4  years of  experience in the field.'
 updatedDate: 'November 21 2022'
 ---

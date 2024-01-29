@@ -404,16 +404,16 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"linux.md": {
-	id: "linux.md";
-  slug: "linux";
+"nginx-apache.md": {
+	id: "nginx-apache.md";
+  slug: "nginx-apache";
   body: string;
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"nginx-apache.md": {
-	id: "nginx-apache.md";
-  slug: "nginx-apache";
+"operating-system.md": {
+	id: "operating-system.md";
+  slug: "operating-system";
   body: string;
   collection: "notes";
   data: any
