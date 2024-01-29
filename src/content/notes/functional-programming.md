@@ -1,3 +1,8 @@
+---
+title: 'Functional Programming'
+description: 'Serveral languages using functional paradigm'
+---
+
 below are list of some functional programming languages:
 
 # ocaml

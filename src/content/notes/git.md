@@ -1,3 +1,7 @@
+---
+title: 'Version Management with Git'
+description: 'A Powerful tool to manage version and release over time.'
+---
 
 # general knowledge:
 

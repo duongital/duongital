@@ -48,7 +48,7 @@ These are just examples, and there are many other protocols that align with diff
 
 # OSI model vs TCP/IP model
 
-![osi vs tcp](attachments/20240126-osi-vs-tcpip.png)
+![osi vs tcp](./attachments/20240126-osi-vs-tcpip.png)
 *OSI model is outdated and mostly replaced by TCP/IP model today*
 
 The Open Systems Interconnection (OSI) model is a conceptual framework that standardizes the functions of a network into seven categories or layers. These layers are: Physical, Data Link, Network, Transport, Session, Presentation, and Application. This model is used to understand and describe how different network protocols interact and work together to provide network services [Source 1](https://en.wikipedia.org/wiki/OSI_model), [Source 2](https://aws.amazon.com/what-is/osi-model/), [Source 3](https://www.techtarget.com/searchnetworking/definition/OSI), [Source 4](https://www.forcepoint.com/cyber-edu/osi-model).

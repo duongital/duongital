@@ -1,8 +1,6 @@
 # Hi 👋 I'm Duong
 
-Keep learning Computer Science and take notes here!
-
-To do:
-
-- [ ] create BaseLayout and use for pages: `index` and `about`
-- [ ] prepare content for CS topics
+- title: Frontend Developer
+- learning: CS and React, [random pieces noted here](/learn)
+- playing: Pokemon Alpha Sapphie
+- plan: write an application to override Browser's new tab

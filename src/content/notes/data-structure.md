@@ -1,3 +1,8 @@
+---
+title: 'Data Structure'
+description: 'All types of Data Structure that we use everyday.'
+---
+
 # 🥕 arrays representations
 
 ---

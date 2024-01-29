@@ -185,6 +185,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"learn": {
+"cs/0-notes.md": {
+	id: "cs/0-notes.md";
+  slug: "cs/0-notes";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
 "cs/1-programming.md": {
 	id: "cs/1-programming.md";
   slug: "cs/1-programming";
@@ -248,6 +255,55 @@ declare module 'astro:content' {
   collection: "learn";
   data: any
 } & { render(): Render[".md"] };
+"lang/c-cpp.md": {
+	id: "lang/c-cpp.md";
+  slug: "lang/c-cpp";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"lang/golang.md": {
+	id: "lang/golang.md";
+  slug: "lang/golang";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"lang/nodejs.md": {
+	id: "lang/nodejs.md";
+  slug: "lang/nodejs";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"lang/rust.md": {
+	id: "lang/rust.md";
+  slug: "lang/rust";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"lang/sql.md": {
+	id: "lang/sql.md";
+  slug: "lang/sql";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"lang/typescript.md": {
+	id: "lang/typescript.md";
+  slug: "lang/typescript";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"misc/odoo.md": {
+	id: "misc/odoo.md";
+  slug: "misc/odoo";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
 "react/josh-css.md": {
 	id: "react/josh-css.md";
   slug: "react/josh-css";
@@ -306,13 +362,6 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"c-cpp.md": {
-	id: "c-cpp.md";
-  slug: "c-cpp";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "data-structure.md": {
 	id: "data-structure.md";
   slug: "data-structure";
@@ -327,9 +376,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"devops.md": {
-	id: "devops.md";
-  slug: "devops";
+"docker-kube.md": {
+	id: "docker-kube.md";
+  slug: "docker-kube";
   body: string;
   collection: "notes";
   data: any
@@ -355,13 +404,6 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"golang.md": {
-	id: "golang.md";
-  slug: "golang";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "linux.md": {
 	id: "linux.md";
   slug: "linux";
@@ -376,58 +418,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"nodejs.md": {
-	id: "nodejs.md";
-  slug: "nodejs";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"odoo.md": {
-	id: "odoo.md";
-  slug: "odoo";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"python.md": {
-	id: "python.md";
-  slug: "python";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"random.md": {
-	id: "random.md";
-  slug: "random";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"rust.md": {
-	id: "rust.md";
-  slug: "rust";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"sql.md": {
-	id: "sql.md";
-  slug: "sql";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "terminal.md": {
 	id: "terminal.md";
   slug: "terminal";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"typescript.md": {
-	id: "typescript.md";
-  slug: "typescript";
   body: string;
   collection: "notes";
   data: any
@@ -451,13 +444,6 @@ declare module 'astro:content' {
 "70-480.md": {
 	id: "70-480.md";
   slug: "70-480";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
-"javascript-snippets.md": {
-	id: "javascript-snippets.md";
-  slug: "javascript-snippets";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

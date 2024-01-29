@@ -1,3 +1,7 @@
+---
+title: 'Writing with Vim'
+description: 'It is faster for normal and simple writing.'
+---
 
 # vim shortcuts
 

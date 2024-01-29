@@ -1,4 +1,9 @@
-operating system
+---
+title: 'Operating System'
+description: 'Normally using Ubuntu, Windows and MacOS'
+---
+
+# Linux
 
 - list all ports are running `sudo lsof -iTCP -sTCP:LISTEN -n -P`
 - kill a port is running `kill -9 PID`

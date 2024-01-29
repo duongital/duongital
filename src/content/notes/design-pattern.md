@@ -1,3 +1,8 @@
+---
+title: 'Design Pattern'
+description: 'Some design patterns in OOP languages: Java, C#...'
+---
+
 có vẻ các ngôn ngữ (typescript, c++...) hay cách thiết kế của database (mysql, postgresql...) đều đang muốn ràng buộc vào lúc khởi tạo, điều này đang giúp mình trong quá compile hay runtime rào lại và quăng ra các lỗi có liên quan ⇒ từ đó giúp dev có thể suy nghĩ lại về logic do mình tạo ra là hợp lý hay không.
 
 # creation

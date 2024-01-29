@@ -1,3 +1,8 @@
+---
+title: 'Common Web Servers'
+description: 'Using nginx or Apache as a web server'
+---
+
 - check if everything setup ok: `sudo nginx -t`
 - restart: `sudo systemctl restart nginx`
 

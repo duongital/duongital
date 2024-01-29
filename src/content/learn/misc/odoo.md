@@ -1,3 +1,5 @@
+sydney tool version: 3.9.15
+
 extends a xml template from default module
 
 ```xml

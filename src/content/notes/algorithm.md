@@ -1,6 +1,11 @@
+---
+title: 'Algorithm'
+description: 'algorithm is for all programing languages, we can apply when being expert at one or many. It help us a lot while getting a complex situation.'
+---
+
 there is a notebook for this, nice to have clone work on here ;-)
 
-algorthm is for all programing languages, we can apply when being expert at one or many. It help us a lot while getting a complex situation.
+algorithm is for all programing languages, we can apply when being expert at one or many. It help us a lot while getting a complex situation.
 
 # search
 

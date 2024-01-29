@@ -19,7 +19,10 @@ const { Content } = await entry.render()
 
 <html lang="en">
   <head>
-    <BaseHead title="@duongital - ReactJS" description="Learn React JS" />
+    <BaseHead
+      title={entry.data.title || entry.slug}
+      description={entry.data.description || entry.body.substring(0, 127)}
+    />
   </head>
 
   <body class="max-w-lg mx-auto blog">

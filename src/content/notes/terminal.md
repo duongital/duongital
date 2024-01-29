@@ -1,3 +1,8 @@
+---
+title: 'Terminal Tools'
+description: 'Tips on using Terminal and make it more powerful.'
+---
+
 # curl
 
 - download a file: `curl -L https://github.com/ryanoasis/IBMPlexMono.zip -o Output.zip`

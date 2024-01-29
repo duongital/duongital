@@ -1,3 +1,8 @@
+---
+title: 'UML Diagram'
+description: 'This would make others understand you idea easily.'
+---
+
 # class diagram
 
 Class structure
