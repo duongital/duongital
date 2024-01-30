@@ -8,8 +8,8 @@ body {
   font-family: 'Garamond', 'Verdana', sans-serif;
 }
 
-hr, p {
-  @apply my-4 !important;
+p {
+  @apply my-2 !important;
 }
 
 ul {
@@ -42,7 +42,7 @@ a.active {
 
 /* todo h1 -- h6 */
 h1 {
-  @apply text-2xl !important;
+  @apply text-3xl border-b mb-3 !important;
 }
 
 h2 {
@@ -50,19 +50,19 @@ h2 {
 }
 
 h3 {
-  @apply text-2xl !important;
+  @apply text-xl !important;
 }
 
 h4 {
-  @apply text-2xl !important;
+  @apply text-lg !important;
 }
 
 h5 {
-  @apply text-xl !important;
+  @apply text-lg !important;
 }
 
 h6 {
-  @apply text-xl !important;
+  @apply text-lg !important;
 }
 
 blockquote {
@@ -86,4 +86,22 @@ pre > code {
 
 p > em {
   @apply block text-center text-sm;
+}
+
+table {
+  @apply min-w-full divide-y divide-gray-200 dark:divide-gray-700 my-8 !important
+}
+
+thead th {
+  @apply py-3 text-left text-xs font-medium text-gray-500 uppercase !important
+}
+
+tbody {
+  @apply divide-y divide-gray-200 dark:divide-gray-700 !important
+}
+
+hr {
+  width: 50% !important;
+  margin: 2rem auto !important;
+  border-top: 1px dotted grey !important
 }

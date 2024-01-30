@@ -64,7 +64,7 @@ there are 3 ways to create 2d arrays:
 
 note: double pointer (**) helps create variable directly on `heap`
 
-## array repesentation by compiler
+## array representation by compiler
 
 in code, variable name will be converted to address. for example: address(A[3]) = 200 + 3*2 = 206 = Lo + i * sizeof(type)
 

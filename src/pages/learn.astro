@@ -3,11 +3,15 @@ import { fade } from 'astro:transitions'
 
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 import LottieAnimation from 'astro-integration-lottie/Lottie.astro'
 import { getCollection } from 'astro:content'
 
 let allLearn = await getCollection('learn')
+const learnList = [
+  { id: 'cs/', name: 'Computer Science' },
+  { id: 'lang/', name: 'Languages' },
+  { id: 'misc/', name: 'Miscellaneous' },
+]
 ---
 
 <!DOCTYPE html>
@@ -28,18 +32,25 @@ let allLearn = await getCollection('learn')
             <LottieAnimation src="/assets/Robot.json" />
           </div>
         </div>
-        <ul>
-          {
-            allLearn.map((post) => (
-              <li class="my-4">
-                <a class="text-lg" href={`/learn/${post.slug}`}>
-                  {post.id}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
       </section>
+      {
+        learnList.map((learnElement) => (
+          <section>
+            <h2>{learnElement.name}</h2>
+            <ul>
+              {allLearn
+                .filter((post) => post.id.includes(learnElement.id))
+                .map((post) => (
+                  <li class="my-2">
+                    <a class="text-lg" href={`/learn/${post.slug}`}>
+                      {post.id}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </section>
+        ))
+      }
     </main>
   </body>
 </html>

@@ -185,6 +185,20 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"learn": {
+"cpp/data-structure.md": {
+	id: "cpp/data-structure.md";
+  slug: "cpp/data-structure";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"cpp/when-to-use-delete.md": {
+	id: "cpp/when-to-use-delete.md";
+  slug: "cpp/when-to-use-delete";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
 "cs/0-notes.md": {
 	id: "cs/0-notes.md";
   slug: "cs/0-notes";
@@ -311,9 +325,9 @@ declare module 'astro:content' {
   collection: "learn";
   data: any
 } & { render(): Render[".md"] };
-"react/react-hook-advanced.md": {
-	id: "react/react-hook-advanced.md";
-  slug: "react/react-hook-advanced";
+"react/josh-react.md": {
+	id: "react/josh-react.md";
+  slug: "react/josh-react";
   body: string;
   collection: "learn";
   data: any
@@ -332,27 +346,6 @@ declare module 'astro:content' {
   collection: "learn";
   data: any
 } & { render(): Render[".md"] };
-"react/react-performance.md": {
-	id: "react/react-performance.md";
-  slug: "react/react-performance";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"react/react-testing.md": {
-	id: "react/react-testing.md";
-  slug: "react/react-testing";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"react/useful-links.md": {
-	id: "react/useful-links.md";
-  slug: "react/useful-links";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
 };
 "notes": {
 "algorithm.md": {
@@ -362,9 +355,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"data-structure.md": {
-	id: "data-structure.md";
-  slug: "data-structure";
+"cpp.md": {
+	id: "cpp.md";
+  slug: "cpp";
   body: string;
   collection: "notes";
   data: any

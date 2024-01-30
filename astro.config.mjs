@@ -12,7 +12,8 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       // theme: "github-light"
-      theme: "slack-ochin"
+      theme: "slack-ochin",
+      wrap: true
     }
   },
   integrations: [

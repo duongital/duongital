@@ -12,6 +12,9 @@ Common phrases:
 
 Other content goes here!
 
+![4 layers](./attachments/20240129-4-layers.png)
+*4 layers of transporting packets over Internet*
+
 # implementation in OSI layers
 
 The OSI (Open Systems Interconnection) model is a conceptual framework that helps in understanding and designing network architectures. Various protocols are associated with different layers of the OSI model. Here are some examples:
