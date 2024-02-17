@@ -67,7 +67,7 @@ install essential tools: `sudo apt install build-essential`
 
 ## linux notes
 
-CPU, RAM, Devices >> 3 loại này chạy được là nhờ vào `kernel` (ví dụ: ubuntu, windows, macos).Ở đây mình tập trung vào ubuntu đang dùng linux kernel, mình nghĩ linux là kernel gốc và ubuntu lấy nó để phát triển làm os của mình kết hợp với một số tính năng khác như giao diện GNOME... Ubuntu và MacOS đi ra từ linux và freeBSD, hai đứa và freeBSD thì đi ra từ UNIX.
+CPU, RAM, Devices => 3 loại này chạy được là nhờ vào `kernel` (ví dụ: ubuntu, windows, macos).Ở đây mình tập trung vào ubuntu đang dùng linux kernel, mình nghĩ linux là kernel gốc và ubuntu lấy nó để phát triển làm os của mình kết hợp với một số tính năng khác như giao diện GNOME... Ubuntu và MacOS đi ra từ linux và freeBSD, hai đứa và freeBSD thì đi ra từ UNIX.
 
 Khi máy chạy sẽ có các tiến trình (process) bắt buộc gọi là Deamon, còn muốn app tự chạy theo thì dùng app systemd. Một process sẽ có một hoặc nhiều threads, các biến đọc được giữa các threads thì để trong global. Một process chạy sẽ có stack trace và CPU, RAM, Devices tương ứng. Được expose ra thành PID.
 

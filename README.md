@@ -1,6 +1,8 @@
 # Hi 👋 I'm Duong
 
 - title: Frontend Developer
-- learning: CS and React, [random pieces noted here](/learn)
-- playing: Pokemon Alpha Sapphie
-- plan: write an application to override Browser's new tab
+- learning: CS and NextJS
+- playing: Mario World 3
+- planning projects: 
+    - override Browser's new tab
+    - iron sticker project

@@ -39,7 +39,7 @@ Zhe\*B8V3NfJE#V
 
 ## sample code
 
-Dockerfile >> Image >> Container
+Dockerfile => Image => Container
 
 ```bash
 # Sample of Dockerfile
@@ -70,7 +70,7 @@ node_modules
 npm-debug.log
 ```
 
-after compose the Dockerfile run `docker build -t <your username>/node-web-app .` >> create Image
+after compose the Dockerfile run `docker build -t <your username>/node-web-app .` => create Image
 
 to run image to container `docker run -p 49160:8080 -d <your username>/node-web-app`
 
@@ -87,7 +87,7 @@ serveral services:
 # ec2 for the first time
 
 - create an instance on micro with available disk at 1Gb
-- during process >> create .pem file and saved to localdisk
+- during process => create .pem file and saved to localdisk
     - macos: ssh normally with this file
     - windows 10: use wsl and `sudo` admin right to ssh 
 - install nvm to manage nodejs
