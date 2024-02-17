@@ -184,170 +184,7 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"learn": {
-"cs/0-notes.md": {
-	id: "cs/0-notes.md";
-  slug: "cs/0-notes";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/1-programming.md": {
-	id: "cs/1-programming.md";
-  slug: "cs/1-programming";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/2-computer-arch.md": {
-	id: "cs/2-computer-arch.md";
-  slug: "cs/2-computer-arch";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/3-algorithms-and-ds.md": {
-	id: "cs/3-algorithms-and-ds.md";
-  slug: "cs/3-algorithms-and-ds";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/4-math.md": {
-	id: "cs/4-math.md";
-  slug: "cs/4-math";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/5-os.md": {
-	id: "cs/5-os.md";
-  slug: "cs/5-os";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/6-networking.md": {
-	id: "cs/6-networking.md";
-  slug: "cs/6-networking";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/7-database.md": {
-	id: "cs/7-database.md";
-  slug: "cs/7-database";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/8-languages-and-compilers.md": {
-	id: "cs/8-languages-and-compilers.md";
-  slug: "cs/8-languages-and-compilers";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cs/9-distributed-systems.md": {
-	id: "cs/9-distributed-systems.md";
-  slug: "cs/9-distributed-systems";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"lang/c-cpp.md": {
-	id: "lang/c-cpp.md";
-  slug: "lang/c-cpp";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"lang/golang.md": {
-	id: "lang/golang.md";
-  slug: "lang/golang";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"lang/nodejs.md": {
-	id: "lang/nodejs.md";
-  slug: "lang/nodejs";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"lang/rust.md": {
-	id: "lang/rust.md";
-  slug: "lang/rust";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"lang/sql.md": {
-	id: "lang/sql.md";
-  slug: "lang/sql";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"lang/typescript.md": {
-	id: "lang/typescript.md";
-  slug: "lang/typescript";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"misc/data-structure.md": {
-	id: "misc/data-structure.md";
-  slug: "misc/data-structure";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"misc/odoo.md": {
-	id: "misc/odoo.md";
-  slug: "misc/odoo";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"misc/when-to-use-delete.md": {
-	id: "misc/when-to-use-delete.md";
-  slug: "misc/when-to-use-delete";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"react/josh-css.md": {
-	id: "react/josh-css.md";
-  slug: "react/josh-css";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"react/josh-react.md": {
-	id: "react/josh-react.md";
-  slug: "react/josh-react";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"react/react-hook.md": {
-	id: "react/react-hook.md";
-  slug: "react/react-hook";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"react/react-patterns.md": {
-	id: "react/react-patterns.md";
-  slug: "react/react-patterns";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-};
-"notes": {
+		"notes": {
 "algorithm.md": {
 	id: "algorithm.md";
   slug: "algorithm";
@@ -454,6 +291,169 @@ declare module 'astro:content' {
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+};
+"random": {
+"cs/0-notes.md": {
+	id: "cs/0-notes.md";
+  slug: "cs/0-notes";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/1-programming.md": {
+	id: "cs/1-programming.md";
+  slug: "cs/1-programming";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/2-computer-arch.md": {
+	id: "cs/2-computer-arch.md";
+  slug: "cs/2-computer-arch";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/3-algorithms-and-ds.md": {
+	id: "cs/3-algorithms-and-ds.md";
+  slug: "cs/3-algorithms-and-ds";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/4-math.md": {
+	id: "cs/4-math.md";
+  slug: "cs/4-math";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/5-os.md": {
+	id: "cs/5-os.md";
+  slug: "cs/5-os";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/6-networking.md": {
+	id: "cs/6-networking.md";
+  slug: "cs/6-networking";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/7-database.md": {
+	id: "cs/7-database.md";
+  slug: "cs/7-database";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/8-languages-and-compilers.md": {
+	id: "cs/8-languages-and-compilers.md";
+  slug: "cs/8-languages-and-compilers";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"cs/9-distributed-systems.md": {
+	id: "cs/9-distributed-systems.md";
+  slug: "cs/9-distributed-systems";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"lang/c-cpp.md": {
+	id: "lang/c-cpp.md";
+  slug: "lang/c-cpp";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"lang/golang.md": {
+	id: "lang/golang.md";
+  slug: "lang/golang";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"lang/nodejs.md": {
+	id: "lang/nodejs.md";
+  slug: "lang/nodejs";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"lang/python.md": {
+	id: "lang/python.md";
+  slug: "lang/python";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"lang/rust.md": {
+	id: "lang/rust.md";
+  slug: "lang/rust";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"lang/sql.md": {
+	id: "lang/sql.md";
+  slug: "lang/sql";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"lang/typescript.md": {
+	id: "lang/typescript.md";
+  slug: "lang/typescript";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"misc/data-structure.md": {
+	id: "misc/data-structure.md";
+  slug: "misc/data-structure";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"misc/odoo.md": {
+	id: "misc/odoo.md";
+  slug: "misc/odoo";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"misc/when-to-use-delete.md": {
+	id: "misc/when-to-use-delete.md";
+  slug: "misc/when-to-use-delete";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"react/josh-css.md": {
+	id: "react/josh-css.md";
+  slug: "react/josh-css";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"react/react-hook.md": {
+	id: "react/react-hook.md";
+  slug: "react/react-hook";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"react/react-patterns.md": {
+	id: "react/react-patterns.md";
+  slug: "react/react-patterns";
+  body: string;
+  collection: "random";
+  data: any
 } & { render(): Render[".md"] };
 };
 

@@ -178,7 +178,7 @@ Kết hợp useContext và useReducer = Redux
 
 # 92: useLayoutEffect
 
-useLayoutEffect >> painting >> useEffect
+useLayoutEffect => painting => useEffect
 
 Use case: khi tin nhắn chat cuối xuất hiện mình muốn nó scoll đến cuối trang trước khi chữ hiện, nếu dùng useEffect bình thường thì UI sẽ bị giựt.
 

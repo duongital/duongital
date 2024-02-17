@@ -79,7 +79,7 @@ nvm use 16.0.0
 
 ref: https://yarin.dev/nodejs-cpu-bound-tasks-worker-threads/
 
-yes, NodeJS is single thread. If we are executing an Fibonacci of 50 (for example), and open another terminal to `curl` to different endpoint it will be blocked >> wait until the first request of Fibonacci of 50 to response.
+yes, NodeJS is single thread. If we are executing an Fibonacci of 50 (for example), and open another terminal to `curl` to different endpoint it will be blocked => wait until the first request of Fibonacci of 50 to response.
 
 to avoid that, NodeJS designs has 3 methods: splitting up tasks with `setImmediate()`, spawning a child process, using worker threads.
 
@@ -117,7 +117,7 @@ http
   .listen(port, () => console.log(`Listening on port ${port}...`));
 ```
 
-work thread in NodeJS is different from classic threads of other languages. It runs on different V8 and not share with the main thread >> safety.
+work thread in NodeJS is different from classic threads of other languages. It runs on different V8 and not share with the main thread => safety.
 
 should use worker pool to avoid creating new thread on every request.
 

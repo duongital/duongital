@@ -1,6 +1,10 @@
 ---
-title: 'Data Structure'
-description: 'All types of Data Structure that we use everyday.'
+title: Data Structure
+description: All types of Data Structure that we use everyday.
+tags:
+  - hello
+  - backlog
+  - react
 ---
 
 # 🥕 arrays representations
@@ -11,17 +15,18 @@ description: 'All types of Data Structure that we use everyday.'
 
 ## introduction to array
 
-array is a vector type, include same type for every block.
+{{ array }} is a vector type, include same type for every block.
+<!--SR:!2024-02-04,4,270-->
 
 on address memory, they are grouped together and closely next to each other.
 
 ## declaration of array
 
-`int A[5]`: list of 5 integers next to each other, nothing is init >> garbage values inside each element
+`int A[5]`: list of 5 integers next to each other, nothing is init => garbage values inside each element
 
 `int A[3] = {1,2,3}`: declare and init
 
-`int A[3] = {1}` >> [1,0,0]
+`int A[3] = {1}` has result [1,0,0]
 
 we can access element of array:
 
@@ -29,7 +34,7 @@ we can access element of array:
 - 2[A]
 - `*(A+2)`
 
-note: if we cout address of each element of array, we can see that those all element positioned next to each other and separate by 4 bytes: `0x61fdc8, 0x61fdcc, 0x61fdd0`
+note: if we count address of each element of array, we can see that those all element positioned next to each other and separate by 4 bytes: `0x61fdc8, 0x61fdcc, 0x61fdd0`
 
 ## static vs dynamic array
 
@@ -61,6 +66,7 @@ there are 3 ways to create 2d arrays:
 - on stack: int A[2][2] = {{1,2},{1,2}}
 - on heap: int* A[2], and then A[0] = new int[2], A[1] = new int[2]
 - all on heap: int** A; A = new int* [2]; ... add element same as 2nd step
+<!--SR:!2024-02-01,1,230-->
 
 note: double pointer (**) helps create variable directly on `heap`
 

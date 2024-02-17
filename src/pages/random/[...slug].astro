@@ -6,7 +6,7 @@ import Header from '../../components/Header.astro'
 import BaseHead from '../../components/BaseHead.astro'
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('learn')
+  const blogEntries = await getCollection('random')
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },

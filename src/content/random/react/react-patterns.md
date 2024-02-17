@@ -16,6 +16,7 @@ Dùng React.Children.map(children, child => {}) để loop qua elements wrapped 
 ```javascript
 return React.Children.map(children, (child) => {
 	const newChild = React.cloneElement(child, { on, toggle }); // not understand why all???
+<!--SR:!2024-02-01,1,230!2000-01-01,1,250-->
 	return newChild;
 });
 ```
@@ -79,21 +80,7 @@ function getTogglerProps({ onClick, ...props } = {}) {
 
 # 114: context module function
 
-???
-
 Note actions should be enum to avoid typo
-
-# 116: control props
-
-???
-
-# 119: controlled and uncontrolled components
-
-???
-
-util 122: I don't understand anything (*&^%$#@
-
-#react 
 
 # 123: React.lazy 
 
@@ -121,7 +108,7 @@ Including:
 
 - Frame:
 - Timing: 
-- Main: stacks trace of javascript steps, top >> down: sequence
+- Main: stacks trace of javascript steps, top => down: sequence
 
 Should have a force re-render to do recording.
 
@@ -155,13 +142,13 @@ Sometimes you passing 2 vars in context and they're changing the props of child 
 
 # 143: perf death by thousands cut
 
-perf death by thousands cut: means there is a change in context value, that leads to subcribed components using this as prop >> render also >> low perf bottle neck
+perf death by thousands cut: means there is a change in context value, that leads to subcribed components using this as prop => render also => low perf bottle neck
 
-There is solution to wrapper every component to React.memo, useMemo and useEffect >> but this leads to so many dependencies and arrays to handle.
+There is solution to wrapper every component to React.memo, useMemo and useEffect => but this leads to so many dependencies and arrays to handle.
 
 Strategy: move global state to child component as much as possible, when state change within child component, it won't trigger re-render like it was in parent.
 
-But above strategy sometimes not right, because we must have that variable stay on global state to share with other components. >> New stragetry: separate reducer and context out of previous one, create new context and reducer with expensive variable.
+But above strategy sometimes not right, because we must have that variable stay on global state to share with other components. => New stragetry: separate reducer and context out of previous one, create new context and reducer with expensive variable.
 
 Another strategy is to divide component into 2 ones. The benefit is that we will know which props rendering and exactly use React.memo for that specific prop. ** we can use HOC for this case instead of separate component**
 

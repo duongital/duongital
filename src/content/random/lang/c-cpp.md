@@ -1,6 +1,6 @@
 **C and C++ notes**
 
-- programming: syntax only, problem solving: math >> life time
+- programming: syntax only, problem solving: math => life time
 
 - `using namespace std` means: in the header file, it has `std` namespace and we want to use it for not repeating `std::something`. Example `#include <string>` or `#include <iostream>` and then using namespace std means: the std namespace of those two headers: _string and iostream_
 
@@ -45,7 +45,7 @@ program: code section, stack memory, heap memory
 
 all codes are running on code section and stack memory
 
-to accessing heap memory >> using pointer
+to accessing heap memory => using pointer
 
 pointer has 8 bytes in memory and also has its own address
 
@@ -152,13 +152,13 @@ int main() {
 ## functions
 
 - in C: param passed by value, address. In C++: param passed by value, address and reference
-- grouping data >> struct; grouping instructions >> function
+- grouping data => struct; grouping instructions => function
 - function called as: module, procedure
-- variables belong to function scope >> can be same names in different functions
+- variables belong to function scope => can be same names in different functions
 
 ## parameter passing method
 
-__passing by value__ will not change original values >> they are copied and changed in function scope only
+__passing by value__ will not change original values => they are copied and changed in function scope only
 
 ```cpp
 int add(int a, int b) {
@@ -193,7 +193,7 @@ int main() {
 }
 ```
 
-__passing by reference__ (feature of C++): focus of define function `void swap(int &a, int &b) {}`, passing like this - the varaibles are not copied and not create new stack >> all happens in main function and variable stays at same scope.
+__passing by reference__ (feature of C++): focus of define function `void swap(int &a, int &b) {}`, passing like this - the varaibles are not copied and not create new stack => all happens in main function and variable stays at same scope.
 
 ```cpp
 void swap(int &a, int &b) {
@@ -304,7 +304,7 @@ int main() {
 }
 ```
 
-struct contains array inside of it, what if we pass that struct as param >> array will be copied? The answer is YES, the compiler will handle this for us.
+struct contains array inside of it, what if we pass that struct as param => array will be copied? The answer is YES, the compiler will handle this for us.
 
 example of create a struct in heap memory and print out values
 
@@ -334,7 +334,7 @@ in C language, functions relating to struct are usually defined in same place. T
 
 ## convert C to C++
 
-in C, there're lots of functions relating to struct >> the question is why they are not grouped together. That's the reason why in C++ we have `class`.
+in C, there're lots of functions relating to struct => the question is why they are not grouped together. That's the reason why in C++ we have `class`.
 
 ## monolithic program
 
@@ -389,7 +389,7 @@ int main() {
 }
 ```
 
-template class == generic class
+template class is equal to generic class
 
 example above using template class
 
@@ -430,7 +430,7 @@ ADT is abstract data types (stack, heap), for example: stack is a ADT to show th
 
 all data saved on hard disk, including software: MS Word
 
-when MS Word executed >> loading to RAM >> CPU will execute codes line by line
+when MS Word executed => loading to RAM => CPU will execute codes line by line
 
 data structure is part on running program, after loading on RAM in forms: array, map, images, videos...
 
@@ -474,7 +474,7 @@ logical DS: stack, queue, tree, graph, hash table. These are create based on eit
 
 data type: representation of data and operation on data. For example: integer is 4 bytes (represetation) and can be + - * / (operation).
 
-example above is primitive data, in contrast if we don't know operation or how it implemented we will call them as abstract data >> List expose methods: add() remove() search()... 
+example above is primitive data, in contrast if we don't know operation or how it implemented we will call them as abstract data => List expose methods: add() remove() search()... 
 
 ---
 
@@ -533,7 +533,7 @@ head recursion can be converted to while loop but it's not easy
 
 ## tree recursion (3/5)
 
-the tail and head recursion above just call main function one time >> this is called linear recusion. in some cases, we want to call that main function more than one time >> this is tree recursion
+the tail and head recursion above just call main function one time => this is called linear recusion. in some cases, we want to call that main function more than one time => this is tree recursion
 
 ```cpp
 void func(int n) {
@@ -553,7 +553,7 @@ in code, if the errors notify that function B is not defined, we can mock a dumm
 
 ## nested recursion (5/5)
 
-pass recursive function to the parameter >> recusive inside recursive
+pass recursive function to the parameter => recusive inside recursive
 
 ```cpp
 int fun(int n) {
@@ -564,7 +564,7 @@ int fun(int n) {
     }
 }
 
-// fun(95) >> result is 91
+// fun(95) => result is 91
 ```
 
 ## sum of natural number using recursion
@@ -645,9 +645,9 @@ note: the larger n, the more precise of result. time complex: O(n^2)
 
 ## Taylor series using Horner's rule
 
-target: reduce from time complexicty >> O(n)
+target: reduce from time complexicty => O(n)
 
-if recursion happens on calling phase >> can be used loop easily
+if recursion happens on calling phase => can be used loop easily
 
 ```cpp
 double e(int x, int n) {

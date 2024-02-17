@@ -1,30 +1,32 @@
-If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve challenging problems.
+> If you don’t know how to use ubiquitous data structures like stacks, queues, trees, and graphs, you won’t be able to solve challenging problems.
 
 - most C++ CP using C++11 standard (latest version is C++20)
+
+Content below is based on CP Handbook:
 
 # CP Handbook
 
 ## Basic Techniques
 
-### introduction
+introduction
 
-### time complexity
+time complexity
 
-### sorting
+sorting
 
-### data structures
+data structures
 
-### complete search
+complete search
 
-### greedy algorithms
+ greedy algorithms
 
-### dynamic programming
+dynamic programming
 
-### amortized analysis
+amortized analysis
 
-### range queries
+range queries
 
-### bit manipulation
+ bit manipulation
 
 ## Graph Algorithms
 

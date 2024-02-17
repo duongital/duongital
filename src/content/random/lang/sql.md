@@ -265,7 +265,7 @@ có 3 loại quan hệ:
 QUAN HỆ 1-TO-MANY
 
 - thường mối liên hệ giữa primary key và foreign key là 1-to-many (cha - to - con): nhiều con sẽ có một cha.
-- nhớ cách đặt tên ở bảng con, mặc dù chung tên nhưng đặt sao có ý nghĩa, ví dụ: booked_company_id >> company_id để thể hiện phòng đã được đặt cho công ty nào
+- nhớ cách đặt tên ở bảng con, mặc dù chung tên nhưng đặt sao có ý nghĩa, ví dụ: booked_company_id => company_id để thể hiện phòng đã được đặt cho công ty nào
 - hướng mũi tên: con —> cha (con đi tìm cha), sao datagrip nó vẽ ngược???
 
 ## join tables

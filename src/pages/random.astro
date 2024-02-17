@@ -6,10 +6,10 @@ import Header from '../components/Header.astro'
 import LottieAnimation from 'astro-integration-lottie/Lottie.astro'
 import { getCollection } from 'astro:content'
 
-let allLearn = await getCollection('learn')
-const learnList = [
-  { id: 'cs/', name: 'Computer Science' },
-  { id: 'lang/', name: 'Languages' },
+let allRandom = await getCollection('random')
+const randomList = [
+  // { id: 'cs/', name: 'Computer Science' },
+  // { id: 'lang/', name: 'Languages' },
   { id: 'misc/', name: 'Miscellaneous' },
 ]
 ---
@@ -18,7 +18,7 @@ const learnList = [
 <html lang="en">
   <head>
     <BaseHead
-      title="@duongital - Learn"
+      title="@duongital - Random"
       description="Random pieces on learning CS topics"
     />
   </head>
@@ -27,22 +27,22 @@ const learnList = [
     <main transition:animate={fade({ duration: '50ms' })}>
       <section>
         <div class="flex gap-x-4 items-center">
-          <h2 class="text-4xl font-mono">Learning Topics</h2>
+          <h2 class="text-4xl font-mono">Random Topics</h2>
           <div class="w-12 h-12">
             <LottieAnimation src="/assets/Robot.json" />
           </div>
         </div>
       </section>
       {
-        learnList.map((learnElement) => (
+        randomList.map((learnElement) => (
           <section>
             <h2>{learnElement.name}</h2>
             <ul>
-              {allLearn
+              {allRandom
                 .filter((post) => post.id.includes(learnElement.id))
                 .map((post) => (
                   <li class="my-2">
-                    <a class="text-lg" href={`/learn/${post.slug}`}>
+                    <a class="text-lg" href={`/random/${post.slug}`}>
                       {post.id}
                     </a>
                   </li>

@@ -1,6 +1,11 @@
+---
+tags: flashcards
+---
+
 sydney tool version: 3.9.15
 
-extends a xml template from default module
+extends a xml template from default module ;; good
+<!--SR:!2024-02-01,1,230-->
 
 ```xml
 <t t-name="ProductsWidget" owl="1" t-inherit="point_of_sale.ProductsWidget" t-inherit-mode="extension">  
@@ -10,11 +15,12 @@ extends a xml template from default module
 </t>
 ```
 
-After xml extended successfully we can create related controller that also extends parent controller:
+After {{ xml }} extended successfully we can create related controller that also extends parent controller:
 - note: should be aware of expr formular and the position
 - t-name: is whatever we want to, and it might have controller
 - can't create any state from extended controller, we just only create additional functions
-- in order to have seperate component and controller, should be creating a different component (only need an xml to extend and then add your own component)
+- in order to have separate component and controller, should be creating a different component (only need an xml to extend and then add your own component)
+<!--SR:!2024-02-01,1,230-->
 
 ### example extended controller
 

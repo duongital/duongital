@@ -2,7 +2,7 @@
 
 [tips for html](https://markodenic.com/html-tips/)
 
-![joy of react](./attachments/20240125-joy-of-react.png)
+![joy of react](attachments/20240125-joy-of-react.png)
 
 # bootstrap vs tailwind 
 
@@ -10,11 +10,11 @@
 
 something goes here
 
-row rule: `d-flex ??-wrap` >> `col-12 col-md-1/2`
+row rule: `d-flex ??-wrap` => `col-12 col-md-1/2`
 
 ## tailwind 2 css
 
-row rule: `flex flex-wrap` >> `w-full md:w-1/2`
+row rule: `flex flex-wrap` => `w-full md:w-1/2`
 
 ---
 
@@ -24,7 +24,7 @@ row rule: `flex flex-wrap` >> `w-full md:w-1/2`
 
 letter-spacing vs line-height
 
-shouldn't set line height in px, if we change font size >> must change line hieght for the second time
+shouldn't set line height in px, if we change font size => must change line hieght for the second time
 
 `::before` and `::after` are really just secret spans, nothing more. It's syntactic sugar
 
@@ -61,7 +61,7 @@ const appliedStyles = {
 - box model: padding, border, magin (should go with box sizing boder box)
 
 - layout modes: flex, grid, flow. In flow we have: block, inline, inline-block
-    - display: inline >> we can't change height, padding/margin will be larger  and calculated from inside
+    - display: inline => we can't change height, padding/margin will be larger  and calculated from inside
     - inline but special: button, img, canvas, video (imagine that they are inside span, props passed to foreign object)
     - inline image treats as text, this leads to magic space below image. To fix: line height 0, display: block
     - inline elements can't be changed height or width because its shape should be decided by situation. for example, text can be wrapped or border box of strong tag can be wrapped with unknowned future shape
@@ -100,12 +100,12 @@ footer {
     - nesting doesn't prevent collapsing
 
 - position: relative, absolute rules:
-    - flow not designed with overlap in mind, negative margin >> overlap and which one render later to be on top of the previous one
+    - flow not designed with overlap in mind, negative margin => overlap and which one render later to be on top of the previous one
     - Flow, Flexbox, Grid.. rendered firsted, then positioned elements rendered on top. By default all pisitioned elements will be placed over flow-flex-grid elements at z-index 0
     - default of positioned index is 0 (or auto)
-    - **stacking context** decided which z-index is higher, A sibling to B - it will compare z-index of A over B, if a child inside A with index 9999, it's still below B because of index A less than B. Note that, index of A is not set, it will compare child index with B >> stacking context
-    - if z-index not specified, orders will be decided by DOM paint (later painted first). But shouldn't change order of DOM elements >> this change interactive element with tab context: links, inputs...
-    - to avoid collision in z-index, use stacking context properly or we can use ` isolation: isolate` (as I understand that I will create isolated area with z-index parent at 0). This action will create stacking context and which DOM is rendered later >> go to top. In library ReachUI (modal, tooltip...), it will bring DOM out of root React section and append at last DOM position to avoid stacking z-index conflict. If the root still have z-index higher, use `isolation: isolate` to flatten render position and those components will go on top.
+    - **stacking context** decided which z-index is higher, A sibling to B - it will compare z-index of A over B, if a child inside A with index 9999, it's still below B because of index A less than B. Note that, index of A is not set, it will compare child index with B => stacking context
+    - if z-index not specified, orders will be decided by DOM paint (later painted first). But shouldn't change order of DOM elements => this change interactive element with tab context: links, inputs...
+    - to avoid collision in z-index, use stacking context properly or we can use ` isolation: isolate` (as I understand that I will create isolated area with z-index parent at 0). This action will create stacking context and which DOM is rendered later => go to top. In library ReachUI (modal, tooltip...), it will bring DOM out of root React section and append at last DOM position to avoid stacking z-index conflict. If the root still have z-index higher, use `isolation: isolate` to flatten render position and those components will go on top.
 
 - position: fixed
     - will be broken if parent use  properties: willChange or transform
