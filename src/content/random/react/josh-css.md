@@ -2,7 +2,7 @@
 
 [tips for html](https://markodenic.com/html-tips/)
 
-![joy of react](attachments/20240125-joy-of-react.png)
+![joy of react](./attachments/20240125-joy-of-react.png)
 
 # bootstrap vs tailwind 
 

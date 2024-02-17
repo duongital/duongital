@@ -8,7 +8,7 @@ Information is {{bits + context}}: all of them are bits or sequence of bytes, bu
 
 Networks provide ways for computer systems to communicate with one another. From the viewpoint of a particular system, the network is just another {{I/O device}}.
 
-![computer arch](attachments/20240201-computer-arch.png)
+![computer arch](./attachments/20240201-computer-arch.png)
 *Computer Architecture and Network*
 
 Hardware organization of a typical system, including:
@@ -19,7 +19,7 @@ Hardware organization of a typical system, including:
 
 Four steps of GCC compiler reads the source file and translates it into an executable object file `hello`:
 
-![compilation system](attachments/20240201-compile-code.png)
+![compilation system](./attachments/20240201-compile-code.png)
 *The process of compiler*
 
 Clang is frontend and LLVM is backend. `rustc` is frontend and LLVM is backend. {{GCC}} can be replaced or a competitor with LLVM.
@@ -31,7 +31,7 @@ A program can't access the keyboard, display or main memory directly. Rather, th
 2. Virtual memory is an abstraction for both main memory and disks. 
 3. Processes are abstractions for the processor, main memory, and I/O devices.
 
-![OS](attachments/20240201-os.png)
+![OS](./attachments/20240201-os.png)
 *OS is between app and hardware devices*
 
 
