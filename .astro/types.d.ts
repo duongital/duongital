@@ -185,20 +185,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"learn": {
-"cpp/data-structure.md": {
-	id: "cpp/data-structure.md";
-  slug: "cpp/data-structure";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
-"cpp/when-to-use-delete.md": {
-	id: "cpp/when-to-use-delete.md";
-  slug: "cpp/when-to-use-delete";
-  body: string;
-  collection: "learn";
-  data: any
-} & { render(): Render[".md"] };
 "cs/0-notes.md": {
 	id: "cs/0-notes.md";
   slug: "cs/0-notes";
@@ -311,9 +297,23 @@ declare module 'astro:content' {
   collection: "learn";
   data: any
 } & { render(): Render[".md"] };
+"misc/data-structure.md": {
+	id: "misc/data-structure.md";
+  slug: "misc/data-structure";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
 "misc/odoo.md": {
 	id: "misc/odoo.md";
   slug: "misc/odoo";
+  body: string;
+  collection: "learn";
+  data: any
+} & { render(): Render[".md"] };
+"misc/when-to-use-delete.md": {
+	id: "misc/when-to-use-delete.md";
+  slug: "misc/when-to-use-delete";
   body: string;
   collection: "learn";
   data: any

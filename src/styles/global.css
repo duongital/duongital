@@ -16,13 +16,9 @@ ul {
   @apply my-4 !important;
 }
 
-ul li {
-  @apply list-disc text-sm !important;
+ul > li {
+  @apply list-disc text-sm list-inside !important;
 }
-
-/* li::marker {
-  @apply flex !important;
-} */
 
 ol li {
   @apply list-decimal text-sm !important;
