@@ -12,16 +12,17 @@ p {
   @apply my-2 !important;
 }
 
-ul {
-  @apply my-4 !important;
+ul,
+ol {
+  @apply my-2 !important;
 }
 
-ul > li {
+ul>li {
   @apply list-disc text-sm list-inside !important;
 }
 
 ol li {
-  @apply list-decimal text-sm !important;
+  @apply list-decimal text-sm list-inside !important;
 }
 
 pre {
@@ -33,7 +34,7 @@ a {
 }
 
 a.active {
-  color:#7EB233 !important;
+  color: #7EB233 !important;
 }
 
 /* todo h1 -- h6 */
@@ -62,7 +63,7 @@ h6 {
 }
 
 blockquote {
-  @apply text-sm italic font-semibold text-gray-900 dark:text-white pl-4 border-l-4 !important;
+  @apply text-sm italic font-semibold text-gray-900 pl-4 border-l-4 !important;
   font-family: 'JetBrains Mono Variable', sans-serif;
 }
 
@@ -71,7 +72,7 @@ code {
   font-family: 'JetBrains Mono Variable', sans-serif;
 }
 
-pre > code {
+pre>code {
   @apply bg-transparent text-xs not-italic !important;
   font-family: 'JetBrains Mono Variable', sans-serif;
 }
@@ -80,12 +81,12 @@ pre > code {
   border: 1px solid gainsboro;
 }
 
-p > em {
+p>em {
   @apply block text-center text-sm;
 }
 
 table {
-  @apply min-w-full divide-y divide-gray-200 dark:divide-gray-700 my-8 !important
+  @apply min-w-full divide-y divide-gray-200 my-8 !important
 }
 
 thead th {
@@ -93,11 +94,15 @@ thead th {
 }
 
 tbody {
-  @apply divide-y divide-gray-200 dark:divide-gray-700 !important
+  @apply divide-y divide-gray-200 !important
 }
 
 hr {
   width: 50% !important;
   margin: 2rem auto !important;
   border-top: 1px dotted grey !important
+}
+
+li>ul>li {
+  @apply ml-4 !important
 }

@@ -6,3 +6,6 @@ cp -r ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Notebook/random .
 
 rm -rf ./src/content/notes
 cp -r ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Notebook/notes ./src/content/notes
+
+rm README.md
+cp ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Notebook/README.md ./README.md
