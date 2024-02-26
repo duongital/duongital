@@ -292,6 +292,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"using-raspberry-pi-as-vps.md": {
+	id: "using-raspberry-pi-as-vps.md";
+  slug: "using-raspberry-pi-as-vps";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 };
 "random": {
 "cs/0-notes.md": {
