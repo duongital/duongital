@@ -1,0 +1,51 @@
+---
+import { fade } from 'astro:transitions'
+
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+
+import { Client } from '@notionhq/client'
+
+const notion = new Client({
+  auth: import.meta.env.NOTION_API_KEY,
+})
+
+const myPage = await notion.databases.query({
+  database_id: 'b19191accb244558a911494fd0f4bde7',
+})
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="@duongital - Links"
+      description="Links saved from the Internet."
+    />
+  </head>
+  <body class="max-w-lg mx-auto">
+    <Header />
+    <main transition:animate={fade({ duration: '50ms' })}>
+      <section>
+        <h2 class="text-4xl font-mono mb-8">My Links</h2>
+        {
+          myPage?.results?.length > 0 ? (
+            <div>
+              {myPage?.results?.map((item) => {
+                return (
+                  <div class="mb-4">
+                    <a href={item?.properties?.URL?.url} target="_blank">
+                      {item?.properties?.Name?.title[0]?.plain_text}
+                    </a>
+                  </div>
+                )
+              })}
+            </div>
+          ) : (
+            <p>Sorry, there's a problem to view the content</p>
+          )
+        }
+      </section>
+    </main>
+  </body>
+</html>
