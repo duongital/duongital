@@ -1,47 +1,53 @@
 > The Internet turned out to be a big deal: understand how it works to unlock its full potential.
 
 ![getting started](https://media.giphy.com/media/gegsYiciYvqmA5CwT7/giphy.gif)
-*Let's go!*
+_Let's go!_
 
 Common phrases:
 
 - Ethernet: is a family of wired computer networking technologies commonly used in local area networks (LANs), metropolitan area networks (MANs), and wide area networks (WANs).
 - Network classified by:
-	- area >> LAN, MAN, WAN
-	- internal >> open, private
-	- bus, star
+  - area >> LAN, MAN, WAN
+  - internal >> open, private
+  - bus, star
 - OSI model: Open Systems Interconnection is a networking model framework (networking protocol) that describe how data transferred between computer systems on a network. It's like cache layer and each one is responsible for a specific function. This is a {{framework}} and not an implementation.
 
 Other content goes here!
 
 ![4 layers](./attachments/20240129-4-layers.png)
-*4 layers of transporting packets over Internet*
+_4 layers of transporting packets over Internet_
 
 # implementation in OSI layers
 
 The OSI (Open Systems Interconnection) model is a conceptual framework that helps in understanding and designing network architectures. Various protocols are associated with different layers of the OSI model. Here are some examples:
 
 1. **Physical Layer (Layer 1):**
+
    - Ethernet (IEEE 802.3)
    - USB (Universal Serial Bus)
 
 2. **Data Link Layer (Layer 2):**
+
    - Point-to-Point Protocol (PPP)
    - Ethernet (IEEE 802.3)
    - Wi-Fi (IEEE 802.11)
 
 3. **Network Layer (Layer 3):**
+
    - Internet Protocol (IP)
    - Internet Control Message Protocol (ICMP)
 
 4. **Transport Layer (Layer 4):**
+
    - Transmission Control Protocol (TCP)
    - User Datagram Protocol (UDP)
 
 5. **Session Layer (Layer 5):**
+
    - NetBIOS (Network Basic Input/Output System)
 
 6. **Presentation Layer (Layer 6):**
+
    - Hypertext Transfer Protocol (HTTP)
    - Simple Object Access Protocol (SOAP)
 
@@ -54,7 +60,7 @@ These are just examples, and there are many other protocols that align with diff
 # OSI model vs TCP/IP model
 
 ![osi vs tcp](./attachments/20240126-osi-vs-tcpip.png)
-*OSI model is outdated and mostly replaced by TCP/IP model today*
+_OSI model is outdated and mostly replaced by TCP/IP model today_
 
 The Open Systems Interconnection (OSI) model is a conceptual framework that standardizes the functions of a network into seven categories or layers. These layers are: Physical, Data Link, Network, Transport, Session, Presentation, and Application. This model is used to understand and describe how different network protocols interact and work together to provide network services [Source 1](https://en.wikipedia.org/wiki/OSI_model), [Source 2](https://aws.amazon.com/what-is/osi-model/), [Source 3](https://www.techtarget.com/searchnetworking/definition/OSI), [Source 4](https://www.forcepoint.com/cyber-edu/osi-model).
 
@@ -75,7 +81,7 @@ The Open Systems Interconnection (OSI) model is a conceptual framework that stan
 The OSI model is important because it provides a common language for computer networking, allowing different technologies to communicate using standard protocols. It encapsulates every type of network communication across both software and hardware components, allowing two standalone systems to communicate via standardized interfaces or protocols [Source 2](https://aws.amazon.com/what-is/osi-model/).
 
 ![7 layers](./attachments/20240125-7-layers.png)
-*7 layers of OSI model*
+_7 layers of OSI model_
 
-![security](attachments/20240314-security.png)
-*Security on each layer*
+![security](./attachments/20240314-security.png)
+_Security on each layer_

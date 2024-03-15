@@ -434,6 +434,13 @@ declare module 'astro:content' {
   collection: "random";
   data: any
 } & { render(): Render[".md"] };
+"misc/pass-by-reference-cpp-vs-js.md": {
+	id: "misc/pass-by-reference-cpp-vs-js.md";
+  slug: "misc/pass-by-reference-cpp-vs-js";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
 "misc/when-to-use-delete.md": {
 	id: "misc/when-to-use-delete.md";
   slug: "misc/when-to-use-delete";
