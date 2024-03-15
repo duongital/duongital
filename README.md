@@ -2,7 +2,7 @@
 
 - title: Frontend Developer
 - learning: CS and NextJS
-- playing: Mario World 3
+- playing: Chrono Trigger
 - planning projects: override Browser's new tab, iron sticker project
 
 # I use:
@@ -11,5 +11,5 @@
 - VSCode Editor + Postico + SmartGit
 - Obsidian: CMS for the personal website
 - Remnote: to remember things
-- Notion: to save [links from the Internet](/links)
+- Notion: to save [links from the Internet](https://duongital.notion.site/duongital/b19191accb244558a911494fd0f4bde7)
 - [random things](/random) to remind knowledge

@@ -24,6 +24,7 @@ printf("%d\n%ld\n%c\n%f\n%lf", d, ld, c, f, lf);
 - windows 10: install minGW
 - ubuntu: sudo apt install build-essential
 - macos: has `clang` installed by default
+
 ```bash
 # install nvim with kickstarter and clangd lsp
 $ clang++ main.cpp -o main

@@ -77,20 +77,5 @@ The OSI model is important because it provides a common language for computer ne
 ![7 layers](./attachments/20240125-7-layers.png)
 *7 layers of OSI model*
 
-# CSMA/CD vs TCP/IP
-
-- note that modern Ethernet networks are built with switches and full-duplex connections, which means CSMA/CD is no longer used
-
-CSMA/CD (Carrier Sense Multiple Access with Collision Detection) and TCP/IP (Transmission Control Protocol/Internet Protocol) are both integral parts of network communication, but they operate at different layers of the network model and serve different purposes.
-
-CSMA/CD is a network protocol used primarily at the Data Link layer (Layer 2) of the OSI model. Its role is to manage data transmission in Ethernet networks. It operates by checking if the network medium is free before attempting to send data. If a collision is detected (two devices trying to send data simultaneously), it stops the transmission, waits for a random period, and then tries to retransmit the data [Source 0](https://copperhilltech.com/blog/industrial-ethernet-guide-ethernet-csmacd-tcpip-and-udp/), [Source 1](https://study-ccna.com/csma-cd/).
-
-On the other hand, TCP/IP operates at the Network and Transport layers (Layers 3 and 4) of the OSI model. TCP/IP is responsible for how data is packaged, addressed, transmitted, routed, and received on the internet. TCP/IP works on top of Ethernet, including its CSMA/CD component [Source 0](https://copperhilltech.com/blog/industrial-ethernet-guide-ethernet-csmacd-tcpip-and-udp/).
-
-TCP/IP is made up of two protocols: TCP (Transmission Control Protocol) and IP (Internet Protocol). TCP is a connection-oriented protocol, meaning a connection must be established before data transfer can begin. It also ensures that data is received in the correct order and implements flow control to prevent a message overflow. IP, on the other hand, is a connectionless protocol, meaning it doesn't establish a connection before sending data. It simply sends data to the destination IP address without concern for whether the data arrives in the correct order or at all [Source 0](https://copperhilltech.com/blog/industrial-ethernet-guide-ethernet-csmacd-tcpip-and-udp/).
-
-In summary, while CSMA/CD is concerned with managing data transmission on the local network level, TCP/IP handles the larger picture of data transmission, routing, and delivery on the internet. Both protocols are necessary for the smooth operation of network communication.
-
-
-
-
+![security](attachments/20240314-security.png)
+*Security on each layer*

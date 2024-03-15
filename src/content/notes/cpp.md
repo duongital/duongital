@@ -15,6 +15,96 @@ int main() {
 }
 ```
 
+# data structures
+
+## array
+
+array is to store multiple values with the same types
+
+```cpp
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+cout << cars[0];  // Outputs Volvo
+cars[0] = "Opel";  
+cout << cars[0]; // Now outputs Opel instead of Volvo
+
+for (int i = 0; i < 5; i++) { 
+	cout << cars[i] << "\n"; 
+}
+```
+
+array size
+
+```cpp
+int myNumbers[5] = {10, 20, 30, 40, 50};  
+cout << sizeof(myNumbers); // Print 20
+
+int myNumbers[5] = {10, 20, 30, 40, 50};  
+int getArrayLength = sizeof(myNumbers) / sizeof(int);  
+cout << getArrayLength; // Print 5
+```
+
+multi-dimensional array
+
+```cpp
+string letters[2][4] = {  
+  { "A", "B", "C", "D" },  
+  { "E", "F", "G", "H" }  
+};  
+  
+cout << letters[0][2];  // Outputs "C"
+for (int i = 0; i < 2; i++) {  
+  for (int j = 0; j < 4; j++) {  
+    cout << letters[i][j] << "\n";  
+  }  
+} // we can also have 3-dimensional array with 3 for loops
+```
+
+
+## set: `#include <set>`
+
+```cpp
+set<int> mySet = {1, 2, 3, 4, 5}; // init a set with values
+mySet.insert(6); // adds 6 to the set
+mySet.erase(3); // erase 3 from the set
+cout << mySet.size() << endl; // print the set size
+for (const auto &int : mySet) {
+	std::cout << element << " ";
+}
+```
+
+## map: `#include <unordered_map>`
+
+```cpp
+map<std::string, int> myMap;
+myMap.insert(make_pair("orange", 4));
+myMap.insert(make_pair("grape", 5));
+myMap.erase("banana"); // erase banana from the map
+cout << "Size of myMap1: " << myMap.size() << endl;
+for (const auto& pair : myMap) {
+	cout << pair.first << ": " << pair.second << endl;
+}
+```
+
+we can use `map` for the example but there are several differences to notes:
+
+|                 | map                    | unordered_map  |
+| --------------- | ---------------------- | -------------- |
+| keys            | in order               | not in order   |
+| implementation  | self balance tree      | hash table     |
+| time complexity | insert, delete O(logN) | O(1)           |
+| use cases       | need ordered data      | fast retrieval | 
+
+## vector: `include <vector>`
+
+```cpp
+    vector<int> myVector = {1, 2, 3, 4, 5};
+    myVector.push_back(6); // Adds 6 to the end of the vector
+    myVector.erase(myVector.begin() + 2); // Removes the third element (0-indexed)
+    for (const auto &element : myVector) {
+        cout << element << " ";
+    }
+```
+
 # data types
 
 ```cpp
@@ -160,67 +250,6 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-# array
-
-array is to store multiple values with the same types
-
-```cpp
-string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
-cout << cars[0];  // Outputs Volvo
-cars[0] = "Opel";  
-cout << cars[0]; // Now outputs Opel instead of Volvo
-
-int myNum[3] = {10, 20, 30};
-```
-
-loop through an array
-
-```cpp
-string cars[5] = {"Volvo", "BMW", "Ford", "Mazda", "Tesla"};  
-for (int i = 0; i < 5; i++) {  
-  cout << cars[i] << "\n";  
-}
-
-int myNumbers[5] = {10, 20, 30, 40, 50};  
-for (int i = 0; i < 5; i++) {  
-  cout << myNumbers[i] << "\n";  
-}
-
-// using foreach loop  
-for (int i : myNumbers) {  
-  cout << i << "\n";  
-}
-```
-
-array size
-
-```cpp
-int myNumbers[5] = {10, 20, 30, 40, 50};  
-cout << sizeof(myNumbers); // Print 20
-
-int myNumbers[5] = {10, 20, 30, 40, 50};  
-int getArrayLength = sizeof(myNumbers) / sizeof(int);  
-cout << getArrayLength; // Print 5
-```
-
-multi-dimensional array
-
-```cpp
-string letters[2][4] = {  
-  { "A", "B", "C", "D" },  
-  { "E", "F", "G", "H" }  
-};  
-  
-cout << letters[0][2];  // Outputs "C"
-for (int i = 0; i < 2; i++) {  
-  for (int j = 0; j < 4; j++) {  
-    cout << letters[i][j] << "\n";  
-  }  
-}
-
-// we can also have 3-dimensional array with 3 for loops
-```
-
 # struct
 
 create a variable `myStructure` as a struct:
@@ -359,3 +388,4 @@ int main() {
   return 0;  
 }
 ```
+
