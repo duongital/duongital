@@ -33,24 +33,19 @@ const randomList = [
           </div>
         </div>
       </section>
-      {
-        randomList.map((learnElement) => (
-          <section>
-            <h2>{learnElement.name}</h2>
-            <ul>
-              {allRandom
-                .filter((post) => post.id.includes(learnElement.id))
-                .map((post) => (
-                  <li class="my-2">
-                    <a class="text-lg" href={`/random/${post.slug}`}>
-                      {post.id}
-                    </a>
-                  </li>
-                ))}
-            </ul>
-          </section>
-        ))
-      }
+      <section>
+        <ul>
+          {
+            allRandom.map((post) => (
+              <li class="my-2">
+                <a class="text-lg" href={`/random/${post.slug}`}>
+                  {post.id}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </main>
   </body>
 </html>

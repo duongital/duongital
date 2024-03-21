@@ -17,12 +17,13 @@ ol {
   @apply my-2 !important;
 }
 
-ul>li {
-  @apply list-disc text-sm list-inside !important;
+ul li {
+  @apply list-disc text-sm list-inside md:list-outside !important;
+
 }
 
 ol li {
-  @apply list-decimal text-sm list-inside !important;
+  @apply list-decimal text-sm list-outside ml-5 md:ml-0 !important;
 }
 
 pre {
@@ -81,9 +82,9 @@ pre>code {
   border: 1px solid gainsboro;
 }
 
-p>em {
+/* p>em {
   @apply block text-center text-sm;
-}
+} */
 
 table {
   @apply min-w-full divide-y divide-gray-200 my-8 !important

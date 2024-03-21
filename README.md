@@ -11,5 +11,5 @@
 - VSCode Editor + Postico + SmartGit
 - Obsidian: CMS for the personal website
 - Remnote: to remember things
-- Notion: to save [links from the Internet](https://duongital.notion.site/duongital/b19191accb244558a911494fd0f4bde7)
+- Notion: to save [links from the Internet](/links)
 - [random things](/random) to remind knowledge
