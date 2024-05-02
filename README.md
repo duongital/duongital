@@ -1,8 +1,8 @@
 # Hi 👋 I'm Duong
 
 - title: Frontend Developer
-- learning: CS and NextJS
-- playing: Chrono Trigger
+- learning: Math & NextJS
+- playing: Zelda - Link to the Past
 - planning projects: override Browser's new tab, iron sticker project
 
 # I use:
