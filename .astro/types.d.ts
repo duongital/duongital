@@ -192,13 +192,6 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"cpp.md": {
-	id: "cpp.md";
-  slug: "cpp";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "design-pattern.md": {
 	id: "design-pattern.md";
   slug: "design-pattern";
@@ -206,9 +199,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"docker-kube.md": {
-	id: "docker-kube.md";
-  slug: "docker-kube";
+"devops.md": {
+	id: "devops.md";
+  slug: "devops";
   body: string;
   collection: "notes";
   data: any
@@ -234,6 +227,13 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
+"java.md": {
+	id: "java.md";
+  slug: "java";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
 "nginx-apache.md": {
 	id: "nginx-apache.md";
   slug: "nginx-apache";
@@ -248,6 +248,13 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
+"python.md": {
+	id: "python.md";
+  slug: "python";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
 "terminal.md": {
 	id: "terminal.md";
   slug: "terminal";
@@ -255,16 +262,16 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"uml.md": {
-	id: "uml.md";
-  slug: "uml";
+"text-editor.md": {
+	id: "text-editor.md";
+  slug: "text-editor";
   body: string;
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"vim.md": {
-	id: "vim.md";
-  slug: "vim";
+"uml.md": {
+	id: "uml.md";
+  slug: "uml";
   body: string;
   collection: "notes";
   data: any
@@ -308,6 +315,13 @@ declare module 'astro:content' {
   collection: "random";
   data: any
 } & { render(): Render[".md"] };
+"misc/greedy-algo.md": {
+	id: "misc/greedy-algo.md";
+  slug: "misc/greedy-algo";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
 "misc/pass-by-reference-cpp-vs-js.md": {
 	id: "misc/pass-by-reference-cpp-vs-js.md";
   slug: "misc/pass-by-reference-cpp-vs-js";
@@ -318,6 +332,13 @@ declare module 'astro:content' {
 "misc/when-to-use-delete.md": {
 	id: "misc/when-to-use-delete.md";
   slug: "misc/when-to-use-delete";
+  body: string;
+  collection: "random";
+  data: any
+} & { render(): Render[".md"] };
+"productivity/how do I learn.md": {
+	id: "productivity/how do I learn.md";
+  slug: "productivity/how-do-i-learn";
   body: string;
   collection: "random";
   data: any

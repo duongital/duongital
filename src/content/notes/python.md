@@ -7,7 +7,22 @@ description: 'Cheatsheet on Python language'
 
 Look like Python doesn't have primitive value, all come from classes. Default or built-in classes are defined in lower case.
 
-Javascript also has wrapper class for: String, Number and Boolean. 
+Javascript also has wrapper class for: String, Number and Boolean. Same as Python, variables like: string, number, boolean are immutable and copied during passing as parameter. The difference is JS defined these as primitive data types while Python implemented as `class` under mutable or immutable ones. Summary as below:
+
+**Immutable:**
+
+1. **Integers (`int`)**: Immutable, meaning their values cannot be changed after creation.
+2. **Floats (`float`)**: Immutable.
+3. **Complex numbers (`complex`)**: Immutable.
+4. **Booleans (`bool`)**: Immutable. They can only be `True` or `False`.
+5. **Strings (`str`)**: Immutable. Once created, their values cannot be modified.
+6. **Tuples (`tuple`)**: Immutable. Once created, elements cannot be modified, added, or removed.
+
+**Mutable:**
+
+1. **Lists (`list`)**: Mutable. Elements can be added, removed, or modified after creation.
+2. **Dictionaries (`dict`)**: Mutable. Key-value pairs can be added, removed, or modified after creation.
+3. **Sets (`set`)**: Mutable. Elements can be added or removed after creation. However, the set itself is mutable, but the elements within it must be immutable.
 
 |                 | python built-in class              | javascript    |
 | --------------- | ---------------------------------- | ------------- |
@@ -34,8 +49,8 @@ User defines class should be in uppercase.
 What is `len`? Using `type(len)` we can see that this is a `<class 'builtin_function_or_method'>`. So:
 
 - builtin: default by Python, no need to import
-- function: `my_list.__len__()`
-- method: `len(my_list)`
+- function: `len(my_list)`
+- method: `my_list.__len__()`
 
 Similar to `len`  (_builtin function or method_) includes: max, min, abs, sorted, sum, range, type, callable.
 
@@ -133,6 +148,13 @@ for x in thisdict.values():
   print(x)
 for x in thisdict.keys():  
   print(x)
+```
+
+```python
+# count the appearance of a string
+dict = {}
+for s in inputString:
+	dict[s] = dict.get(s, 0) + 1
 ```
 
 # math
