@@ -13,7 +13,7 @@ allPosts = allPosts.sort(
 )
 ---
 
-<html lang="en">
+<html data-theme="cupcake" lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
@@ -38,7 +38,10 @@ allPosts = allPosts.sort(
                     day: 'numeric',
                   })}
                 </span>
-                <a class="text-lg" href={`/blog/${post.slug}`}>
+                <a
+                  class="link link-primary text-lg"
+                  href={`/blog/${post.slug}`}
+                >
                   {post.data.title}
                 </a>
               </li>

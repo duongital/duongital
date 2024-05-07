@@ -15,7 +15,7 @@ const randomList = [
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="cupcake" lang="en">
   <head>
     <BaseHead
       title="@duongital - Random"
@@ -38,7 +38,10 @@ const randomList = [
           {
             allRandom.map((post) => (
               <li class="my-2">
-                <a class="text-lg" href={`/random/${post.slug}`}>
+                <a
+                  class="text-lg link link-primary"
+                  href={`/random/${post.slug}`}
+                >
                   {post.id}
                 </a>
               </li>

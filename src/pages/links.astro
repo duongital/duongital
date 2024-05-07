@@ -16,7 +16,7 @@ const myPage = await notion.databases.query({
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="cupcake" lang="en">
   <head>
     <BaseHead
       title="@duongital - Links"
@@ -34,7 +34,11 @@ const myPage = await notion.databases.query({
               {myPage?.results?.map((item) => {
                 return (
                   <div class="mb-4">
-                    <a href={item?.properties?.URL?.url} target="_blank">
+                    <a
+                      class="link link-secondary"
+                      href={item?.properties?.URL?.url}
+                      target="_blank"
+                    >
                       {item?.properties?.Name?.title[0]?.plain_text}
                     </a>
                   </div>

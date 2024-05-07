@@ -17,7 +17,7 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<html lang="en">
+<html data-theme="cupcake" lang="en">
   <head>
     <BaseHead
       title={entry.data.title || entry.slug}

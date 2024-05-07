@@ -10,7 +10,7 @@ let allNotes = await getCollection('notes')
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="cupcake" lang="en">
   <head>
     <BaseHead
       title="@duongital - Notes"
@@ -22,7 +22,7 @@ let allNotes = await getCollection('notes')
     <main transition:animate={fade({ duration: '50ms' })}>
       <section>
         <div class="flex gap-x-4 items-center">
-          <h2 class="text-4xl font-mono">My Notes</h2>
+          <h2 class="text-4xl font-mono">Cheat sheets</h2>
           <div class="w-12 h-12">
             <LottieAnimation src="/assets/Robot.json" />
           </div>
@@ -31,7 +31,11 @@ let allNotes = await getCollection('notes')
           {
             allNotes.map((post) => (
               <li class="my-4">
-                <a class="text-lg" href={`/notes/${post.slug}`}>
+                <a
+                  class="link link-secondary"
+                  class="text-lg"
+                  href={`/notes/${post.slug}`}
+                >
                   {post.id}
                 </a>
               </li>

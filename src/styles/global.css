@@ -31,16 +31,16 @@ pre {
 }
 
 a {
-  @apply text-gray-600 underline !important;
+  @apply underline !important;
 }
 
 a.active {
-  color: #7EB233 !important;
+  @apply text-primary !important;
 }
 
 /* todo h1 -- h6 */
 h1 {
-  @apply text-3xl border-b mb-3 !important;
+  @apply text-3xl border-b mb-3 mt-10 !important;
 }
 
 h2 {
