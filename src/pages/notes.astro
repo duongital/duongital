@@ -21,12 +21,7 @@ let allNotes = await getCollection('notes')
     <Header />
     <main transition:animate={fade({ duration: '50ms' })}>
       <section>
-        <div class="flex gap-x-4 items-center">
-          <h2 class="text-4xl font-mono">Cheat sheets</h2>
-          <div class="w-12 h-12">
-            <LottieAnimation src="/assets/Robot.json" />
-          </div>
-        </div>
+        <h1>Cheatsheets:</h1>
         <ul>
           {
             allNotes.map((post) => (
@@ -42,6 +37,11 @@ let allNotes = await getCollection('notes')
             ))
           }
         </ul>
+        <div class="flex gap-x-4 items-center">
+          <div class="w-12 h-12">
+            <LottieAnimation src="/assets/Robot.json" />
+          </div>
+        </div>
       </section>
     </main>
   </body>

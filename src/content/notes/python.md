@@ -3,6 +3,19 @@ title: 'Python'
 description: 'Cheatsheet on Python language'
 ---
 
+# create virtual environment 
+
+using current Python version
+
+```bash
+# create env at the current directory with name `venv` 
+python3 -m venv venv 
+# activate python 
+source venv/bin/activate 
+# exit venv 
+deactivate
+```
+
 # built-in data types
 
 Look like Python doesn't have primitive value, all come from classes. Default or built-in classes are defined in lower case.

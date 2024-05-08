@@ -199,23 +199,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"devops.md": {
-	id: "devops.md";
-  slug: "devops";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "excel.md": {
 	id: "excel.md";
   slug: "excel";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"functional-programming.md": {
-	id: "functional-programming.md";
-  slug: "functional-programming";
   body: string;
   collection: "notes";
   data: any
@@ -234,13 +220,6 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"nginx-apache.md": {
-	id: "nginx-apache.md";
-  slug: "nginx-apache";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "operating-system.md": {
 	id: "operating-system.md";
   slug: "operating-system";
@@ -248,23 +227,16 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
+"owl.md": {
+	id: "owl.md";
+  slug: "owl";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
 "python.md": {
 	id: "python.md";
   slug: "python";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"terminal.md": {
-	id: "terminal.md";
-  slug: "terminal";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"text-editor.md": {
-	id: "text-editor.md";
-  slug: "text-editor";
   body: string;
   collection: "notes";
   data: any
@@ -336,8 +308,8 @@ declare module 'astro:content' {
   collection: "random";
   data: any
 } & { render(): Render[".md"] };
-"productivity/how do I learn.md": {
-	id: "productivity/how do I learn.md";
+"productivity/how-do-i-learn.md": {
+	id: "productivity/how-do-i-learn.md";
   slug: "productivity/how-do-i-learn";
   body: string;
   collection: "random";

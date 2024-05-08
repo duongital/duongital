@@ -40,15 +40,15 @@ a.active {
 
 /* todo h1 -- h6 */
 h1 {
-  @apply text-3xl border-b mb-3 mt-10 !important;
+  @apply text-2xl border-b mb-3 mt-10 !important;
 }
 
 h2 {
-  @apply text-2xl !important;
+  @apply text-xl !important;
 }
 
 h3 {
-  @apply text-xl !important;
+  @apply text-lg !important;
 }
 
 h4 {

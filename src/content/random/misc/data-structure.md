@@ -16,7 +16,6 @@ tags:
 ## introduction to array
 
 {{ array }} is a vector type, include same type for every block.
-<!--SR:!2024-02-04,4,270-->
 
 on address memory, they are grouped together and closely next to each other.
 
@@ -66,7 +65,6 @@ there are 3 ways to create 2d arrays:
 - on stack: int A[2][2] = {{1,2},{1,2}}
 - on heap: int* A[2], and then A[0] = new int[2], A[1] = new int[2]
 - all on heap: int** A; A = new int* [2]; ... add element same as 2nd step
-<!--SR:!2024-02-01,1,230-->
 
 note: double pointer (**) helps create variable directly on `heap`
 

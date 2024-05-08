@@ -3,7 +3,6 @@
 - title: Frontend Developer
 - learning: Math & NextJS
 - playing: Zelda - Link to the Past
-- planning projects: override Browser's new tab, iron sticker project
 
 # I use:
 
