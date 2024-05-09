@@ -47,24 +47,15 @@ h2 {
   @apply text-xl !important;
 }
 
-h3 {
-  @apply text-lg !important;
-}
-
-h4 {
-  @apply text-lg !important;
-}
-
-h5 {
-  @apply text-lg !important;
-}
-
+h3,
+h4,
+h5,
 h6 {
   @apply text-lg !important;
 }
 
 blockquote {
-  @apply text-sm italic font-semibold text-gray-900 pl-4 border-l-4 !important;
+  @apply text-sm italic font-semibold text-gray-600 pl-4 border-l-4 !important;
   font-family: 'JetBrains Mono Variable', sans-serif;
 }
 
@@ -79,7 +70,8 @@ pre>code {
 }
 
 .astro-code {
-  border: 1px solid gainsboro;
+  border: 1px solid rgb(243, 243, 243);
+  @apply shadow-sm;
 }
 
 /* p>em {

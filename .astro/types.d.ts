@@ -192,13 +192,6 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"design-pattern.md": {
-	id: "design-pattern.md";
-  slug: "design-pattern";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
 "excel.md": {
 	id: "excel.md";
   slug: "excel";
@@ -206,16 +199,16 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"git.md": {
-	id: "git.md";
-  slug: "git";
+"java.md": {
+	id: "java.md";
+  slug: "java";
   body: string;
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"java.md": {
-	id: "java.md";
-  slug: "java";
+"oop-patterns.md": {
+	id: "oop-patterns.md";
+  slug: "oop-patterns";
   body: string;
   collection: "notes";
   data: any

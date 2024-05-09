@@ -1,5 +1,5 @@
 ---
-title: 'Design Pattern'
+title: 'OOP Design Patterns'
 description: 'Some design patterns in OOP languages: Java, C#...'
 ---
 
@@ -34,7 +34,6 @@ interface KingdomFactory {
 
 ## singleton
 
----
 
 # struct
 
@@ -57,7 +56,6 @@ interface KingdomFactory {
 
 ## proxy
 
----
 
 # behavior
 
