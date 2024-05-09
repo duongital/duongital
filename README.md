@@ -1,8 +1,8 @@
 # Hi 👋 I'm Duong
 
-- title: Frontend Developer
-- learning: Math & NextJS
-- playing: Zelda - Link to the Past
+- title: software engineer
+- learning: math & nextjs
+- playing: zelda - link to the past
 
 # I use:
 
