@@ -12,14 +12,15 @@ let allProjects = await getCollection('projects')
 <html data-theme="cupcake" lang="en">
   <head>
     <BaseHead
-      title="@duongital - Notes"
-      description="Cheatsheet on CS topics"
+      title="@duongital - Projects"
+      description="Side projects that I've been working on"
     />
   </head>
   <body class="max-w-lg mx-auto">
     <Header />
     <main transition:animate={fade({ duration: '50ms' })}>
       <section>
+        <h1>Projects:</h1>
         <ul>
           {
             allProjects.map((post) => (
