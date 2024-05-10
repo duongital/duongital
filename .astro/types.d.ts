@@ -185,16 +185,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"notes": {
-"algorithm.md": {
-	id: "algorithm.md";
-  slug: "algorithm";
+"-algorithm.md": {
+	id: "-algorithm.md";
+  slug: "-algorithm";
   body: string;
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"excel.md": {
-	id: "excel.md";
-  slug: "excel";
+"-ds.md": {
+	id: "-ds.md";
+  slug: "-ds";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"-patterns.md": {
+	id: "-patterns.md";
+  slug: "-patterns";
   body: string;
   collection: "notes";
   data: any
@@ -202,13 +209,6 @@ declare module 'astro:content' {
 "java.md": {
 	id: "java.md";
   slug: "java";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"oop-patterns.md": {
-	id: "oop-patterns.md";
-  slug: "oop-patterns";
   body: string;
   collection: "notes";
   data: any
@@ -230,6 +230,20 @@ declare module 'astro:content' {
 "python.md": {
 	id: "python.md";
   slug: "python";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"react.md": {
+	id: "react.md";
+  slug: "react";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"sql.md": {
+	id: "sql.md";
+  slug: "sql";
   body: string;
   collection: "notes";
   data: any
@@ -272,47 +286,12 @@ declare module 'astro:content' {
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 };
-"random": {
-"misc/data-structure.md": {
-	id: "misc/data-structure.md";
-  slug: "misc/data-structure";
+"projects": {
+"personal-blog.md": {
+	id: "personal-blog.md";
+  slug: "personal-blog";
   body: string;
-  collection: "random";
-  data: any
-} & { render(): Render[".md"] };
-"misc/greedy-algo.md": {
-	id: "misc/greedy-algo.md";
-  slug: "misc/greedy-algo";
-  body: string;
-  collection: "random";
-  data: any
-} & { render(): Render[".md"] };
-"misc/pass-by-reference-cpp-vs-js.md": {
-	id: "misc/pass-by-reference-cpp-vs-js.md";
-  slug: "misc/pass-by-reference-cpp-vs-js";
-  body: string;
-  collection: "random";
-  data: any
-} & { render(): Render[".md"] };
-"misc/when-to-use-delete.md": {
-	id: "misc/when-to-use-delete.md";
-  slug: "misc/when-to-use-delete";
-  body: string;
-  collection: "random";
-  data: any
-} & { render(): Render[".md"] };
-"productivity/how-do-i-learn.md": {
-	id: "productivity/how-do-i-learn.md";
-  slug: "productivity/how-do-i-learn";
-  body: string;
-  collection: "random";
-  data: any
-} & { render(): Render[".md"] };
-"security/general-questions.md": {
-	id: "security/general-questions.md";
-  slug: "security/general-questions";
-  body: string;
-  collection: "random";
+  collection: "projects";
   data: any
 } & { render(): Render[".md"] };
 };

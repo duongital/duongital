@@ -1,18 +1,20 @@
 ---
-title: 'OOP Design Patterns'
+title: 'Design Patterns in Programming'
 description: 'Some design patterns in OOP languages: Java, C#...'
 ---
 
-# creation
+# **object oriented programming**
 
-## factory method
+## oop - creation
+
+### factory method
 
 - khai báo interface để các factories implement, mục đích để bảo đảm các factory sinh ra nó gọi chung hàm giống tên: `interface Generate(String type) { String generate(type)  }`
 - khởi tạo factory, ví dụ Nike: `class FactoryNike implement Generate {}`
 - instance factory1: `var factory1 = new FactoryNike(); factory1.generate("ao_thun")`
 - instance facotry2: `var factory2 = new FactoryAdidas(); factory2.generate("ao_thun")`
 
-## abstract factory
+### abstract factory
 
 
 ```java
@@ -24,59 +26,63 @@ interface KingdomFactory {
 ```
 
 
-## builder
+### builder
 
 
 
-## prototype
+### prototype
 
 
 
-## singleton
+### singleton
 
 
-# struct
+## oop - struct
 
-## adapter
-
-
-
-## bridge
-
-## composite
+### adapter
 
 
-## decorator
+### bridge
 
-## facade
-
-
-## flyweight
+### composite
 
 
-## proxy
+### decorator
+
+### facade
 
 
-# behavior
-
-## chain of responsibility
-
-## command
+### flyweight
 
 
-## iterator
+### proxy
 
-## mediator
 
-## memeto
+## oop - behavior
 
-## observer
+### chain of responsibility
 
-## state
+### command
 
-## strategy
 
-## template method
+### iterator
 
-## visitor
+### mediator
 
+### memeto
+
+### observer
+
+### state
+
+### strategy
+
+### template method
+
+### visitor
+
+# **functional programming**
+
+## functional - closure
+
+## functional - currying

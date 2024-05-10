@@ -1,3 +1,19 @@
+---
+title: 'Owl UI Library'
+description: 'Look similar to VueJS and ReactJS'
+---
+
+# owl qweb template
+
+using `and` condition
+
+```xml
+<span
+	t-esc="!store.inputDirty and store.model === store.list?.resModel ? store.range : value"
+	t-on-click="onValueClick"
+/>
+```
+
 - Odoo is using class component for migrating all old `<odoo>` template, we can understand QWeb is a xml or syntax helps Python compile to HTML, JS, CSS.
 
 # create a new component:

@@ -1,8 +1,6 @@
 # Hi 👋 I'm Duong
 
-- title: software engineer
-- learning: math & nextjs
-- playing: zelda - link to the past
+I graduated from University of Economics HCMC and started first job as a Marketing Executive for Mercedes-Benz Vietnam. Over five years working in the field I made a big decision to change career paths and become a software engineer. Now I enjoys every working day with front-end tasks and challenges myself to become a principal engineer in the future.
 
 # I use:
 
@@ -11,4 +9,3 @@
 - Obsidian: CMS for the personal website
 - Remnote: to remember things
 - Notion: to save [links from the Internet](/links)
-- [random things](/random) to remind knowledge

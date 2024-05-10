@@ -30,7 +30,7 @@ thể hiện quy trình theo chiều ngang và chiều dọc, ví dụ: sequence
 
 # statechart diagram
 
-
+dùng để tracking sự thay đổi của state
 
 # activity diagram
 

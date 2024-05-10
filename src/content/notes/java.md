@@ -206,7 +206,7 @@ for(int i = 0; i < 5; i++){
 
 IPEA: Inheritance, Polymorphism, Encapsulation, Abstract
 
-## Inheritance with `extends`
+## inheritance with `extends`
 
 ```java
 class Vehicle {
@@ -232,7 +232,7 @@ class Car extends Vehicle {
 }
 ```
 
-## Polymorphism with `override` and `overload`
+## polymorphism with `override` and `overload`
 
 ```java
 class Animal {
@@ -301,7 +301,7 @@ public class Main {
 }
 ```
 
-## Encapsulation with: `privated`, get set functions
+## encapsulation with: `privated`, get set functions
 
 ```java
 public class Person {
@@ -319,7 +319,7 @@ public class Person {
 }
 ```
 
-## Abstract with: `abstract` class or `interface`
+## abstract with: `abstract` class or `interface`
 
 ```java
 // Abstract class
