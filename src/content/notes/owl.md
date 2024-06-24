@@ -3,9 +3,29 @@ title: 'Owl UI Library'
 description: 'Look similar to VueJS and ReactJS'
 ---
 
+# odoo xml
+
+override
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="product_template_tree_view_infinite_loading" model="ir.ui.view">
+		<field name="name">product.template.product.tree</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_tree_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//tree" position="attributes">
+			<attribute name="limit">11</attribute>
+			</xpath>
+		</field>
+	</record>
+</odoo>
+```
+
 # owl qweb template
 
-using `and` condition
+using `and` condition (same for `or`):
 
 ```xml
 <span

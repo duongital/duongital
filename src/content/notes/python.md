@@ -3,6 +3,8 @@ title: 'Python'
 description: 'Cheatsheet on Python language'
 ---
 
+() [] {} is simple way of writing tupple() list() or dict(), all are created from classes or data abstraction methology oop. even mylist[0] is originally written as getitem(mylist, 0).
+
 # create virtual environment 
 
 using current Python version
@@ -65,7 +67,26 @@ What is `len`? Using `type(len)` we can see that this is a `<class 'builtin_func
 - function: `len(my_list)`
 - method: `my_list.__len__()`
 
-Similar to `len`  (_builtin function or method_) includes: max, min, abs, sorted, sum, range, type, callable.
+Similar to `len`  (_builtin function or method_) includes: max, min, abs, sorted, sum,  callable.
+
+Short syntax:
+
+```python
+odds = [1, 3, 5, 7, 9]
+[x + 1 for x in odds] # [4, 6, 8, 10]
+[x for x in odds if x %% 5 == 0] # [1, 5]
+```
+
+Sequence type: list, range, string, flat tree, linked list... have sequence abstraction: 
+
+```python
+# membership
+>>> 2 in digits
+>>> 1234 not in digits
+
+# slicing
+>>> digits[0:2]
+```
 
 # boilerplate
 
