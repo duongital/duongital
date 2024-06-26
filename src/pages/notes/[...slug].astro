@@ -1,5 +1,5 @@
 ---
-import { fade } from 'astro:transitions'
+import { fade, slide } from 'astro:transitions'
 import { getCollection } from 'astro:content'
 
 import Header from '../../components/Header.astro'
@@ -17,7 +17,7 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<html data-theme="cupcake" lang="en">
+<html data-theme="autumn" lang="en">
   <head>
     <BaseHead
       title={entry.data.title || entry.slug}
@@ -27,7 +27,7 @@ const { Content } = await entry.render()
 
   <body class="max-w-lg mx-auto blog">
     <Header />
-    <main transition:animate={fade({ duration: '50ms' })}>
+    <main transition:animate={slide({ duration: '50ms' })}>
       <h1 class="text-primary">{entry.data.title}</h1>
       <blockquote>{entry.data.description}</blockquote>
       <article>

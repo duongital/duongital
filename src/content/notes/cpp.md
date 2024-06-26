@@ -65,7 +65,14 @@ for (const int& i : vector1) {
 }
 ```
 
-other utils functions: size(), clear(), front(), back(), empty(), capacity()
+| Function     | Description                                          |
+| ------------ | ---------------------------------------------------- |
+| `size()`     | returns the number of elements present in the vector |
+| `clear()`    | removes all the elements of the vector               |
+| `front()`    | returns the first element of the vector              |
+| `back()`     | returns the last element of the vector               |
+| `empty()`    | returns **1** (true) if the vector is empty          |
+| `capacity()` | check the overall size of a vector                   |
 
 ## string
 
@@ -128,11 +135,11 @@ for (iter = student.begin(); iter != student.end(); ++iter) {
 }
 ```
 
-add a value to the map
+count characters in a string by using a map:
 
 ```cpp
 unordered_map<char, int> m;
-	for (char c : s) {
+for (char c : s) {
 	m[c]++;
 }
 
@@ -202,6 +209,7 @@ for (int i : myNumbers) {
   cout << i << "\n";  
 }
 
+// break
 for (int i = 0; i < 10; i++) {  
   if (i == 4) {  
     break;  
@@ -209,6 +217,7 @@ for (int i = 0; i < 10; i++) {
   cout << i << "\n";  
 }
 
+// continue
 for (int i = 0; i < 10; i++) {  
   if (i == 4) {  
     continue;  

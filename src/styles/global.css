@@ -54,7 +54,7 @@ h6 {
   @apply text-lg !important;
 }
 
-blockquote {
+/* blockquote {
   @apply text-sm italic font-semibold text-gray-600 pl-4 border-l-4 !important;
   font-family: 'JetBrains Mono Variable', sans-serif;
 }
@@ -67,7 +67,7 @@ code {
 pre>code {
   @apply bg-transparent text-xs not-italic !important;
   font-family: 'JetBrains Mono Variable', sans-serif;
-}
+} */
 
 .astro-code {
   border: 1px solid rgb(243, 243, 243);
@@ -79,7 +79,11 @@ pre>code {
 } */
 
 table {
-  @apply min-w-full divide-y divide-gray-200 my-8 !important
+  @apply divide-y divide-gray-200 my-8 block whitespace-nowrap overflow-x-scroll !important
+}
+
+table td {
+  @apply px-2 !important;
 }
 
 thead th {
@@ -98,4 +102,26 @@ hr {
 
 li>ul>li {
   @apply ml-4 !important
+}
+
+/* scroll bar style */
+/* width */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1; */
+  @apply bg-white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

@@ -1,5 +1,5 @@
 ---
-import { fade } from 'astro:transitions'
+import { fade, slide } from 'astro:transitions'
 
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
@@ -16,7 +16,7 @@ const myPage = await notion.databases.query({
 ---
 
 <!DOCTYPE html>
-<html data-theme="cupcake" lang="en">
+<html data-theme="autumn" lang="en">
   <head>
     <BaseHead
       title="@duongital - Links"
@@ -25,7 +25,7 @@ const myPage = await notion.databases.query({
   </head>
   <body class="max-w-lg mx-auto">
     <Header />
-    <main transition:animate={fade({ duration: '50ms' })}>
+    <main transition:animate={slide({ duration: '50ms' })}>
       <section>
         <h2 class="text-4xl font-mono mb-8">My Links</h2>
         {
