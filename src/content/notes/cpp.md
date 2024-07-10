@@ -5,16 +5,16 @@ description: 'Cheatsheet on C++ language'
 
 # primitive variables
 
-| type name | bytes |
-| --------- | ----- |
-| short     | 2     |
-| int       | 4     |
-| long      | 4     |
-| long long | 8     |
-| float     | 4     |
-| double    | 8     |
-| bool      | 1     |
-| char      | 1     |
+| type name | bytes  |
+| --------- | ------ |
+| short     | 2      |
+| int       | 4      |
+| long      | 4 or 8 | 
+| long long | 8      |
+| float     | 4      |
+| double    | 8      |
+| bool      | 1      |
+| char      | 1      |
 
 For short, int, long, long long we can define to have positive number only by using `unsigned` keyword, for example: `unsigned int a;`
 
@@ -49,12 +49,16 @@ for (int i = 0; i < 2; i++) {
     cout << letters[i][j] << "\n";  
   }  
 }
+
+// sort array using std library
+int arr[] = {4,5,1,2,3};
+sort(arr, arr+n); // arr: first address, arr+n: last address
 ```
 
 ## vector
 
 ```cpp
-// Initializer list
+// initializer list
 vector<int> vector1 = {1, 2, 3, 4, 5};
 vector1.push_back(6);
 cout << "Element at Index 0: " << vector1.at(0) << endl;
@@ -63,6 +67,10 @@ vector1.pop_back(); // remove the last element
 for (const int& i : vector1) {
 	cout << i << "  ";
 }
+
+// sort a vector using std library
+vector<int> vector2 = {3,4,5,2,1};
+sort(vector2.begin(), vector2.end())
 ```
 
 | Function     | Description                                          |
@@ -224,4 +232,37 @@ for (int i = 0; i < 10; i++) {
   }  
   cout << i << "\n";  
 }
+```
+
+# pass by reference vs. value
+
+if data structure is large, using `&` to avoid copy data, additionally: modify original data, don't take ownership of data or manage its memory.
+
+```cpp
+// Pass by reference
+void modifyVector(std::vector<int>& nums) {
+    nums.push_back(10); // Modifies the original vector
+}
+
+// Pass by value
+void processVector(std::vector<int> nums) {
+    nums.push_back(10); // Modifies only the local copy
+    for (int num : nums) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    std::vector<int> myVector = {1, 2, 3};
+
+    modifyVector(myVector);
+    // myVector is now {1, 2, 3, 10}
+
+    processVector(myVector);
+    // myVector is still {1, 2, 3, 10}
+    // processVector printed 1 2 3 10 10
+    return 0;
+}
+
 ```

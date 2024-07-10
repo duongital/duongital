@@ -213,9 +213,23 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"javascript.md": {
-	id: "javascript.md";
-  slug: "javascript";
+"flutter.md": {
+	id: "flutter.md";
+  slug: "flutter";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"js-ts.md": {
+	id: "js-ts.md";
+  slug: "js-ts";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"network.md": {
+	id: "network.md";
+  slug: "network";
   body: string;
   collection: "notes";
   data: any
@@ -227,23 +241,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"owl.md": {
-	id: "owl.md";
-  slug: "owl";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"python.md": {
-	id: "python.md";
-  slug: "python";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"react.md": {
-	id: "react.md";
-  slug: "react";
+"sercurity.md": {
+	id: "sercurity.md";
+  slug: "sercurity";
   body: string;
   collection: "notes";
   data: any
