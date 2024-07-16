@@ -1,6 +1,6 @@
 ---
 title: 'Javascript'
-description: 'Cheatsheet on Javascript language'
+description: 'Notes on using JS language'
 ---
 
 Count apperance of character in an array:

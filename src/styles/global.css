@@ -40,11 +40,11 @@ a.active {
 
 /* todo h1 -- h6 */
 h1 {
-  @apply text-2xl border-b mb-3 mt-10 !important;
+  @apply text-2xl border-b my-6 !important;
 }
 
 h2 {
-  @apply text-xl !important;
+  @apply text-xl my-3 !important;
 }
 
 h3,
@@ -107,7 +107,7 @@ li>ul>li {
 /* scroll bar style */
 /* width */
 ::-webkit-scrollbar {
-  @apply w-2 h-2;
+  @apply w-2 h-1;
 }
 
 /* Track */

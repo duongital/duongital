@@ -1,7 +1,13 @@
 ---
 title: 'Design Patterns in Programming'
-description: 'Some design patterns in OOP languages: Java, C#...'
+description: 'Some design patterns in OOP languages: Java, C++... and functional ones: Javascript, Python...'
 ---
+
+# **functional programming**
+
+## closure
+
+## currying
 
 # **object oriented programming**
 
@@ -81,8 +87,4 @@ interface KingdomFactory {
 
 ### visitor
 
-# **functional programming**
 
-## functional - closure
-
-## functional - currying

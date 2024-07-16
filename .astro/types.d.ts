@@ -192,9 +192,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"-ds.md": {
-	id: "-ds.md";
-  slug: "-ds";
+"-data-structure.md": {
+	id: "-data-structure.md";
+  slug: "-data-structure";
   body: string;
   collection: "notes";
   data: any

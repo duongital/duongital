@@ -16,12 +16,12 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 ---
 
-<html data-theme="autumn" lang="en">
+<html data-theme="lemonade" lang="en">
   <head>
     <BaseHead title={entry.data.title} description={entry.data.description} />
   </head>
 
-  <body class="max-w-lg mx-auto blog">
+  <body class="max-w-2xl mx-auto blog">
     <Header />
     <main transition:animate={slide({ duration: '50ms' })}>
       <section>
