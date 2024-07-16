@@ -3,6 +3,8 @@ title: 'Networking'
 description: 'Servers are talking to each other'
 ---
 
+src: [backend swe interview](https://github.com/tamhoang1412/backend-swe-interview-questions/tree/main/answers)
+
 ## How TCP open a connection? What does it need to open a connection?
 
 TCP needs to open a connection to determine if the server is available to respond and know there is a way from it to the server before transferring data. To open a connection, firstly server must be bound and listen to a port, it is passive open. Then a process called 3 way handshake happens:
