@@ -6,9 +6,9 @@ description: 'To use data efficiency while solving a problem'
 
 # 1. linear ds
 
-## 1.1 standard
+standard
 
-### static array `int arr[MAX]` 🍏
+## 🍏 1.1 static array `int arr[MAX]` 
 
 ```cpp
 // one direction
@@ -34,7 +34,7 @@ int arr[] = {4,5,1,2,3};
 sort(arr, arr+n); // arr: first address, arr+n: last address
 ```
 
-### dynamic array `vector<int>` 🍏
+## 🍏 1.2 dynamic array `vector<int>` 
 
 ```cpp
 // initializer list
@@ -61,27 +61,31 @@ sort(vector2.begin(), vector2.end())
 | `empty()`    | returns **1** (true) if the vector is empty          |
 | `capacity()` | check the overall size of a vector                   |
 
-### bitmask 🍊
+## 🍊 1.3 bitmask 
 
-### linked list `list` 🍏
+## 🍏 1.4 linked list `list` 
 
-### stack `stack` 🫐
+## 🫐 1.5 stack `stack` 
 
-### queue `queue` 🫐
+## 🫐 1.6 queue `queue` 
 
-### dequeue (double ended queue) `dequeue` 🫐
+## 🫐1.7 dequeue (double ended queue) `dequeue` 
 
-## 2.2 not standard
+not standard
 
-data structures with your own implementation:
+---
 
-- linked list with `ListNode` struct 🍏
+below data structures implemented by your own:
+
+## 🍏 1.8 linked list with `ListNode` struct 
+
+using while to traverse a linked list
 
 # 2. non-linear ds
 
-## 2.1 standard
+standard library
 
-### balanced binary search tree: `set` 🍏
+## 🍏 2.1 balanced binary search tree: `set` 
 
 ```cpp
 #include <set>
@@ -102,7 +106,7 @@ my_set1.count(8) == 1 // check if 8 appear one time
 | `empty()`  | Check if the set is empty.          |
 | `size()`   | Returns the size of the set.        |
 
-### balanced binary search tree: `map` 🍏
+## 🍏 2.2 balanced binary search tree: `map` 
 
 ```cpp
 map<int, string> student;
@@ -146,15 +150,30 @@ for (const auto& pair : m) {
 | `size()`   | returns the number of elements in the map            |
 | `empty()`  | returns `true` if the map is empty                   |
 
-### priority queue: `heap` 🫐
+## 🫐 2.3 priority queue: `heap` 
 
-### hash table: `unorder_map` 🍊
+content to be updated
 
-## 2.2 not standard
+## 🍊 2.4 hash table: `unorder_map` 
 
-data structures with your own implementation:
+content to be updated
 
-- binary tree with `ListNode` struct 🍏
-- graph: adjacency matrix, adjacency list, edge list 🫐
-- union-find disjoint sets 🫐
-- segment tree 🍊
+---
+
+below data structures are not standard and implemented with your own implementation:
+
+## 🍏 2.5 binary tree with `ListNode` struct 
+
+content to be updated
+
+## 🫐 2.6 graph: adjacency matrix, adjacency list, edge list 
+
+content to be updated
+
+## 🫐 2.7 union-find disjoint sets 
+
+content to be updated
+
+## 🍊 2.8 segment tree 
+
+content to be updated
