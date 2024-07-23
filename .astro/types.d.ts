@@ -199,9 +199,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"-patterns.md": {
-	id: "-patterns.md";
-  slug: "-patterns";
+"-pattern.md": {
+	id: "-pattern.md";
+  slug: "-pattern";
   body: string;
   collection: "notes";
   data: any
@@ -213,9 +213,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"flutter.md": {
-	id: "flutter.md";
-  slug: "flutter";
+"dart.md": {
+	id: "dart.md";
+  slug: "dart";
   body: string;
   collection: "notes";
   data: any
@@ -223,6 +223,13 @@ declare module 'astro:content' {
 "js-ts.md": {
 	id: "js-ts.md";
   slug: "js-ts";
+  body: string;
+  collection: "notes";
+  data: any
+} & { render(): Render[".md"] };
+"mobile.md": {
+	id: "mobile.md";
+  slug: "mobile";
   body: string;
   collection: "notes";
   data: any
@@ -255,9 +262,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"uml.md": {
-	id: "uml.md";
-  slug: "uml";
+"www.md": {
+	id: "www.md";
+  slug: "www";
   body: string;
   collection: "notes";
   data: any
