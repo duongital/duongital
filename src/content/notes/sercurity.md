@@ -5,8 +5,6 @@ description: 'So you wana hack'
 
 src: [backend swe interview](https://github.com/tamhoang1412/backend-swe-interview-questions/tree/main/answers)
 
-# Topic: SECURITY
-
 ## Hash vs Encrypt vs Encode
 
 Hashing is the act of transforming data from arbitrary size to a fixed size value. For example the module operator.

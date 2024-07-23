@@ -3,12 +3,11 @@ title: 'Data Structure'
 description: 'To use data efficiency while solving a problem'
 ---
 
-
 # 1. linear ds
 
 standard
 
-## 🍏 1.1 static array `int arr[MAX]` 
+## 🍏 1.1 `int arr[]`: static array 
 
 ```cpp
 // one direction
@@ -34,7 +33,7 @@ int arr[] = {4,5,1,2,3};
 sort(arr, arr+n); // arr: first address, arr+n: last address
 ```
 
-## 🍏 1.2 dynamic array `vector<int>` 
+## 🍏 1.2 `vector<int>`: dynamic array 
 
 ```cpp
 // initializer list
@@ -63,29 +62,61 @@ sort(vector2.begin(), vector2.end())
 
 ## 🍊 1.3 bitmask 
 
-## 🍏 1.4 linked list `list` 
+## 🍏 1.4 `list`: linked list
 
-## 🫐 1.5 stack `stack` 
+## 🫐 1.5 `stack`: stack
 
-## 🫐 1.6 queue `queue` 
+last in first out
 
-## 🫐1.7 dequeue (double ended queue) `dequeue` 
+## 🫐 1.6 `queue`: queue
 
-not standard
+first in first out
+
+## 🫐 1.7  `dequeue`: double ended queue
+
+used to implement `stack` or `queue`
 
 ---
 
 below data structures implemented by your own:
 
-## 🍏 1.8 linked list with `ListNode` struct 
+## 🍏 1.8 `ListNode`: struct to implement a linked list
 
 using while to traverse a linked list
 
+```cpp
+struct ListNode {
+	int val;
+	ListNode* next;
+	ListNode() : val(0), next(nullptr) {}
+	ListNode(int x) : val(x), next(nullptr) {}
+	ListNode(int x, ListNode* next) : val(x), next(next) {}
+};
+```
+
 # 2. non-linear ds
 
-standard library
+## 🫐 2.1 `priority_queue`: max heap and min heap
 
-## 🍏 2.1 balanced binary search tree: `set` 
+- this is a *complete* binary tree (different from *full* and *perfect* ones):
+	- full: each parent must have two children.
+	- complete: xếp từ trên xg dưới từ trái qua phải (ko cần đủ 2 lá)
+	- perfect: full + complete.
+- complete >> full >> perfect
+- two types: min head, max heap:
+	- min heap: parent is less than or equal children
+	- max heap: parent is greater than or equal children
+
+- things to remember:
+	- create a heap from an array
+	- add an element to a heap
+	- remove an element from a heap
+	- 
+## 🫐 2.2 `set` and `map`: balanced binary search tree
+
+not learn yet
+
+### set
 
 ```cpp
 #include <set>
@@ -106,7 +137,7 @@ my_set1.count(8) == 1 // check if 8 appear one time
 | `empty()`  | Check if the set is empty.          |
 | `size()`   | Returns the size of the set.        |
 
-## 🍏 2.2 balanced binary search tree: `map` 
+### map
 
 ```cpp
 map<int, string> student;
@@ -150,30 +181,65 @@ for (const auto& pair : m) {
 | `size()`   | returns the number of elements in the map            |
 | `empty()`  | returns `true` if the map is empty                   |
 
-## 🫐 2.3 priority queue: `heap` 
+## 🍊 2.3 `unorder_map` and `unorder_set`: hash table
 
-content to be updated
+API same as `map` and `set`
 
-## 🍊 2.4 hash table: `unorder_map` 
-
-content to be updated
+|        | `set`, `map` | `unorder_set`, `unorder_map` |
+| ------ | ------------ | ---------------------------- |
+| DS     | balanced BST | hash table                   | 
+| insert | O($log_n$)     | O(1)                        |
 
 ---
 
 below data structures are not standard and implemented with your own implementation:
 
-## 🍏 2.5 binary tree with `ListNode` struct 
+## 🍏 2.4  `ListNode` struct to implement a binary tree
 
-content to be updated
+```cpp
+struct TreeNode {
+	int val;
+	TreeNode *left;
+	TreeNode *right;
+	TreeNode() : val(0), left(nullptr), right(nullptr) {}
+	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+	TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+```
 
-## 🫐 2.6 graph: adjacency matrix, adjacency list, edge list 
+## 🫐 2.5 graph: adjacency matrix, adjacency list, edge list 
 
-content to be updated
+read a graph by using edge list:
 
-## 🫐 2.7 union-find disjoint sets 
+```cpp
+#define MAX 100
+int E, V; // edges and vertices
+vector<int> graph[MAX]; // graph is an array of vector
+bool visited[MAX];
+int path[MAX];
 
-content to be updated
+int main() {
+	cin >> E >> V;
+	int t = E; // the number of edges to the loop
+	while (t--) {
+		int u, v; 
+		cin >> u >> v;
+		graph[u].push_back(v);
+		graph[v].push_back(u);
+	}
+	for (int i=0; i<V; i++) {
+		visited[i] = false;
+		path[i] = -1;
+	}
+	// start BFS or DFS here
+	return 0;
+}
+```
 
-## 🍊 2.8 segment tree 
+## 🫐 2.6 union-find disjoint sets 
 
-content to be updated
+not learn yet
+
+## 🍊 2.7 segment tree 
+
+not learn yet
