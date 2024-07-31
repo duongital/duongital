@@ -31,16 +31,16 @@ Examples: 0/1 Knapsack, Longest Increasing Subsequence
 
 Note that all vertices of a graph should have unique values. Because we only visit a vertex once and mark as visited. We can traverse a graph that has duplicated values, but as it's marked as visited so that BFS or DFS will skip the vertex.
 
-There are three different ways to represent a graph: adjacency matrix, adjacency list, edge list. These are special and only suitable for all unique vertices. While in a **binary tree**, the struct of each node has left and right pointer. So we don't worry about using bfs or DFS to visit the same node on every step.
+There are three different ways to represent a graph: adjacency matrix, adjacency list, edge list. These are special and only suitable for all unique vertices. While in a **binary tree**, the struct of each node has left and right pointer. So we don't worry about using BFS or DFS to visit the same node on every step.
 
-Type of a graph:
+Type of a graphs:
 
-|           | un-direct | direct |
+|           | undirect | direct |
 | --------- | --------- | ------ |
-| no-weight | (1)       | (2)    |
+| unweight | (1)       | (2)    |
 | weighed   | (3)       | (4)    | 
 
-Traverse a no weighted graph:
+Traverse an unweighted graph:
 
 |              | BFS                    | DFS                      |
 | ------------ | ---------------------- | ------------------------ |
@@ -49,9 +49,10 @@ Traverse a no weighted graph:
 | condition    | no weight              | no weight                |
 | detect cycle | possible               | possible, recommended    |
 | apps         | find shortest path     | exploring, detect cycles |
-| time complex | $O(V+E)$               | $O(V+E)$                 | 
+| time complex | $O(V+E)$               | $O(V+E)$                 |
+| visit        | all vertices           | all vertices             | 
 
-Traverse a weighted graph:
+Traverse a weighted graph to find the shortest path:
 
 |              | Dijkstra             | Bellman-Ford              | Floyd-Warshall        |
 | ------------ | -------------------- | ------------------------- | --------------------- |
@@ -59,7 +60,8 @@ Traverse a weighted graph:
 | DS           | priority_queue       |                           |                       |
 | condition    | + weight values      | +/- weights, no (-) cycle | same as BF            |
 | apps         | AI, maps             | game, detect (-) cycle    | graph theory research |
-| time complex | $O(V^2)$             | $O(V*E)$             | $O(V^3)$              |
+| time complex | $O(V^2)$             | $O(V*E)$                  | $O(V^3)$              |
+| visit        | all vertices         |                           |                       |
 
 
 ## 🫐 bfs 
@@ -144,9 +146,40 @@ void DFSRecursion(int s) {
 ## 🫐 Dijkstra
 
 - Purpose: finding the shortest path during traverse from a starting point to all vertices.
-- Condition: all edge weight values must be positive.
+- Condition: all weight values must be positive.
 
 ```cpp
+typedef pair<int, int> pii;
+vector<vector<pii>> graph(MAX, vector<pii>());
+vector<int> dist(MAX, INF);
+int path[MAX];
+
+struct option {
+  bool operator()(const pii &a, const pii &b) const {
+    return a.second > b.second;
+  }
+};
+
+void Dijkstra(int s) {
+  priority_queue<pii, vector<pii>, option> pq;
+  pq.push(make_pair(s, 0));
+  dist[s] = 0;
+  while (!pq.empty()) {
+    pii top = pq.top();
+    pq.pop();
+    int u = top.first;
+    int w = top.second;
+
+    for (int i = 0; i < graph[u].size(); i++) {
+      pii neighbor = graph[u][i];
+      if (w + neighbor.second < dist[neighbor.first]) {
+        dist[neighbor.first] = w + neighbor.second;
+        pq.push(make_pair(neighbor.first, dist[neighbor.first]));
+        path[neighbor.first] = u;
+      }
+    }
+  }
+}
 
 ```
 
@@ -156,7 +189,45 @@ void DFSRecursion(int s) {
 - Condition: work with positive and negative edge weight values, but there is not negative cycle (e.g: sum of a triangle edges is lower than 0).
 
 ```cpp
+struct Edge {
+  int source, target, weight;
+  Edge(int source = 0, int target = 0, int weight = 0) {
+    this->source = source;
+    this->target = target;
+    this->weight = weight;
+  }
+};
 
+vector<int> dist(MAX, INF);
+vector<int> path(MAX, -1);
+vector<Edge> graph;
+int V, E;
+
+bool BellmanFord(int s) {  // check negative cycle
+  int u, v, w;
+  dist[s] = 0;
+  for (int i = 0; i < V; i++) {
+    for (int j = 0; j < E; j++) {
+      u = graph[j].source;
+      v = graph[j].target;
+      w = graph[j].weight;
+      if (dist[u] != INF && (dist[u] + w < dist[v])) {
+        dist[v] = dist[u] + w;
+        path[v] = u;
+      }
+    }
+  }
+
+  for (int i = 0; i < E; i++) { // can optimize more?
+    u = graph[i].source;
+    v = graph[i].target;
+    w = graph[i].weight;
+    if (dist[u] != INF && (dist[u] + w < dist[v])) {
+      return false;
+    }
+  }
+  return true;
+}
 ```
 
 ## 🫐 Floyd-Warshall

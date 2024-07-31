@@ -24,31 +24,6 @@ allPosts = allPosts.sort(
       <article>
         <ReadMe />
       </article>
-
-      <section>
-        <h1 class="mt-4">Thoughts:</h1>
-        <ul>
-          {
-            allPosts.map((post) => (
-              <li class="mt-4 flex flex-col gap-x-4">
-                <span>
-                  {new Date(post.data.pubDate).toLocaleDateString('en-us', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric',
-                  })}
-                </span>
-                <a
-                  class="link link-primary text-lg"
-                  href={`/blog/${post.slug}`}
-                >
-                  {post.data.title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
     </main>
   </body>
 </html>
