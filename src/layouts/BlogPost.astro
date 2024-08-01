@@ -1,6 +1,4 @@
 ---
-import { fade, slide } from 'astro:transitions'
-
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 
@@ -24,7 +22,7 @@ const {
 
   <body class="max-w-2xl mx-auto blog">
     <Header />
-    <main transition:animate={slide({ duration: '50ms' })}>
+    <main>
       <article>
         <h1 class="title">{title}</h1>
         {pubDate && <time>{pubDate}</time>}

@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content'
 import Header from '../../components/Header.astro'
 import BaseHead from '../../components/BaseHead.astro'
-import { fade, slide } from 'astro:transitions'
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts')
@@ -23,7 +22,7 @@ const { Content } = await entry.render()
 
   <body class="max-w-2xl mx-auto blog">
     <Header />
-    <main transition:animate={slide({ duration: '50ms' })}>
+    <main>
       <h1 class="text-primary">{entry.data.title}</h1>
       <article>
         <Content />

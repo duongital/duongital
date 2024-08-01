@@ -1,6 +1,4 @@
 ---
-import { fade, slide } from 'astro:transitions'
-
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 import LottieAnimation from 'astro-integration-lottie/Lottie.astro'
@@ -19,7 +17,7 @@ let allNotes = await getCollection('notes')
   </head>
   <body class="max-w-2xl mx-auto">
     <Header />
-    <main transition:animate={slide({ duration: '50ms' })}>
+    <mai>
       <section>
         <h1>Cheatsheets:</h1>
         <ul>
@@ -43,6 +41,6 @@ let allNotes = await getCollection('notes')
           </div>
         </div>
       </section>
-    </main>
+    </mai>
   </body>
 </html>

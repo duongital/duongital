@@ -1,6 +1,4 @@
 ---
-import { fade, slide } from 'astro:transitions'
-
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
 
@@ -25,7 +23,7 @@ const myPage = await notion.databases.query({
   </head>
   <body class="max-w-2xl mx-auto">
     <Header />
-    <main transition:animate={slide({ duration: '50ms' })}>
+    <main>
       <section>
         <h2 class="text-4xl font-mono mb-8">My Links</h2>
         {

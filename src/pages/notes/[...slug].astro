@@ -1,5 +1,4 @@
 ---
-import { fade, slide } from 'astro:transitions'
 import { getCollection } from 'astro:content'
 
 import Header from '../../components/Header.astro'
@@ -27,7 +26,7 @@ const { Content } = await entry.render()
 
   <body class="max-w-2xl mx-auto blog">
     <Header />
-    <main transition:animate={slide({ duration: '50ms' })}>
+    <main>
       <h1 class="text-primary">{entry.data.title}</h1>
       <blockquote>{entry.data.description}</blockquote>
       <article>

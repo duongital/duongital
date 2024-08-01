@@ -2,7 +2,6 @@
 import { Content as ReadMe } from '../../README.md'
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
-import { fade, slide } from 'astro:transitions'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../config'
 import { getCollection } from 'astro:content'
 
@@ -20,7 +19,7 @@ allPosts = allPosts.sort(
 
   <body class="max-w-2xl mx-auto blog">
     <Header />
-    <main transition:animate={slide({ duration: '50ms' })}>
+    <main>
       <article>
         <ReadMe />
       </article>
