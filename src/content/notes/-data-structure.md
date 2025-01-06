@@ -3,29 +3,31 @@ title: 'Data Structure'
 description: 'To use data efficiency while solving a problem'
 ---
 
+> 🍏: easy, 🫐:medium, 🍊: hard
+
 # 1. linear ds
 
 standard
 
-## 🍏 1.1 `int arr[]`: static array 
+## 🍏 1.1 `int arr[]`: static array
 
 ```cpp
 // one direction
 int myNum[3] = {10, 20, 30};
-string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};  
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
 cout << cars[0]; // Volvo
 int getArrayLength = sizeof(myNum) / sizeof(int);
 
 // two directions
-string letters[2][4] = {  
-  { "A", "B", "C", "D" },  
-  { "E", "F", "G", "H" }  
-};  
-  
-for (int i = 0; i < 2; i++) {  
-  for (int j = 0; j < 4; j++) {  
-    cout << letters[i][j] << "\n";  
-  }  
+string letters[2][4] = {
+  { "A", "B", "C", "D" },
+  { "E", "F", "G", "H" }
+};
+
+for (int i = 0; i < 2; i++) {
+  for (int j = 0; j < 4; j++) {
+    cout << letters[i][j] << "\n";
+  }
 }
 
 // sort array using std library
@@ -33,7 +35,7 @@ int arr[] = {4,5,1,2,3};
 sort(arr, arr+n); // arr: first address, arr+n: last address
 ```
 
-## 🍏 1.2 `vector<int>`: dynamic array 
+## 🍏 1.2 `vector<int>`: dynamic array
 
 ```cpp
 // initializer list
@@ -60,7 +62,7 @@ sort(vector2.begin(), vector2.end())
 | `empty()`    | returns **1** (true) if the vector is empty          |
 | `capacity()` | check the overall size of a vector                   |
 
-## 🍊 1.3 bitmask 
+## 🍊 1.3 bitmask
 
 ## 🍏 1.4 `list`: linked list
 
@@ -72,7 +74,7 @@ last in first out
 
 first in first out
 
-## 🫐 1.7  `dequeue`: double ended queue
+## 🫐 1.7 `dequeue`: double ended queue
 
 used to implement `stack` or `queue`
 
@@ -98,20 +100,22 @@ struct ListNode {
 
 ## 🫐 2.1 `priority_queue`: max heap and min heap
 
-- this is a *complete* binary tree (different from *full* and *perfect* ones):
-	- full: each parent must have two children.
-	- complete: xếp từ trên xg dưới từ trái qua phải (ko cần đủ 2 lá)
-	- perfect: full + complete.
+- this is a _complete_ binary tree (different from _full_ and _perfect_ ones):
+  - full: each parent must have two children.
+  - complete: xếp từ trên xg dưới từ trái qua phải (ko cần đủ 2 lá)
+  - perfect: full + complete.
 - complete >> full >> perfect
 - two types: min head, max heap:
-	- min heap: parent is less than or equal children
-	- max heap: parent is greater than or equal children
+
+  - min heap: parent is less than or equal children
+  - max heap: parent is greater than or equal children
 
 - things to remember:
-	- create a heap from an array
-	- add an element to a heap
-	- remove an element from a heap
-	- 
+  - create a heap from an array
+  - add an element to a heap
+  - remove an element from a heap
+  -
+
 ## 🫐 2.2 `set` and `map`: balanced binary search tree
 
 not learn yet
@@ -131,7 +135,7 @@ my_set1.count(8) == 1 // check if 8 appear one time
 
 | Operation  | Description                         |
 | ---------- | ----------------------------------- |
-| `insert()` | Insert elements into a set.         | 
+| `insert()` | Insert elements into a set.         |
 | `erase()`  | Delete elements from a set.         |
 | `clear()`  | Remove all the elements from a set. |
 | `empty()`  | Check if the set is empty.          |
@@ -187,14 +191,14 @@ API same as `map` and `set`
 
 |        | `set`, `map` | `unorder_set`, `unorder_map` |
 | ------ | ------------ | ---------------------------- |
-| DS     | balanced BST | hash table                   | 
-| insert | O($log_n$)     | O(1)                        |
+| DS     | balanced BST | hash table                   |
+| insert | O($log_n$)   | O(1)                         |
 
 ---
 
 below data structures are not standard and implemented with your own implementation:
 
-## 🍏 2.4  `ListNode` struct to implement a binary tree
+## 🍏 2.4 `ListNode` struct to implement a binary tree
 
 ```cpp
 struct TreeNode {
@@ -207,7 +211,7 @@ struct TreeNode {
 };
 ```
 
-## 🫐 2.5 graph: adjacency matrix, adjacency list, edge list 
+## 🫐 2.5 graph: adjacency matrix, adjacency list, edge list
 
 read a graph by using edge list:
 
@@ -222,7 +226,7 @@ int main() {
 	cin >> E >> V;
 	int t = E; // the number of edges to the loop
 	while (t--) {
-		int u, v; 
+		int u, v;
 		cin >> u >> v;
 		graph[u].push_back(v);
 		graph[v].push_back(u);
@@ -236,10 +240,10 @@ int main() {
 }
 ```
 
-## 🫐 2.6 union-find disjoint sets 
+## 🫐 2.6 union-find disjoint sets
 
 not learn yet
 
-## 🍊 2.7 segment tree 
+## 🍊 2.7 segment tree
 
 not learn yet
