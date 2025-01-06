@@ -28,7 +28,7 @@ Examples: 0/1 Knapsack, Longest Increasing Subsequence
 
 `dynamic programing`: almost all problems can be solved by recursive back tracking approach, but this method is slow and multiple calculations repeat all the time. In order to tackle this, we use `dynamic programming` to solve the problem.
 
-# 🫐 2. graph
+# 🫐 2. graph traversal
 
 Note that all vertices of a graph should have unique values. Because we only visit a vertex once and mark as visited. We can traverse a graph that has duplicated values, but as it's marked as visited so that BFS or DFS will skip the vertex.
 

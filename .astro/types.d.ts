@@ -206,23 +206,9 @@ declare module 'astro:content' {
   collection: "notes";
   data: any
 } & { render(): Render[".md"] };
-"cpp.md": {
-	id: "cpp.md";
-  slug: "cpp";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"dart.md": {
-	id: "dart.md";
-  slug: "dart";
-  body: string;
-  collection: "notes";
-  data: any
-} & { render(): Render[".md"] };
-"js-ts.md": {
-	id: "js-ts.md";
-  slug: "js-ts";
+"language.md": {
+	id: "language.md";
+  slug: "language";
   body: string;
   collection: "notes";
   data: any
