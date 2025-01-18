@@ -11,4 +11,4 @@ Hello! I'm Duong. I graduated from University of Economics HCMC and started firs
 
 # 💡
 
-- [duongital.com](duongital.com): personal blog using markdown files and edited in Obsidian.
+- [duongital.com](https://duongital.com): personal blog using markdown files and edited in Obsidian.
