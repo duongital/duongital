@@ -7,7 +7,7 @@ Hello! I'm Duong. I graduated from University of Economics HCMC and started firs
 - Macbook M1 Pro 14" + Magic Keyboard + Logitech MX Mouse
 - VSCode Editor + Postico + SmartGit
 - Remnote: to remember things
-- Notion: to save [links from the Internet](/links)
+- Notion: to save [links from the Internet](https://duongital.com/links)
 
 # 💡
 
