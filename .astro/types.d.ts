@@ -264,6 +264,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"deploy-nextjs-to-google-cloud-run.md": {
+	id: "deploy-nextjs-to-google-cloud-run.md";
+  slug: "deploy-nextjs-to-google-cloud-run";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "moving-to-astro.md": {
 	id: "moving-to-astro.md";
   slug: "moving-to-astro";
