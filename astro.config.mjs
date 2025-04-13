@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import tailwind from "@astrojs/tailwind";
 // import remarkMermaid from 'remark-mermaidjs';
-import rehypeMermaid from 'rehype-mermaid';
+// import rehypeMermaid from 'rehype-mermaid';
 
 import sentry from "@sentry/astro";
 
@@ -14,7 +14,7 @@ export default defineConfig({
       type: 'shiki',
       excludeLangs: ['mermaid', 'math'],
     },
-    remarkPlugins: [rehypeMermaid],
+    // remarkPlugins: [rehypeMermaid],
   },
   integrations: [
     sitemap(),
