@@ -235,10 +235,6 @@ bool BellmanFord(int s) {  // check negative cycle
 - Purpose: finding the shortest path between _all pairs_ of vertices in a graph. Using dynamic programming to archive this.
 - Condition: same as Bellman-Ford.
 
-```cpp
-
-```
-
 # 🍊 3. math
 
 ```cpp

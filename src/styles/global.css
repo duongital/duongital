@@ -5,11 +5,12 @@
 body {
   @apply px-4 py-12;
   font-size: 16px;
-  font-family: 'Garamond', 'Verdana', sans-serif;
+  font-family: 'Lora', ' Verdana', sans-serif;
+
 }
 
 p {
-  @apply my-2 !important;
+  @apply py-2 !important;
 }
 
 ul,
@@ -30,6 +31,10 @@ pre {
   @apply text-xs p-4 rounded-md my-4 !important;
   font-family: 'JetBrains Mono', 'sans-serif' !important;
 }
+
+/* code {
+  font-family: 'JetBrains Mono', 'sans-serif' !important;
+} */
 
 a {
   @apply underline !important;
@@ -54,21 +59,6 @@ h5,
 h6 {
   @apply text-lg !important;
 }
-
-/* blockquote {
-  @apply text-sm italic font-semibold text-gray-600 pl-4 border-l-4 !important;
-  font-family: 'JetBrains Mono Variable', sans-serif;
-}
-
-code {
-  @apply bg-gray-100 text-xs px-1 py-0.5 rounded-sm !important;
-  font-family: 'JetBrains Mono Variable', sans-serif;
-}
-
-pre>code {
-  @apply bg-transparent text-xs not-italic !important;
-  font-family: 'JetBrains Mono Variable', sans-serif;
-} */
 
 .astro-code {
   border: 1px solid rgb(243, 243, 243);

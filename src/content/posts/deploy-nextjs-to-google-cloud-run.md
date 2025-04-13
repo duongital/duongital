@@ -8,6 +8,13 @@ NextJS brings a number of features building on top of ReactJS, we can implement 
 
 I have just joined an intersting project and I find that devops team here manually deploy it to Google Cloud Run (GCR) and I want to try this solution from scratch with supporting AI models for the steps. 😄
 
+```mermaid
+flowchart TD
+    A(Client) --> B[VPC Network]
+    B --> C[Network Services]
+    C --> D[Google Cloud Run & Cloud Build ]
+```
+
 These are Google Cloud services that I used:
 
 - Google Cloud Run: to deploy Docker image to serverless.
@@ -21,13 +28,13 @@ OK, let's go!
 
 After finish implementing your NextJS application, we need to create a Dockerfile. Below is a very simple of it:
 
-Example of Dockerfile: https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
+Example of Dockerfile: [link](https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile)
 
 Then visit GCR dashboard and we need to create a new service, choose the middle option to integrate with Github repository. With this option, we can use Cloud Build automatically on every push on `main` branch.
 
 ![create a GCR service](./attachments/gcr-create-gcr-service.png)
 
-After deploying a Docker container successfully, we will have a URL like this: https://youngerist-5470084010.us-central1.run.app. We can use that if it's public by the setting. As the time I write this, there is a beta feature to map a domain but it's not recommended and we need to use VPC Networks and Network Services.
+After deploying a Docker container successfully, we will have a URL like this: [demo link](https://youngerist-5470084010.us-central1.run.app). We can use that if it's public by the setting. As the time I write this, there is a beta feature to map a domain but it's not recommended and we need to use VPC Networks and Network Services.
 
 # 2. VPC Network + Network Services
 

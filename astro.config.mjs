@@ -12,7 +12,11 @@ export default defineConfig({
       type: 'shiki',
       excludeLangs: ['mermaid', 'math'],
     },
-    // remarkPlugins: [rehypeMermaid],
+    shikiConfig: {
+      theme: "github-dark",
+      // theme: "slack-ochin",
+      wrap: true
+    }
   },
   integrations: [
     sitemap(),
