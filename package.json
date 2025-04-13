@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "daisyui": "^4.10.5",
+    "playwright": "^1.51.1",
     "prettier": "^2.8.8",
     "prisma": "^4.15.0",
     "rehype-mermaid": "^2.1.0"
