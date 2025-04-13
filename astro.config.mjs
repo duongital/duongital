@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import tailwind from "@astrojs/tailwind";
-import remarkMermaid from 'remark-mermaidjs';
+// import remarkMermaid from 'remark-mermaidjs';
+import rehypeMermaid from 'rehype-mermaid';
 
 import sentry from "@sentry/astro";
 
@@ -14,10 +14,9 @@ export default defineConfig({
       type: 'shiki',
       excludeLangs: ['mermaid', 'math'],
     },
-    remarkPlugins: [remarkMermaid],
+    remarkPlugins: [rehypeMermaid],
   },
   integrations: [
-    mdx(),
     sitemap(),
     partytown({
       config: {
