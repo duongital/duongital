@@ -3,18 +3,18 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import tailwind from "@astrojs/tailwind";
+import remarkMermaid from 'remark-mermaidjs';
 
 import sentry from "@sentry/astro";
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://duongital.com',
   markdown: {
-    shikiConfig: {
-      // theme: "github-light"
-      theme: "slack-ochin",
-      wrap: true
-    }
+    syntaxHighlight: {
+      type: 'shiki',
+      excludeLangs: ['mermaid', 'math'],
+    },
+    remarkPlugins: [remarkMermaid],
   },
   integrations: [
     mdx(),

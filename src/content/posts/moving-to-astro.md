@@ -75,6 +75,15 @@ The blockquote element represents content that is quoted from another source, op
 </html>
 ```
 
+## Mermaid Diagram
+
+```mermaid
+pie title NETFLIX
+         "Time spent looking for movie" : 90
+         "Time spent watching it" : 10
+
+```
+
 ## List Types
 
 #### Ordered List
