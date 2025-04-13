@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import tailwind from "@astrojs/tailwind";
-import lottie from "astro-integration-lottie";
 
 import sentry from "@sentry/astro";
 
@@ -26,7 +25,7 @@ export default defineConfig({
       }
     }),
     tailwind(),
-    lottie(), sentry({
+    sentry({
       dsn: "https://26791de3aac046e096168af5f072ec60@o4508776494792704.ingest.us.sentry.io/4508776909766656",
       sourceMapsUploadOptions: {
         project: "duongital",

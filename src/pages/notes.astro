@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
 import Header from '../components/Header.astro'
-import LottieAnimation from 'astro-integration-lottie/Lottie.astro'
 import { getCollection } from 'astro:content'
 
 let allNotes = await getCollection('notes')
@@ -39,11 +38,6 @@ let allNotes = await getCollection('notes')
             ))
           }
         </ul>
-        <div class="flex gap-x-4 items-center">
-          <div class="w-12 h-12">
-            <LottieAnimation src="/assets/Robot.json" />
-          </div>
-        </div>
       </section>
     </mai>
   </body>
