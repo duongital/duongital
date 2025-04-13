@@ -3,312 +3,145 @@ title: 'Operating System'
 description: 'Normally using Ubuntu, Windows and MacOS'
 ---
 
-# Linux
+## What is an operating system?
 
-- list all ports are running `sudo lsof -iTCP -sTCP:LISTEN -n -P`
-- kill a port is running `kill -9 PID`
-- copy all content in folder: `cp -r ./dist/* ~/public_apache`
-- list all `service --status-all`
-- start `sudo systemctl start nginx`
-- stop `sudo systemctl stop nginx`
+It’s like the boss of your computer. It tells everything what to do — apps, files, memory, and hardware.
 
-## linux file system and its feature
+## What is a process and a thread?
 
-![file system](./attachments/20240125-file-system.png)
+A process is like an app. A thread is a little helper inside the app. Threads help do many things at once.
 
-## systemd
+## What happens when your computer runs more than one thing?
 
-saved all running services that every restart engine will be recovered
+The OS switches between them really fast — like juggling. It saves their place so it can come back later.
 
-to create a new service, create a `*.servce` file in folder `/lib/systemd/system`, example: 
+## What is multitasking?
 
-```
-[Unit]
-Description=pocketbase
+Running many apps (processes) at the same time. Some use multiple helpers (threads) to work faster.
 
-[Service]
-ExecStart=/root/pocketbase/pocketbase serve
+## Why do some apps wait?
 
-[Install]
-WantedBy=multi-user.target
-```
+They are waiting for something (like a file or input). While waiting, others can run.
 
-common usages:
+## What is a thread pool?
 
-- list all running services: `systemctl | grep running`
-- reload all deamon: `sudo systemctl daemon-reload`
-- start a service: `sudo systemctl start your-service.service`
-- enable to run service on every reboot: `sudo systemctl enable example.service`
+A box of helpers (threads) ready to do jobs. You don’t make new helpers every time — you reuse them.
 
-note: systemctl is a sub command of systemd
+## Can two apps share memory?
 
-## how to install themes in ubuntu desktop
+Normally, no. Each app has its own space. But they can share special memory or send messages.
 
-step 1: install tweak to control themes `sudo apt install gnome-tweaks`
+## What is a child process?
 
-step 2: install `sudo apt install gnome-shell-extensions` to load local themes downloaded from the internet, to be created folders: ./themes and ./icons and then save to those locations.
+It’s like when an app makes a mini version of itself to do a small job.
 
-structure of a theme:
+## What is Copy-On-Write (COW)?
 
-- GTK: là phần giao diện giống như body của tab, alert...
-- Icon: là các biểu tượng 
-- GNOME shell: là top bar...
+When two apps share the same thing but don’t really copy it unless one tries to change it.
 
-## how to install C C++
+## What is deadlock?
 
-install essential tools: `sudo apt install build-essential`
+When two apps are both holding something and waiting for the other to let go. Like two kids both holding a toy saying “you first.”
 
----
+## What is virtual memory?
 
-src: [backend swe interview](https://github.com/tamhoang1412/backend-swe-interview-questions/blob/main/answers/os.md)
-
-## What is `process`, `thread`? What are the differences between them?
-
-A process is like a program in execution. And a thread is a segment of a process. Each process has its own memory and is isolated. Meanwhile, threads of the same process can easily communicate with other threads, access common variables, memory.
-
-## What data `process`, `thread` need to live? Why do they say that Thread is a lightweight process?
-
-Thread is a lightweight process because it does not cost much CPU to switch between threads as between processes.
-
-## How CPU switch (context switch) between processes/threads? How data is to ensure safety? (in case single CPU core and multiple CPU cores)
-
-When process context switching happens, the state of the current process will be stored in Process Control Block (PCB), so this process can be resumed later. It includes the value of the CPU registers, the process state, and memory-management information. Data pages in memory of the current process can be replaced or not, depending on the availability of memory, and the memory-management method of the operating system.
-
-When thread context switching happens, the state of the current thread will be stored in Thread Control Block (TCB), so the thread can be resumed later. It includes the value of the CPU registers, the thread state, a program counter, a stack pointer, and a pointer to the PCB of the process to which the thread belongs. There is one major difference in thread context switching compared to processes: the address space remains the same (the is no page replacement).
-
-## What is multi-process and multi-thread? When should we use which?
-
-Multi-processing is when more than 2 processes are running simultaneously on a computer. This is probable in a multi-processor computer, where each processor handles a process.
-
-Multi-threading is when more than 2 threads created by the same process are running simultaneously.
-
-## Process has how many states? How does it change between each state?
-
-Basically, a process has 5 states: new, ready, running, wait, and terminate. New is the status of the process when it is created. At the ready status, the process waits to be assigned to a processor. When the process is assigned to a processor, its status becomes running and the processor executes the process instructions. If the process need something like I/O, or the CPU is assigned for another process, process status will become waiting. When all the instructions are executed, or the process is terminated by OS, it moves to terminate state where it waits to be removed out of the main memory.
-
-## Scheduling algorithm
-
-There are many types of scheduling algorithms like first come first serve, shortest job first, shortest remaining time first, round-robin, etc.
-
-## What will happen if a process is waiting? Or a thread is sleeping?
-
-When a thread is sleeping, other threads might be running.
-
-When a process is waiting, OS can run another process.
-
-## How CPU detects that a thread is sleeping? Or detect when it wants to run?
-
-OS has an OS scheduler that keeps track of the list of processes and their status. When the thread goes to sleep, it tells the scheduler that it gives up its time slide, and it shouldn't be wake up until a certain time has elapsed. The next time the scheduler looks at this process, if the time has elapsed, it will change this thread status as ready to run.
-
-## What is thread-pool? How to use it? Describe how to create a thread-pool in your programming language
-
-Thread pool is a design pattern that's used to manage concurrent execution. It is also called as worker model. A thread pool has a limited number of threads to allocate for concurrent execution.
-
-## Can 2 different processes access or change data of each other address space? (this question may make you confuse with your knowledge about virtual memory)
-
-Cause memory can be used by a process at this time and later by another process, yes an address space in general does not belongs to any process and can be changed by many processes, but in a certain time, an address space belongs to a process only and can only be modified by this process.
-
-## Can 2 processes use the same library (for eg: libc is required to every process)? How?
-
-It is possible if the library is a shared library, not a static one. Each process has its own virtual memory address that refers to the same physical memory address that stores the shared library.
-
-## How does debugger work? How it can attach to a running process and change data of that process?
-
-To be defined.
-
-## How 2 processes can communicate with each other? (There are a lot of ways but focus on the OS's way)
-
-It can use a shared resource or pass messages to other processes.
-
-## What is child-process? How to create a child-process?
-
-Child process is a process created by another process. Child process inherits most of properties from its parent, such as environment settings, process directory, from its parent. It does not inherit some properties like process id, lock...
-
-## What data a child-process have when we create it?
-
-As above.
-
-## Can it read/write data on it's parent process?
-
-No, it cannot. If it wants to communicate with its parents, it has to use a separate shared memory segment or use a socket.
-
-## What is copy on write (COW), Dirty COW? **(this concept is important to understand OS)**
-
-Copy on write is when multiple callers ask for a copy of a resource, OS can return the pointer to the old resource and only make the private copy for a caller when necessary, like when the caller wants to modify this resource. The advantage is if the caller makes no modification, no private copy needs to be created.
-
-## What will happen when child-process changes a variable of parent process?
-
-Child process cannot change variables of its parent.
-
-## If file descriptor also be inherited by the child process. What if 2 processes can handle a same file descriptor or even a same socket?
-
-2 processes can handle the same file descriptor/socket. To prevent other processes does further things with the socket that the current process wants to close, we can use shutdown function instead of close function to stop other processes from using this socket.
-
-## Concurrency vs Parallels? (in case single CPU core and multiple CPU cores)
-
-To be defined.
-
-## What is critical zone?
-
-Critical zone or critical region is the segment of code where processes access shared resources.
-
-## What is race condition and how to handle this case?
-
-Race condition is when two threads access a variable at the same time. It can lead to data inconsistency if the operations are executed in a certain order. To prevent this we can take advantage of some locking mechanisms.
-
-## What is locking mechanism? mutex? semaphore? spinlock? read lock vs write lock?
-
-Mutex is a mutual exclusive flag to detect if the desired resource is free and claim it for use.
-
-Semaphore is a generalized mutex, to control the number of available resources.
-
-Spinlock is a mechanism in which a process keeps asking for the availability of the resource via polling.
-
-## What is deadlock and how to avoid deadlock?
-
-Deadlock is when there is a circle where some processes lock something and wait for something that other processes have already locked.
-
-Deadlock happens when all of these conditions happen:
-
-- Mutual exclusion: It means processes want to access the same resource.
-- Hold and wait: When processes need more than one resource and it already has some, it will hold them and wait for the rest.
-- No preemption: A process can not take away resource that is being held by other processes.
-- Circular wait.
-
-This can be avoided by making processes release their locked variable when they cannot get the other necessary resource, or granting some preemption permission for some processes.
-
-## How does memory is managed in the OS?
-
-To be defined.
-
-## What is virtual memory? Why do we need it? How does it work?
-
-Virtual memory is a memory management technique where secondary memory (eg disks) can be used as main memory like RAM. Virtual memory allows computers to operate quite normally when memory shortages happen.
-
-When a process is in use, its data is stored in a physical address using RAM. If at any point, RAM space is needed for something more urgent, data can be swapped out of RAM into virtual memory and swapped back again when needed.
-
-## How large virtual memory is?
-
-The size of virtual memory is unlimited. Actually, it is limited by the disk space but the disk space is quite large so we can consider it unlimited.
+Pretend memory. The computer uses the hard drive to act like it has more RAM than it really does.
 
 ## What is paging?
 
-Paging is the memory management mechanism that allows OS to get the processes from the secondary memory to the physical memory in form of fixed-size blocks called pages.
+Breaking memory into small boxes (pages). The OS moves them in and out of real RAM as needed.
 
-## Can 2 processes map to the same physical address? How and in which case?
+## What is heap and stack?
 
-Yes. Each process has its virtual memory address and can be mapped to the same physical memory address when it is processed by CPU. The condition is they need to take turns to be processed.
+- Stack: for short-term stuff like function calls.
+- Heap: for long-term stuff you create yourself.
 
-## What is heap space and stack space?
+## What is stack overflow?
 
-Heap space is for dynamic memory allocation. Stack space is for static memory allocation.
+It’s when too much stuff is put on the stack. Like too many plates on a small tower.
 
-## What will happen with memory when you open an application?
+## What is garbage collection?
 
-The application will be loaded to RAM when we open an application.
+It’s like a cleanup robot that removes unused stuff from memory.
 
-## What will happen when you call another function (with parameters) or return from a function?
+## What is a pointer?
 
-When we call another function, local variables of the new function will be put to stack, and the stack register will be moved to the appropriate position. If the function takes parameters, it will create a duplicate version of those parameters (If the parameter is a pointer, it still creates a new pointer that points to the same address).
+It’s like a sign that says “the thing you want is over there.”
 
-When a function returns, local variables will be pop out of stack and the stack pointers will also be moved to the appropriate position.
+## Where are global variables stored?
 
-## What will happen with stack? (why we do not use heap here?)?
+In a special part of memory just for them.
 
-As above.
+## Why is everything a file in Linux?
 
-## What will happen with registers?
+Because it makes everything easier to manage: files, devices, even internet connections.
 
-As above.
+## What is a file descriptor?
 
-## What causes stack overflow?
+It’s a number that helps the OS know what file or device you’re using.
 
-Stack overflow happens when the stack memory runs out. The most common cause of stack overflow is infinite recursion.
+## What happens if two apps use the same file?
 
-## What is dynamic allocating? How does it work?
+They might mess each other up if not careful. They need to take turns or use locks.
 
-Dynamic allocation is the act of asking for a specific segment of memory from the OS.
+## What is a system call?
 
-## How does deallocation work?
-
-Deallocation announces for the OS that this segment of memory is free now and can be used by other processes.
-
-## What happens when your computer is full of memory?
-
-To be defined. (It will throw error?)
-
-## Why you do not need to "deallocate" local variable?
-
-Cause local variable is allocated in stack and will be destroyed automatically after the function returns.
-
-## How does Garbage Collection work? When it will be triggered?
-
-Garbage Collector (GC) will detect which object in heap memory has no reference. It means this object cannot be used anymore and it's safe to sweep this object away. GC will run periodically for languages that have GC. Besides, languages like Java or Python have a mechanism to invoke GC manually.
-
-## What is a pointer? What difference between pass by value and pass by reference?
-
-Pointer is the address of a variable. Pass by value means passing only the value of the variable, while pass by reference means passing the address of this variable in the memory.
-
-## Where global variable will be saved?
-
-Process memory is divided into four sections:
-
-- Text section: when the code is stored.
-- Data section: when static and global variables are stored.
-- Stack section: where local variables are stored.
-- Heap section: where dynamically allocated variables are stored.
-
-## Why in Linux everything is "file"?
-
-It will create a uniform interface for operations on Linux systems. To be more exact, everything in Linux is a stream of bytes that is represented as a file descriptor.
-
-## How does mouse/keyboard/monitor... communicate with your computer?
-
-It streams a stream of bytes into our computer.
-
-## What is file descriptor?
-
-File descriptor is a unique identifier for a file or input/output resources.
-
-## What is buffer? Why do we need buffer?
-
-Buffer is a segment of memory that is reserved to store necessary data being processed. Buffer helps reduce the processing time.
-
-## What will happen if 2 processes read/write to the same file?
-
-If 2 processes read/write to the same file, it means they use the same file descriptor to access this file, also the file offset. So the changes that one process does with the shared file are visible to the other process. ([More](https://walkerlala.github.io/archive/what-if-write-to-the-same-file.html))
-
-## What is system call (syscal)?
-
-A syscall is a programmatic way that allows a computer program to request a service from the kernel of the operating system, on which the program will be executed.
-
-## How to do a syscal?
-
-Some libraries provide functions that allow us to interact with the kernel.
-
-## What happens with CPU when we execute a syscal?
-
-CPU will execute the system call handler, which will perform some action to fulfill the syscall. ([More](https://www.ibm.com/docs/en/aix/7.2?topic=calls-understanding-system-call-execution))
+It’s how an app asks the OS to do something — like open a file or send a message.
 
 ## What is user space and kernel space?
 
-Memory is divided into kernel space and user space:
+- User space: where apps run
+- Kernel space: where the OS runs (only trusted code allowed)
 
-- Kernel space is where the code of the kernel is stored, and executed.
-- User space is where the code of everything other than the kernel is stored and executed.
+## What is caching?
 
-## What is in-memory cache? (memcached/redis)
+Saving data in a fast spot (memory) so it doesn’t have to be found again.
 
-In-memory cache is the data storage layer between the application and the database. It stores data in memory which has a much fast data access speed so it is used to speed up the application.
+## What is LRU cache?
 
-## LRU? implement LRU in your program language! (How about multi-thread?)
+"Least Recently Used" — it forgets the old stuff you haven’t used in a while when it gets full.
 
-Least recently used is a strategy to invalidate cache. As the name already said, it will remove the least recently used data when the cache is full. We can implement LRU using a combination of hashmap and a doubly linked list.
+## What is cache stampede?
 
-## How to migrate Cache stampede?
+Too many apps ask for the same thing at once before it’s cached. It can overload the system.
 
-Cache stampede happens when a lot of data need to be queried at the same time but most of them haven't been cached yet, so the number of queries that need to be executed on database is huge. We can mitigate cache stampede by warming cache, cache locking, or predicting when the cache is expired so we can update cache.
+## What is a race condition?
 
-## Quicksort vs Merge sort. Which is faster? Why? How they use these 2 sorting algorithms real life?
+When two helpers change something at the same time and it causes problems.
 
-To be defined.
+## What is a mutex or lock?
+
+A lock says, “Only one helper can touch this thing at a time.”
+
+## What’s the difference between concurrency and parallelism?
+
+- Concurrency: taking turns super fast (like one toy but many kids)
+- Parallelism: doing things at the same time (many kids, many toys)
+
+## What happens when you call a function?
+
+New info is added to the stack. When it returns, it’s removed.
+
+## Why don’t we use heap for everything?
+
+Stack is faster and auto-cleans. Heap needs more work to manage.
+
+## What if memory is full?
+
+Your app or system might slow down or crash. Some apps might get killed.
+
+## What is the OS scheduler?
+
+It decides who gets to use the CPU next — like a teacher calling on students.
+
+## What is the kernel?
+
+It’s the core part of the OS that talks to the hardware and controls everything else.
+
+## What is input/output (I/O)?
+
+It’s how the computer talks to the outside world — keyboard, screen, files...
+
+## How does your keyboard talk to the computer?
+
+It sends signals (tiny messages) through a driver that the OS understands.
