@@ -3,13 +3,6 @@ title: 'Website or Browsers eating the internet'
 description: 'The interface that we interact with.'
 ---
 
----
-
-title: 'Web and Browser for Beginners'
-description: 'Explaining how the internet and browsers work — like you’re 10'
-
----
-
 ## What is the Web?
 
 The Web is like a giant library where each book is a website, and you can read them using your browser.
