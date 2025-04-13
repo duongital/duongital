@@ -54,5 +54,26 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true, theme: 'forest' });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const mermaidBlocks = document.querySelectorAll('pre > code.language-mermaid');
+
+    mermaidBlocks.forEach((block) => {
+      // Get Mermaid code
+      const mermaidCode = block.textContent;
+
+      // Create a new pre element with class 'mermaid'
+      const pre = document.createElement('pre');
+      pre.className = 'mermaid';
+      pre.textContent = mermaidCode;
+
+      // Replace the original pre/code block with the new pre.mermaid
+      block.parentNode.replaceWith(pre);
+    });
+
+    // Initialize Mermaid
+    if (window.mermaid) {
+      mermaid.initialize({ startOnLoad: true, theme: 'forest' });
+    }
+  });
 </script>
