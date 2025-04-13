@@ -54,6 +54,7 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'forest' });
 
   document.addEventListener("DOMContentLoaded", () => {
     const mermaidBlocks = document.querySelectorAll('pre > code.language-mermaid');

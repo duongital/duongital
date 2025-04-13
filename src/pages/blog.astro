@@ -4,6 +4,7 @@ import Header from '../components/Header.astro'
 import { getCollection } from 'astro:content'
 
 let allProjects = await getCollection('posts')
+allProjects = allProjects.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
 ---
 
 <!DOCTYPE html>

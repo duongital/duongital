@@ -4,6 +4,8 @@ import Header from '../components/Header.astro'
 import { getCollection } from 'astro:content'
 
 let allNotes = await getCollection('notes')
+allNotes = allNotes.sort((a, b) => a.id.localeCompare(b.id))
+
 ---
 
 <!DOCTYPE html>
