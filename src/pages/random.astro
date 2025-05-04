@@ -1,0 +1,45 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import Header from '../components/Header.astro'
+
+import { Client } from '@notionhq/client'
+
+const response = await fetch("https://lavender-frog-861823.hostingersite.com/wp-json/wp/v2/posts");
+const posts = await response.json();
+---
+
+<!DOCTYPE html>
+<html data-theme="lemonade" lang="en">
+  <head>
+    <BaseHead
+      title="@duongital - Random"
+      description="Random things to save."
+    />
+  </head>
+  <body class="max-w-2xl mx-auto">
+    <Header />
+    <main>
+      <section>
+        <h2 class="text-4xl font-mono mb-8">Random things:</h2>
+        {
+          posts?.length > 0 ? (
+            <div>
+              {posts?.map((item) => {
+                return (
+                  <div class="mb-4">
+                    <h1>
+                      {item?.id}: {item?.title?.rendered}
+                    </h1>
+                    <div set:html={item?.content?.rendered}></div>
+                  </div>
+                )
+              })}
+            </div>
+          ) : (
+            <p>Sorry, there's a problem to view the content {JSON.stringify(posts)}</p>
+          )
+        }
+      </section>
+    </main>
+  </body>
+</html>
