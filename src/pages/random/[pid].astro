@@ -1,0 +1,40 @@
+---
+import Header from '../../components/Header.astro'
+import BaseHead from '../../components/BaseHead.astro'
+
+const { pid } = Astro.params;
+const response = await fetch(`https://lavender-frog-861823.hostingersite.com/wp-json/wp/v2/posts/${pid}`);
+const snippet = await response.json();
+
+export async function getStaticPaths() {
+  const response = await fetch("https://lavender-frog-861823.hostingersite.com/wp-json/wp/v2/posts");
+  const snippets = await response.json();
+  console.log(snippets)
+  const snippetsIdList = snippets.map(item => {
+    return {
+      params: { pid: item.id}
+    }
+  })
+
+  return snippetsIdList;
+}
+---
+
+<html data-theme="lemonade" lang="en">
+  <head>
+    <BaseHead
+      title={snippet.title.rendered}
+      description=""
+    />
+  </head>
+
+  <body class="max-w-2xl mx-auto blog">
+    <Header />
+    <main>
+      <section>
+        <h1>{snippet.title.rendered}</h1>
+        <div set:html={snippet?.content?.rendered}></div>
+      </section>
+    </main>
+  </body>
+</html>

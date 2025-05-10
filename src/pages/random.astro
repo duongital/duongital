@@ -20,18 +20,23 @@ const posts = await response.json();
     <Header />
     <main>
       <section>
-        <h2 class="text-4xl font-mono mb-8">Random things:</h2>
+         <p>
+          Some snippets I've gathered along the way and feel intersting.
+        </p>
+        <h1>Random Snippets:</h1>
         {
           posts?.length > 0 ? (
             <div>
               {posts?.map((item) => {
                 return (
-                  <div class="mb-4">
-                    <h1>
-                      {item?.id}: {item?.title?.rendered}
-                    </h1>
-                    <div set:html={item?.content?.rendered}></div>
-                  </div>
+                  <li class="mt-4 flex flex-col gap-x-4">
+                    <a
+                      class="link link-primary text-lg"
+                      href={`/random/${item?.id}`}
+                    >
+                      {item?.title?.rendered}
+                    </a>
+                  </li>
                 )
               })}
             </div>
