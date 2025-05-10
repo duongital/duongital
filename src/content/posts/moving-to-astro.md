@@ -4,6 +4,30 @@ description: 'Just a small blog but changing source code many times :D'
 pubDate: 'Nov 26 2022'
 ---
 
+```mermaid
+mindmap
+  root((blog))
+    Astro
+      render markdown
+      SSG
+    Notion API
+      render links
+    Prisma
+      introspect MySQL
+    Sentry
+      monitoring
+```
+
+# 2025
+
+- add Notion integration
+- add MySQL extened database using Prisma
+- get content from Wordpress for random section
+
+# 2022
+
+- moving to Astro from NextJS
+
 I created this blog for long but changing the source code so many times. First one is Gatsby then NextJS and now is Astro, not sure how long it takes for the current one but it still evolving.
 
 Hopefully with this migration I will write more articles and Google will fast index my site because Astro has some plugins quite support to this.
