@@ -1,12 +1,20 @@
 ---
 import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../config'
+
+import { Image } from 'astro:assets';
+import GithubLogo from '../assets/Github_light.svg'
 ---
 
 <header>
-  <h2 class="text-4xl font-mono">
-    {SITE_TITLE}
-  </h2>
+  <section class="flex justify-between items-center">
+    <h2 class="text-4xl font-mono">
+      {SITE_TITLE}
+    </h2>
+    <a class="cursor-pointer" href="https://github.com/duongital" target="_blank">
+      <Image width="24" height="24" src={GithubLogo} alt="Github" />
+    </a>
+  </section>
   <nav class="my-6 flex gap-x-4">
     <HeaderLink href="/">Home</HeaderLink>
     <HeaderLink href="/blog">Blog</HeaderLink>

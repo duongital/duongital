@@ -11,7 +11,7 @@ I create this website to save and share things that I have learnt. What I am doi
   - desc: a web extension to override Browser's new tab.
   - stack: ReactJS, TLDraw Canvas API
 - [Romano](https://duongital.github.io/project-romano/):
-  - desc: a landing page to collect Romano customers' information.
+  - desc: a landing page for a Romano event.
   - stack: Bootstrap CSS, jQuery, PHP, MySQL
 - [SMG Vietnam](https://vietnam.swissmarketplace.group/):
   - desc: a landing page to introduce SMG Vietnam.

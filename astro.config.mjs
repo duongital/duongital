@@ -18,7 +18,7 @@ export default defineConfig({
     shikiConfig: {
       theme: "github-dark",
       // theme: "slack-ochin",
-      wrap: true
+      // wrap: true
     },
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],

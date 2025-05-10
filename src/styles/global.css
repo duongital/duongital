@@ -38,7 +38,7 @@ code:not(pre > code) {
 }
 
 a {
-  @apply underline !important;
+  @apply text-primary underline !important;
 }
 
 a.active {
@@ -110,4 +110,9 @@ li>ul>li {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+pre.wp-block-code {
+  @apply overflow-x-scroll text-white !important;
+  background-color: #24292E;
 }
