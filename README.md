@@ -11,7 +11,15 @@ Hello! I'm Duong. I graduated from the University of Economics Ho Chi Minh City 
 
 # 💡
 
-- [Romano](https://duongital.github.io/project-romano/): a static site to collect customers' information.
-- [SMG Vietnam](https://vietnam.swissmarketplace.group/): a homepage for SMG Vietnam.
-- [Duong's blog](https://duongital.com): a personal blog using markdown files.
-- [utab](https://github.com/duongital/project-utab) an open source web extension to override Browser's new tab.
+- [Duong's blog](https://duongital.com):
+  - desc: a personal blog using markdown files.
+  - stacks: Astro SSG, Notion API, Wordpress API, Sentry, Cloudflare
+- [Utab](https://github.com/duongital/project-utab):
+  - desc: an open source web extension to override Browser's new tab.
+  - stacks: ReactJS, TLDraw Canvas API
+- [Romano](https://duongital.github.io/project-romano/):
+  - desc: a static site to collect customers' information.
+  - stacks: Bootstrap CSS, jQuery, PHP, MySQL
+- [SMG Vietnam](https://vietnam.swissmarketplace.group/):
+  - desc: a homepage for SMG Vietnam.
+  - stacks: Astro SSG, Tailwind CSS
