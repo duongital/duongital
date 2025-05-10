@@ -1,4 +1,6 @@
-Hello! 👋 I'm Duong. I graduated from the University of Economics Ho Chi Minh City and began my career as a Marketing Executive at Mercedes-Benz Vietnam. After five years in marketing, I made a significant career change to become a software engineer. Now, I enjoy every workday tackling front-end tasks, and I'm challenging myself to become a principal engineer in the future. Below are several side projects that I feel intersting to share:
+Hello! I'm Duong. I graduated from the University of Economics Ho Chi Minh City and began my career as a Marketing Executive at Mercedes-Benz Vietnam. After five years in marketing, I made a significant career change to become a software engineer. Now, I enjoy every workday tackling front-end tasks, and I'm challenging myself to become a principal engineer in the future.
+
+I create this website to save and share things that I have learnt. What I am doing outside of work or an extended version of CV. Below are several side projects that I feel intersting to share:
 
 # 💡
 
