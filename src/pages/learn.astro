@@ -12,8 +12,8 @@ allNotes = allNotes.sort((a, b) => a.id.localeCompare(b.id))
 <html data-theme="lemonade" lang="en">
   <head>
     <BaseHead
-      title="@duongital - Notes"
-      description="Cheatsheet on CS topics"
+      title="@duongital - Learn"
+      description="Cheatsheet on learning CS topics"
     />
   </head>
   <body class="max-w-2xl mx-auto">
@@ -32,7 +32,7 @@ allNotes = allNotes.sort((a, b) => a.id.localeCompare(b.id))
                 <a
                   class="link link-secondary"
                   class="text-xl"
-                  href={`/notes/${post.slug}`}
+                  href={`/learn/${post.slug}`}
                 >
                   {post.id}
                 </a>

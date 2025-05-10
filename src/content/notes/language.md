@@ -3,7 +3,98 @@ title: 'Programming Languages'
 description: 'I use Python and JS most of the time'
 ---
 
-## 🟨 JavaScript Basics
+# Python Basics
+
+### 1. Primitive Data Types
+
+Python uses:
+
+- **Integer**: `x = 42`
+- **Float**: `pi = 3.14`
+- **String**: `name = "Alice"`
+- **Boolean**: `is_active = True`
+- **None**: `value = None`
+
+### 2. Collections
+
+- **List**: `fruits = ["apple", "banana", "cherry"]`
+- **Set**: `unique = {1, 2, 3}`
+- **Dictionary (like Map)**: `user = {"name": "Alice", "age": 25}`
+- **Tuple**: `coordinates = (10, 20)`
+
+### 3. Conditionals
+
+```python
+if score > 90:
+    print("Excellent!")
+elif score > 75:
+    print("Good job!")
+else:
+    print("Keep trying!")
+```
+
+### 4. Switch Case Alternative
+
+Python doesn't have a built-in `switch`. You can use `if-elif-else` or dictionaries:
+
+```python
+actions = {
+    "start": "Starting...",
+    "stop": "Stopping...",
+    "pause": "Pausing..."
+}
+print(actions.get(command, "Unknown command"))
+```
+
+### 5. Loops
+
+- **For loop**:
+
+```python
+for i in range(5):
+    print(i)
+```
+
+- **While loop**:
+
+```python
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+```
+
+- **Skip (continue) and exit (break)**:
+
+```python
+for i in range(10):
+    if i == 5:
+        continue
+    if i == 8:
+        break
+    print(i)
+```
+
+### 6. Check Type
+
+```python
+type(42)         # <class 'int'>
+type("hello")    # <class 'str'>
+isinstance([], list)  # True
+```
+
+### 7. Exit Program
+
+```python
+exit()
+# or
+import sys
+sys.exit()
+```
+
+---
+
+# JavaScript Basics
 
 ### 1. Primitive Data Types
 
@@ -112,92 +203,3 @@ for (const e of arr) {
 ```
 
 ---
-
-## 🟦 Python Basics
-
-### 1. Primitive Data Types
-
-Python uses:
-
-- **Integer**: `x = 42`
-- **Float**: `pi = 3.14`
-- **String**: `name = "Alice"`
-- **Boolean**: `is_active = True`
-- **None**: `value = None`
-
-### 2. Collections
-
-- **List**: `fruits = ["apple", "banana", "cherry"]`
-- **Set**: `unique = {1, 2, 3}`
-- **Dictionary (like Map)**: `user = {"name": "Alice", "age": 25}`
-- **Tuple**: `coordinates = (10, 20)`
-
-### 3. Conditionals
-
-```python
-if score > 90:
-    print("Excellent!")
-elif score > 75:
-    print("Good job!")
-else:
-    print("Keep trying!")
-```
-
-### 4. Switch Case Alternative
-
-Python doesn't have a built-in `switch`. You can use `if-elif-else` or dictionaries:
-
-```python
-actions = {
-    "start": "Starting...",
-    "stop": "Stopping...",
-    "pause": "Pausing..."
-}
-print(actions.get(command, "Unknown command"))
-```
-
-### 5. Loops
-
-- **For loop**:
-
-```python
-for i in range(5):
-    print(i)
-```
-
-- **While loop**:
-
-```python
-i = 0
-while i < 5:
-    print(i)
-    i += 1
-```
-
-- **Skip (continue) and exit (break)**:
-
-```python
-for i in range(10):
-    if i == 5:
-        continue
-    if i == 8:
-        break
-    print(i)
-```
-
-### 6. Check Type
-
-```python
-type(42)         # <class 'int'>
-type("hello")    # <class 'str'>
-isinstance([], list)  # True
-```
-
-### 7. Exit Program
-
-```python
-exit()
-# or
-import sys
-sys.exit()
-```

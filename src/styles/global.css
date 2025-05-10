@@ -86,12 +86,6 @@ tbody {
   @apply divide-y divide-gray-200 !important
 }
 
-hr {
-  width: 50% !important;
-  margin: 2rem auto !important;
-  border-top: 1px dotted grey !important
-}
-
 li>ul>li {
   @apply ml-4 !important
 }

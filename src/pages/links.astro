@@ -25,7 +25,10 @@ const myPage = await notion.databases.query({
     <Header />
     <main>
       <section>
-        <h2 class="text-4xl font-mono mb-8">My Links</h2>
+        <p>
+          Links that I feel intersting to read and save them all here.
+        </p>
+        <h1>Saved Links:</h1>
         {
           myPage?.results?.length > 0 ? (
             <div>
