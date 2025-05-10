@@ -38,7 +38,7 @@ code:not(pre > code) {
 }
 
 a {
-  @apply text-primary underline !important;
+  @apply underline !important;
 }
 
 a.active {
