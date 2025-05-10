@@ -56,15 +56,6 @@ vector<int> vector2 = {3,4,5,2,1};
 sort(vector2.begin(), vector2.end())
 ```
 
-| Function     | Description                                          |
-| ------------ | ---------------------------------------------------- |
-| `size()`     | returns the number of elements present in the vector |
-| `clear()`    | removes all the elements of the vector               |
-| `front()`    | returns the first element of the vector              |
-| `back()`     | returns the last element of the vector               |
-| `empty()`    | returns **1** (true) if the vector is empty          |
-| `capacity()` | check the overall size of a vector                   |
-
 In Python we can define as below for the same approach but I'm not sure how the memory created inside:
 
 ```python
@@ -211,8 +202,8 @@ print(my_deque)  # deque([10, 20, 30])
 
 Remeber that dequeue:
 
-- Efficient insertions/removals at both ends (O(1)).
-- Slower random access (O(n)).
+- Efficient insertions/removals at both ends $O(1)$.
+- Slower random access $O(n)$.
 
 ---
 
@@ -310,7 +301,7 @@ API same as `map` and `set`
 |        | `set`, `map` | `unorder_set`, `unorder_map` |
 | ------ | ------------ | ---------------------------- |
 | DS     | balanced BST | hash table                   |
-| insert | O($log_n$)   | O(1)                         |
+| insert | $O(log_n)$   | $O(1)$                       |
 
 In Python we have `{}` and `set()`:
 

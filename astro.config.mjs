@@ -5,6 +5,9 @@ import tailwind from "@astrojs/tailwind";
 
 import sentry from "@sentry/astro";
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 export default defineConfig({
   site: 'https://duongital.com',
   markdown: {
@@ -16,7 +19,9 @@ export default defineConfig({
       theme: "github-dark",
       // theme: "slack-ochin",
       wrap: true
-    }
+    },
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
   },
   integrations: [
     sitemap(),

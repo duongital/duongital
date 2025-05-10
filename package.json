@@ -30,6 +30,8 @@
   "devDependencies": {
     "daisyui": "^4.10.5",
     "prettier": "^2.8.8",
-    "prisma": "^4.15.0"
+    "prisma": "^4.15.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   }
 }

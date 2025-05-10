@@ -32,9 +32,10 @@ pre {
   font-family: 'JetBrains Mono', 'sans-serif' !important;
 }
 
-/* code {
-  font-family: 'JetBrains Mono', 'sans-serif' !important;
-} */
+code:not(pre > code) {
+  background-color: rgb(239, 239, 239);
+  @apply px-1 py-0.5 rounded-md text-sm !important;
+}
 
 a {
   @apply underline !important;
@@ -74,7 +75,7 @@ table {
 }
 
 table td {
-  @apply px-2 !important;
+  @apply px-2 text-sm !important;
 }
 
 thead th {
