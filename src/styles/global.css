@@ -75,7 +75,7 @@ table {
 }
 
 table td {
-  @apply px-2 text-sm !important;
+  @apply px-2 py-1 text-sm !important;
 }
 
 thead th {
