@@ -7,6 +7,49 @@ description: 'algorithm is for all programing languages, we can apply when being
 
 # 🍊 1. approaches:
 
+```mermaid
+graph TB
+    subgraph Approaches["Problem Solving Approaches"]
+        CompleteSearch["1.1 Complete Search"]
+        DivideConquer["1.2 Divide & Conquer"]
+        Greedy["1.3 Greedy"]
+        DP["1.4 Dynamic Programming"]
+    end
+
+    subgraph CS["Complete Search Details"]
+        CS1["Iterative<br/>(Generate all solutions)"]
+        CS2["Backtracking<br/>(Build incrementally)"]
+    end
+
+    subgraph DC["Divide & Conquer Details"]
+        DC1["Binary Search<br/>O(log n)"]
+        DC2["Merge Sort<br/>O(n log n)"]
+    end
+
+    subgraph GR["Greedy Details"]
+        GR1["Coin Change<br/>(Locally optimal)"]
+        GR2["Activity Selection<br/>(Sort by finish time)"]
+        GR3["Dijkstra<br/>(Shortest path)"]
+    end
+
+    subgraph DPD["Dynamic Programming Details"]
+        DPD1["Memoization<br/>(Top-down)"]
+        DPD2["Tabulation<br/>(Bottom-up)"]
+        DPD3["Optimal Substructure"]
+        DPD4["Overlapping Subproblems"]
+    end
+
+    CompleteSearch --> CS
+    DivideConquer --> DC
+    Greedy --> GR
+    DP --> DPD
+
+    style CompleteSearch fill:#ffcccc
+    style DivideConquer fill:#ccffcc
+    style Greedy fill:#ccccff
+    style DP fill:#ffffcc
+```
+
 ## 1.1 complete search
 
 Complete search (also called brute force) tries all possible solutions.
@@ -186,6 +229,7 @@ print(activity_selection(start, finish))
 `Dynamic programming`: Solves problems by breaking them down into overlapping subproblems and storing results to avoid redundant calculations.
 
 Key principles:
+
 - **Optimal substructure**: Optimal solution contains optimal solutions to subproblems
 - **Overlapping subproblems**: Same subproblems are solved multiple times
 
@@ -253,6 +297,51 @@ print(longest_increasing_subsequence(arr))  # Output: 4 ([2,3,7,18])
 ```
 
 # 🫐 2. graph traversal
+
+```mermaid
+graph TB
+    subgraph GraphTypes["Graph Types"]
+        UU["Unweighted<br/>Undirected"]
+        UD["Unweighted<br/>Directed"]
+        WU["Weighted<br/>Undirected"]
+        WD["Weighted<br/>Directed"]
+    end
+
+    subgraph Unweighted["Unweighted Traversal"]
+        BFS["BFS<br/>Queue<br/>O(V+E)"]
+        DFS["DFS<br/>Stack/Recursion<br/>O(V+E)"]
+    end
+
+    subgraph Weighted["Weighted Shortest Path"]
+        Dijkstra["Dijkstra<br/>Priority Queue<br/>O(V²)<br/>Positive weights"]
+        BellmanFord["Bellman-Ford<br/>O(V*E)<br/>Negative weights OK"]
+        FloydWarshall["Floyd-Warshall<br/>O(V³)<br/>All pairs"]
+    end
+
+    UU --> BFS
+    UD --> BFS
+    UU --> DFS
+    UD --> DFS
+
+    WU --> Dijkstra
+    WD --> Dijkstra
+    WU --> BellmanFord
+    WD --> BellmanFord
+    WU --> FloydWarshall
+    WD --> FloydWarshall
+
+    BFS -.->|"Shortest Path"| SP1["Unweighted<br/>shortest path"]
+    DFS -.->|"Detection"| SP2["Cycle detection<br/>Exploration"]
+    Dijkstra -.->|"Applications"| SP3["Maps<br/>AI pathfinding"]
+    BellmanFord -.->|"Applications"| SP4["Games<br/>Negative cycle<br/>detection"]
+    FloydWarshall -.->|"Applications"| SP5["Graph theory<br/>research"]
+
+    style BFS fill:#99ccff
+    style DFS fill:#99ccff
+    style Dijkstra fill:#ffcc99
+    style BellmanFord fill:#ffcc99
+    style FloydWarshall fill:#ffcc99
+```
 
 Note that all vertices of a graph should have unique values. Because we only visit a vertex once and mark as visited. We can traverse a graph that has duplicated values, but as it's marked as visited so that BFS or DFS will skip the vertex.
 
@@ -452,6 +541,59 @@ def floyd_warshall(graph, V):
 
 # 🍊 3. math
 
+```mermaid
+graph TB
+    subgraph Math["Mathematical Operations"]
+        Basic["Basic Operations"]
+        Sequences["Sequences"]
+        NumberTheory["Number Theory"]
+        Combinatorics["Combinatorics"]
+        PowerMod["Power & Modular"]
+    end
+
+    subgraph BasicOps["Basic Operations"]
+        B1["max, min, abs"]
+        B2["sqrt, pow"]
+        B3["round, floor, ceil"]
+        B4["log, log10"]
+    end
+
+    subgraph Seq["Sequences"]
+        S1["Fibonacci<br/>Iterative O(n)"]
+        S2["Fibonacci<br/>Memoization O(n)"]
+    end
+
+    subgraph NT["Number Theory"]
+        N1["Prime Check<br/>O(√n)"]
+        N2["Sieve of Eratosthenes<br/>O(n log log n)"]
+        N3["GCD<br/>Euclidean Algorithm"]
+        N4["LCM"]
+        N5["Factorial"]
+    end
+
+    subgraph Comb["Combinatorics"]
+        C1["Combinations<br/>C(n,k)"]
+        C2["Permutations"]
+    end
+
+    subgraph PM["Power & Modular"]
+        P1["Fast Exponentiation<br/>O(log n)"]
+        P2["Modular Exponentiation<br/>(base^exp) % mod"]
+    end
+
+    Basic --> BasicOps
+    Sequences --> Seq
+    NumberTheory --> NT
+    Combinatorics --> Comb
+    PowerMod --> PM
+
+    style Basic fill:#ffcccc
+    style Sequences fill:#ccffcc
+    style NumberTheory fill:#ccccff
+    style Combinatorics fill:#ffffcc
+    style PowerMod fill:#ffccff
+```
+
 ## Common Math Operations
 
 ```python
@@ -649,6 +791,46 @@ print(mod_power(2, 10, 1000))  # Output: 24 (2^10 % 1000 = 1024 % 1000)
 ```
 
 # 🍏 4. string
+
+```mermaid
+graph TB
+    subgraph String["String Operations"]
+        Basic["Basic Operations"]
+        PatternMatch["Pattern Matching"]
+        Problems["Common Problems"]
+    end
+
+    subgraph BasicStr["Basic Operations"]
+        B1["Length, Access, Slicing"]
+        B2["Concatenation"]
+        B3["Methods<br/>strip, lower, upper, replace"]
+        B4["Split & Join"]
+        B5["Substring Check"]
+    end
+
+    subgraph Pattern["Pattern Matching"]
+        P1["KMP Algorithm<br/>O(n+m)<br/>LPS array"]
+        P2["Rabin-Karp<br/>O(n+m)<br/>Rolling hash"]
+    end
+
+    subgraph CommonProblems["Common Problems"]
+        CP1["Palindrome Check<br/>Two pointers"]
+        CP2["Longest Palindromic<br/>Substring"]
+        CP3["Anagram Check<br/>Sorting or Counter"]
+        CP4["String Reversal<br/>Slicing"]
+    end
+
+    Basic --> BasicStr
+    PatternMatch --> Pattern
+    Problems --> CommonProblems
+
+    P1 -.->|"Best for"| Use1["Multiple pattern<br/>searches"]
+    P2 -.->|"Best for"| Use2["Single pattern<br/>search"]
+
+    style Basic fill:#ccffcc
+    style PatternMatch fill:#ffcccc
+    style Problems fill:#ccccff
+```
 
 ## Basic String Operations
 
@@ -885,6 +1067,67 @@ print(reverse_string("Hello"))  # "olleH"
 ```
 
 # 🍏 5. geometry
+
+```mermaid
+graph TB
+    subgraph Geometry["Geometric Operations"]
+        Point["Point Operations"]
+        Line["Line Operations"]
+        Circle["Circle Operations"]
+        Triangle["Triangle Operations"]
+        Advanced["Advanced"]
+    end
+
+    subgraph PointOps["Point Operations"]
+        P1["Distance between points<br/>Euclidean formula"]
+        P2["Distance to origin"]
+        P3["Midpoint"]
+    end
+
+    subgraph LineOps["Line Operations"]
+        L1["Slope calculation"]
+        L2["Line length"]
+        L3["Parallel check"]
+        L4["Perpendicular check"]
+        L5["Point-to-line distance"]
+    end
+
+    subgraph CircleOps["Circle Operations"]
+        C1["Area: π*r²"]
+        C2["Circumference: 2πr"]
+        C3["Point inside circle"]
+        C4["Circle intersection"]
+    end
+
+    subgraph TriangleOps["Triangle Operations"]
+        T1["Area<br/>Cross product"]
+        T2["Perimeter"]
+        T3["Valid triangle check"]
+        T4["Point inside triangle"]
+    end
+
+    subgraph AdvancedGeo["Advanced Algorithms"]
+        A1["Convex Hull<br/>Graham Scan<br/>O(n log n)"]
+        A2["Closest Pair<br/>of Points"]
+        A3["Line Intersection"]
+    end
+
+    Point --> PointOps
+    Line --> LineOps
+    Circle --> CircleOps
+    Triangle --> TriangleOps
+    Advanced --> AdvancedGeo
+
+    PointOps -.-> LineOps
+    PointOps -.-> CircleOps
+    PointOps -.-> TriangleOps
+
+    style Point fill:#ffcccc
+    style Line fill:#ccffcc
+    style Circle fill:#ccccff
+    style Triangle fill:#ffffcc
+    style Advanced fill:#ffccff
+```
 
 ## Point Operations
 
