@@ -10,6 +10,6 @@ I create this website to save and share things that I have learnt. What I am doi
 - [Utab](https://github.com/duongital/project-utab):
   - desc: a web extension to override Browser's new tab.
   - stack: ReactJS, TLDraw Canvas API.
-- [Romano](https://duongital.github.io/project-romano/):
-  - desc: a landing page for a Romano event.
-  - stack: Bootstrap CSS, jQuery, PHP, MySQL.
+- [Mermaid Viewer](https://github.com/duongital/project-mermaid):
+  - desc: a simple mermaid diagram viewer.
+  - stack: Mermaid, Panzoom, Vite, IndexDB.
