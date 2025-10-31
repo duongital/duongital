@@ -16,8 +16,8 @@ export default defineConfig({
       excludeLangs: ['mermaid', 'math'],
     },
     shikiConfig: {
-      theme: "github-dark",
-      // theme: "slack-ochin",
+      // theme: "github-light",
+      theme: "slack-ochin",
       // wrap: true
     },
     remarkPlugins: [remarkMath],
