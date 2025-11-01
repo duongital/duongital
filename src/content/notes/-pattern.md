@@ -3,7 +3,7 @@ title: 'Design Patterns in Programming'
 description: 'Some design patterns in OOP languages: Java, C++... and functional ones: Javascript, Python...'
 ---
 
-# **functional programming**
+# 1. **functional programming**
 
 Functional programming emphasizes pure functions, immutability, and function composition to build predictable and maintainable code.
 
@@ -33,7 +33,7 @@ graph LR
     style PureFunctions fill:#ccffff
 ```
 
-## closure
+## 1.1 closure
 
 Like a backpack that remembers what you packed in it - even when you're far from home, you still have access to everything inside.
 
@@ -53,7 +53,7 @@ print(counter())  # 1
 print(counter())  # 2
 ```
 
-## currying
+## 1.2 currying
 
 Like a vending machine where you first select the category (snacks), then the specific item (chips), then the size (large) - one choice at a time.
 
@@ -84,11 +84,11 @@ error_log("Database connection failed")  # [APP] ERROR: Database connection fail
 info_log("Server started")  # [APP] INFO: Server started
 ```
 
-## higher-order functions
+## 1.3 higher-order functions
 
 Like a chef who can use different cooking methods (baking, frying, grilling) on ingredients - the chef takes the cooking method as instructions and applies it.
 
-In this code, map takes a function (lambda x: x**2) and applies it to every number in the list, filter uses a function to pick which items to keep, and reduce combines items using a function.
+In this code, map takes a function (lambda x: x\*\*2) and applies it to every number in the list, filter uses a function to pick which items to keep, and reduce combines items using a function.
 
 ```python
 # Map, filter, reduce examples
@@ -118,7 +118,7 @@ result = apply_twice(add_three, 10)
 print(result)  # 16 (10 + 3 + 3)
 ```
 
-## function composition
+## 1.4 function composition
 
 Like an assembly line where each station does one simple task - the product moves through each station and gets transformed step by step.
 
@@ -162,7 +162,7 @@ process_text = compose(add_prefix, to_uppercase, remove_spaces)
 print(process_text("hello world"))  # PROCESSED: HELLOWORLD
 ```
 
-## pure functions & immutability
+## 1.5 pure functions & immutability
 
 Like a calculator that always gives you the same answer for 2+2=4, and doesn't change anything else in the world when you use it.
 
@@ -201,7 +201,7 @@ print(user)  # {'name': 'John', 'age': 30} - unchanged
 print(updated_user)  # {'name': 'John', 'age': 31, 'city': 'NYC'}
 ```
 
-# **object oriented programming**
+# 2. **object oriented programming**
 
 Object-oriented programming organizes code around objects and classes, using encapsulation, inheritance, and polymorphism.
 
@@ -253,7 +253,7 @@ graph TB
     style Behavioral fill:#ccccff
 ```
 
-## oop - creation
+## 2.1. oop - creation
 
 **Creational patterns** deal with object creation mechanisms, trying to create objects in a manner suitable to the situation.
 
@@ -280,7 +280,7 @@ graph LR
     style Singleton fill:#ffccff
 ```
 
-### factory method
+### 2.1.1. factory method
 
 Like a toy factory that can make different types of toys - you tell it what you want, and it creates the right toy for you.
 
@@ -299,7 +299,7 @@ factory1 = FactoryNike()
 print(factory1.generate("ao_thun"))
 ```
 
-### abstract factory
+### 2.1.2. abstract factory
 
 Like getting a complete LEGO set instead of individual pieces - it gives you a whole family of matching things that work together.
 
@@ -312,7 +312,7 @@ class KingdomFactory:
     def create_castle(self): pass
 ```
 
-### builder
+### 2.1.3. builder
 
 Like building a custom burger at a restaurant - you choose the bun, then the patty, then the toppings, one step at a time.
 
@@ -340,7 +340,7 @@ class BurgerBuilder:
         return self.burger
 ```
 
-### prototype
+### 2.1.4. prototype
 
 Like using a photocopier to make exact copies of something instead of creating each one from scratch.
 
@@ -354,7 +354,7 @@ class Sheep:
         return copy.deepcopy(self)
 ```
 
-### singleton
+### 2.1.5 singleton
 
 Like having only one sun in the sky - no matter how many times you look up, you always see the same one.
 
@@ -370,7 +370,7 @@ class Singleton:
         return cls._instance
 ```
 
-## oop - struct
+## 2.2. oop - struct
 
 **Structural patterns** explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
 
@@ -403,7 +403,7 @@ graph LR
     style Proxy fill:#ffddcc
 ```
 
-### adapter
+### 2.2.1. adapter
 
 Like a power plug adapter that lets you use your phone charger in a different country's wall socket.
 
@@ -422,7 +422,7 @@ class PrinterAdapter:
         self.old_printer.print_old()
 ```
 
-### bridge
+### 2.2.2. bridge
 
 Like separating a remote control from your TV - you can change either one without affecting the other.
 
@@ -445,7 +445,7 @@ class Circle:
         self.draw_api.draw_circle()
 ```
 
-### composite
+### 2.2.3. composite
 
 Like a folder on your computer that can contain both files and other folders, and you can treat them all the same way.
 
@@ -490,11 +490,11 @@ tree.add(sub_tree)
 tree.operation()
 ```
 
-### decorator
+### 2.2.4. decorator
 
 Like adding toppings to ice cream - you start with plain ice cream and keep adding sprinkles, chocolate sauce, and whipped cream on top.
 
-In this code, you start with plain Coffee that costs $5, then wrap it with MilkDecorator (adds $2), then wrap that with SugarDecorator (adds $1) for a total of $8.
+In this code, you start with plain Coffee that costs `$5`, then wrap it with MilkDecorator `(adds $2)`, then wrap that with SugarDecorator `(adds $1)` for a total of `$8`.
 
 ```python
 class Coffee:
@@ -523,7 +523,7 @@ coffee_with_milk_and_sugar = SugarDecorator(coffee_with_milk)
 print("Total cost:", coffee_with_milk_and_sugar.cost())  # Output: 8
 ```
 
-### facade
+### 2.2.5. facade
 
 Like a TV remote with one "power" button that turns on the TV, sound system, and cable box all at once - it makes complicated things simple.
 
@@ -562,7 +562,7 @@ computer = ComputerFacade()
 computer.start()
 ```
 
-### flyweight
+### 2.2.6. flyweight
 
 Like a library where many people can read the same book instead of everyone buying their own copy - it saves space by sharing.
 
@@ -606,7 +606,7 @@ for tree in trees:
     tree.draw()
 ```
 
-### proxy
+### 2.2.7. proxy
 
 Like a security guard who checks your ID before letting you into a building - it controls who can access something.
 
@@ -633,7 +633,7 @@ db.query()
 db.query()
 ```
 
-## oop - behavior
+## 2.3. oop - behavior
 
 **Behavioral patterns** are concerned with algorithms and the assignment of responsibilities between objects.
 
@@ -675,7 +675,7 @@ graph LR
     style Visitor fill:#ffddff
 ```
 
-### chain of responsibility
+### 2.3.1. chain of responsibility
 
 Like asking for help at school - first you ask your friend, then your teacher, then the principal until someone can answer your question.
 
@@ -708,7 +708,7 @@ print(handler.handle(5))
 print(handler.handle(15))
 ```
 
-### command
+### 2.3.2. command
 
 Like writing instructions on sticky notes - you can save them, pass them to others, or undo them later.
 
@@ -774,7 +774,7 @@ for item in col:
     print(item)
 ```
 
-### mediator
+### 2.3.3. mediator
 
 Like a traffic light that tells all the cars when to stop and go - instead of cars talking to each other, they all listen to one controller.
 
@@ -818,7 +818,7 @@ c1.do_a()
 
 ```
 
-### memento
+### 2.3.4. memento
 
 Like saving your game progress - you can go back to that exact moment later if you make a mistake.
 
@@ -855,7 +855,7 @@ originator.set("State2")
 originator.restore(memento)
 ```
 
-### observer
+### 2.3.5. observer
 
 Like subscribing to a YouTube channel - whenever they post a new video, all subscribers get notified automatically.
 
@@ -886,7 +886,7 @@ subject.attach(observer2)
 subject.notify("Event occurred!")
 ```
 
-### state
+### 2.3.6. state
 
 Like a water bottle that acts differently when it's full (heavy and steady) versus empty (light and easy to crush).
 
@@ -919,7 +919,7 @@ context.state = StateB()
 context.request()
 ```
 
-### strategy
+### 2.3.7. strategy
 
 Like choosing different ways to get to school - you can walk, bike, or take the bus depending on the weather.
 
@@ -952,7 +952,7 @@ context = Context(Subtract())
 print(context.do_operation(5, 3))
 ```
 
-### template method
+### 2.3.8. template method
 
 Like a recipe that has the same steps (mix, bake, cool) but you can change the ingredients to make different cakes.
 
@@ -979,7 +979,7 @@ obj = ConcreteClass()
 obj.template_method()
 ```
 
-### visitor
+### 2.3.9. visitor
 
 Like a doctor visiting patients in a hospital - the doctor can do different things for each type of patient without the patients changing.
 
