@@ -1,0 +1,126 @@
+---
+export interface Props {
+  headings: Array<{
+    depth: number
+    slug: string
+    text: string
+  }>
+  depth?: number
+}
+
+const { headings, depth = 0 } = Astro.props
+
+// Build a tree structure from flat headings array
+function buildHeadingsTree(headings: Props['headings']) {
+  const tree: Array<{
+    depth: number
+    slug: string
+    text: string
+    children: any[]
+  }> = []
+  const stack: any[] = []
+
+  for (const heading of headings) {
+    const node = { ...heading, children: [] }
+
+    // Find the appropriate parent
+    while (stack.length > 0 && stack[stack.length - 1].depth >= heading.depth) {
+      stack.pop()
+    }
+
+    if (stack.length === 0) {
+      tree.push(node)
+    } else {
+      stack[stack.length - 1].children.push(node)
+    }
+
+    stack.push(node)
+  }
+
+  return tree
+}
+
+const tree = depth === 0 ? buildHeadingsTree(headings) : headings
+---
+
+<ul class="toc-list" data-depth={depth}>
+  {
+    tree.map((heading: any) => (
+      <li class="toc-item">
+        <a href={`#${heading.slug}`} class="toc-link">
+          <span>{heading.text}</span>
+        </a>
+        {heading.children && heading.children.length > 0 && (
+          <Astro.self headings={heading.children} depth={depth + 1} />
+        )}
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .toc-list {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .toc-list[data-depth='0'] {
+    padding-left: 0;
+  }
+
+  .toc-list[data-depth='1'],
+  .toc-list[data-depth='2'],
+  .toc-list[data-depth='3'] {
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .toc-item {
+    margin: 0.25rem 0;
+    list-style: none !important;
+    list-style-type: none !important;
+  }
+
+  .toc-item::before {
+    content: none !important;
+  }
+
+  .toc-item::marker {
+    content: none !important;
+  }
+
+  .toc-link {
+    display: block;
+    color: rgb(115, 115, 115);
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+  }
+
+  .toc-link:hover {
+    color: rgb(23, 23, 23);
+  }
+
+  .toc-link[aria-current='true'] {
+    color: rgb(23, 23, 23);
+    font-weight: 600;
+  }
+
+  .toc-link span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  @media (max-width: 1024px) {
+    .toc-list {
+      display: none;
+    }
+  }
+</style>

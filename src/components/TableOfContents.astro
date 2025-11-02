@@ -1,0 +1,168 @@
+---
+import TableOfContentsList from './TableOfContentsList.astro'
+
+export interface Props {
+  headings: Array<{
+    depth: number
+    slug: string
+    text: string
+  }>
+}
+
+const { headings } = Astro.props
+
+// Filter to include h1, h2 and h3 headings (you can adjust this)
+const filteredHeadings = headings.filter((h) => h.depth >= 1 && h.depth <= 3)
+---
+
+{
+  filteredHeadings.length > 0 && (
+    <nav class="toc-wrapper" aria-labelledby="toc-heading" id="table-of-contents">
+      <h2 id="toc-heading" class="toc-title">On this page</h2>
+      <TableOfContentsList headings={filteredHeadings} />
+    </nav>
+  )
+}
+
+<script>
+  // Intersection Observer to track active heading
+  class TableOfContents {
+    private currentLink: HTMLAnchorElement | null = null
+    private observer: IntersectionObserver | null = null
+
+    constructor() {
+      this.setupObserver()
+    }
+
+    private setupObserver() {
+      const links = Array.from(
+        document.querySelectorAll<HTMLAnchorElement>('.toc-link')
+      )
+
+      if (links.length === 0) return
+
+      // Get all heading elements that are linked in the TOC
+      const headings = links
+        .map((link) => {
+          const id = link.getAttribute('href')?.slice(1)
+          return id ? document.getElementById(id) : null
+        })
+        .filter((el): el is HTMLElement => el !== null)
+
+      if (headings.length === 0) return
+
+      // Calculate root margin (accounting for header height)
+      const getRootMargin = () => {
+        const header = document.querySelector('header')
+        const headerHeight = header ? header.offsetHeight : 0
+        return `-${headerHeight + 20}px 0px -66% 0px`
+      }
+
+      this.observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              const id = entry.target.id
+              const link = links.find((link) => link.getAttribute('href') === `#${id}`)
+              if (link) {
+                this.setCurrentLink(link)
+                break
+              }
+            }
+          }
+        },
+        {
+          rootMargin: getRootMargin(),
+          threshold: [0, 1],
+        }
+      )
+
+      headings.forEach((heading) => {
+        if (this.observer) {
+          this.observer.observe(heading)
+        }
+      })
+
+      // Set initial active link
+      if (links.length > 0) {
+        this.setCurrentLink(links[0])
+      }
+    }
+
+    private setCurrentLink(link: HTMLAnchorElement) {
+      if (link === this.currentLink) return
+
+      if (this.currentLink) {
+        this.currentLink.removeAttribute('aria-current')
+      }
+
+      link.setAttribute('aria-current', 'true')
+      this.currentLink = link
+    }
+
+    public destroy() {
+      if (this.observer) {
+        this.observer.disconnect()
+      }
+    }
+  }
+
+  // Initialize TOC when DOM is ready
+  let tocInstance: TableOfContents | null = null
+
+  document.addEventListener('DOMContentLoaded', () => {
+    tocInstance = new TableOfContents()
+  })
+
+  // Cleanup on navigation (for SPA-like behavior)
+  document.addEventListener('astro:before-preparation', () => {
+    if (tocInstance) {
+      tocInstance.destroy()
+      tocInstance = null
+    }
+  })
+</script>
+
+<style>
+  .toc-wrapper {
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    padding: 1rem;
+    border-left: 1px solid rgb(229, 231, 235);
+  }
+
+  .toc-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(23, 23, 23);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Custom scrollbar for TOC */
+  .toc-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .toc-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .toc-wrapper::-webkit-scrollbar-thumb {
+    background: rgb(209, 213, 219);
+    border-radius: 2px;
+  }
+
+  .toc-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgb(156, 163, 175);
+  }
+
+  @media (max-width: 1024px) {
+    .toc-wrapper {
+      display: none;
+    }
+  }
+</style>

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content'
 
 import Header from '../../components/Header.astro'
 import BaseHead from '../../components/BaseHead.astro'
+import TableOfContents from '../../components/TableOfContents.astro'
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('notes')
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content, headings } = await entry.render()
 ---
 
 <html data-theme="lemonade" lang="en">
@@ -24,14 +25,70 @@ const { Content } = await entry.render()
     />
   </head>
 
-  <body class="max-w-2xl mx-auto blog">
-    <Header />
-    <main>
-      <h1 class="text-primary">{entry.data.title}</h1>
-      <blockquote>{entry.data.description}</blockquote>
-      <article>
-        <Content />
-      </article>
-    </main>
+  <body class="blog">
+    <div class="header-wrapper">
+      <Header />
+    </div>
+    <div class="page-container">
+      <main class="main-content">
+        <h1 class="text-primary">{entry.data.title}</h1>
+        <blockquote>{entry.data.description}</blockquote>
+        <article>
+          <Content />
+        </article>
+      </main>
+      <aside class="toc-sidebar">
+        <TableOfContents headings={headings} />
+      </aside>
+    </div>
   </body>
 </html>
+
+<style>
+  .header-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .main-content {
+    max-width: 65ch;
+    width: 100%;
+  }
+
+  .toc-sidebar {
+    display: none;
+  }
+
+  /* Desktop layout with TOC on the right */
+  @media (min-width: 1024px) {
+    .header-wrapper {
+      padding: 0 2rem;
+    }
+
+    .page-container {
+      grid-template-columns: minmax(0, 1fr) 300px;
+      padding: 0 2rem;
+    }
+
+    .toc-sidebar {
+      display: block;
+    }
+  }
+
+  /* Larger screens - give more room to content */
+  @media (min-width: 1280px) {
+    .page-container {
+      grid-template-columns: minmax(0, 1fr) 350px;
+    }
+  }
+</style>
