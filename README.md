@@ -13,3 +13,6 @@ I create this website to save and share things that I have learnt. What I am doi
 - [Mermaid Viewer](https://github.com/duongital/project-mermaid):
   - desc: a simple mermaid diagram viewer.
   - stack: Mermaid, Panzoom, Vite, IndexDB.
+- [Copilot Apple](https://github.com/duongital/copilot-apple):
+  - desc: manage AI agents using Github Copilot CLI.
+  - stack: ReactJS, BunJS, Nginx, Dcoker.
