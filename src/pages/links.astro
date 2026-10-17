@@ -10,6 +10,13 @@ const notion = new Client({
 
 const myPage = await notion.databases.query({
   database_id: 'b19191accb244558a911494fd0f4bde7',
+  sorts: [
+    {
+      timestamp: 'created_time',
+      direction: 'descending',
+    },
+  ],
+  page_size: 20,
 })
 ---
 
@@ -51,6 +58,16 @@ const myPage = await notion.databases.query({
             <p>Sorry, there's a problem to view the content</p>
           )
         }
+        <p class="mt-8">
+          See more at{' '}
+          <a
+            class="link link-secondary"
+            href="https://duongital.notion.site/b19191accb244558a911494fd0f4bde7?v=65973542e8614ea48fcb9ca00771170e"
+            target="_blank"
+          >
+            duongital.notion.site
+          </a>
+        </p>
       </section>
     </main>
   </body>

@@ -21,7 +21,6 @@
     "@fontsource/jetbrains-mono": "^5.1.2",
     "@fontsource/lora": "^5.2.5",
     "@notionhq/client": "^2.2.14",
-    "@prisma/client": "^4.15.0",
     "@sentry/astro": "^8.54.0",
     "astro": "^5.7.12",
     "notion-to-md": "^3.1.1",
@@ -30,7 +29,6 @@
   "devDependencies": {
     "daisyui": "^4.10.5",
     "prettier": "^2.8.8",
-    "prisma": "^4.15.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0"
   }
