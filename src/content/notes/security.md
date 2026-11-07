@@ -1,5 +1,5 @@
 ---
-title: 'Sercurity'
+title: 'Security'
 description: 'So you wana hack'
 ---
 

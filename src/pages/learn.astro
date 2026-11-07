@@ -18,7 +18,7 @@ allNotes = allNotes.sort((a, b) => a.id.localeCompare(b.id))
   </head>
   <body class="max-w-2xl mx-auto">
     <Header />
-    <mai>
+    <main>
       <section>
         <p>
           I've been exploring computer science on my own, and I'd like to share
@@ -30,8 +30,7 @@ allNotes = allNotes.sort((a, b) => a.id.localeCompare(b.id))
             allNotes.map((post) => (
               <li class="my-4">
                 <a
-                  class="link link-secondary text-lg"
-                  class="text-xl"
+                  class="link link-secondary text-lg text-xl"
                   href={`/learn/${post.slug}`}
                 >
                   {post.id}
@@ -41,6 +40,6 @@ allNotes = allNotes.sort((a, b) => a.id.localeCompare(b.id))
           }
         </ul>
       </section>
-    </mai>
+    </main>
   </body>
 </html>

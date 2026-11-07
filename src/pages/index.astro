@@ -10,11 +10,25 @@ allPosts = allPosts.sort(
   (a, b) =>
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf()
 )
+
+// JSON-LD Person schema for homepage / personal brand
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Duong',
+  url: 'https://duongital.com',
+  jobTitle: 'Software Engineer',
+  sameAs: [
+    'https://github.com/duongital',
+    'https://twitter.com/duongital',
+  ],
+}
 ---
 
 <html data-theme="lemonade" lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />
   </head>
 
   <body class="max-w-2xl mx-auto blog">

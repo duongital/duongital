@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duongital.com/sitemap-index.xml
