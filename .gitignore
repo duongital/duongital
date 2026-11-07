@@ -6,3 +6,5 @@ dist
 .obsidian
 .env
 .astro
+pnpm-debug.log*
+.wrangler

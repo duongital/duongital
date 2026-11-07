@@ -6,7 +6,7 @@ I create this website to save and share things that I have learnt. What I am doi
 
 - [Duong's site](https://duongital.com):
   - desc: a personal website using markdown files.
-  - stack: Astro SSG, Notion API, Wordpress API, Sentry, Cloudflare.
+  - stack: Astro SSG, Notion API, Cloudflare.
 - [Utab](https://github.com/duongital/project-utab):
   - desc: a web extension to override Browser's new tab.
   - stack: ReactJS, TLDraw Canvas API.

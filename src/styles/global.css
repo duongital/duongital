@@ -111,8 +111,3 @@ li>ul>li {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
-pre.wp-block-code {
-  @apply overflow-x-scroll text-white !important;
-  background-color: #24292E;
-}
